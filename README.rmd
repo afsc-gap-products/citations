@@ -265,20 +265,36 @@ To make sure all bibliography listed in the `.bib` file are consistent, please r
 
 ### R packages built in-house
 
+**From suggested citations**
+
+To find the citation: 
+
+```{r, echo = TRUE, eval = FALSE}
+require(remotes)
+remotes::install_github("afsc-gap-products/trawllight")
+```
+
+```{r, echo = TRUE, eval = FALSE}
+library(trawllight)
+citation(trawllight)
+```
+
+**From Zenodo**
+
 For packages not on CRAN, package builders can use [Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to cite their R packages. 
 
-The [{trawllight}](https://zenodo.org/record/3688864#.Y5JIjHbMJnI) created by @sean-rohan-NOAA has a citation on zenodo that can be cited like below. 
+The [{trawllight}](https://zenodo.org/record/3700877) created by @sean-rohan-NOAA has a citation on zenodo that can be cited like below. 
 
 ```{r, eval = FALSE, echo=TRUE}
-@software{sean_rohan_2020_3688864,
+@software{sean_rohan_2020_3700877,
   author       = {sean-rohan},
-  title        = {sean-rohan/trawllight: trawllight},
-  month        = feb,
+  title        = {sean-rohan/trawllight: Light conversion features},
+  month        = mar,
   year         = 2020,
   publisher    = {Zenodo},
-  version      = {1.1.0},
-  doi          = {10.5281/zenodo.3688864},
-  url          = {https://doi.org/10.5281/zenodo.3688864}
+  version      = {1.2.0},
+  doi          = {10.5281/zenodo.3700877},
+  url          = {https://doi.org/10.5281/zenodo.3700877}
 }
 ```
 
