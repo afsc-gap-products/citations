@@ -238,7 +238,7 @@ To make sure all bibliography listed in the `.bib` file are consistent, please r
 }
 ```
 
-### Journal articles 
+### Journal articles
 
 ```{r, eval = FALSE, echo=TRUE}
 @article{RN929,

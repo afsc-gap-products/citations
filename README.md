@@ -57,7 +57,7 @@ Seattle, WA 98195
 >         -   [*NOAA technical memorandums/process
 >             reports*](#noaa-technical-memorandums/process-reports)
 >         -   [*NOAA Stock Assessments*](#noaa-stock-assessments)
->         -   [*Journal articles *](#journal-articles-)
+>         -   [*Journal articles*](#journal-articles)
 >         -   [*Presentations*](#presentations)
 >         -   [*Data*](#data)
 >         -   [*R packages built in-house*](#r-packages-built-in-house)
