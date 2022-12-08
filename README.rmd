@@ -267,12 +267,16 @@ To make sure all bibliography listed in the `.bib` file are consistent, please r
 
 **From suggested citations**
 
+The {trawllight} created by [\@sean-rohan-NOAA](https://github.com/sean-rohan-NOAA) has a built in citation that can be cited like below. 
+
 To find the citation: 
 
 ```{r, echo = TRUE, eval = FALSE}
 require(remotes)
 remotes::install_github("afsc-gap-products/trawllight")
 ```
+
+To use the citation: 
 
 ```{r, echo = TRUE, eval = FALSE}
 library(trawllight)
