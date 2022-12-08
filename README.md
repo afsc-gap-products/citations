@@ -20,8 +20,14 @@ annual data reports, presentations, and other outreach documents.
 **Liz Dawson** (Liz.Dawson AT noaa.gov;
 [@liz-dawson-NOAA](https://github.com/liz-dawson-NOAA))
 
-**Alexandra Dowlin** (Alexandra.Dowlin AT noaa.gov;
+**Alex Dowlin** (Alexandra.Dowlin AT noaa.gov;
 [@AlexandraDowlin-NOAA](https://github.com/AlexandraDowlin-NOAA))
+
+**Chris Anderson** (Christopher.Anderson AT noaa.gov;
+[@ChrisAnderson-NOAA](https://github.com/ChrisAnderson-NOAA))
+
+**Bethany Riggle** (Bethany.Riggle AT noaa.gov;
+[@bethanyriggle](https://github.com/bethanyriggle))
 
 Alaska Fisheries Science Center,
 
