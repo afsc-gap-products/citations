@@ -2,7 +2,7 @@
 output: 
   md_document: 
     variant: gfm
-csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
+csl: "./cite/citestyle.csl"
 bibliography: "./cite/bibliography.bib"
 ---
 
