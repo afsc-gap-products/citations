@@ -39,28 +39,38 @@ Seattle, WA 98195
 
 # Table of contents
 
-> -   [*Contribute to this repo and community `.bib`
->     file*](#contribute-to-this-repo-and-community-%60.bib%60-file)
 > -   [*Citation style guides*](#citation-style-guides)
 > -   [*How to cite*](#how-to-cite)
 >     -   [*As local files*](#as-local-files)
 >     -   [*Sourcing directly from
 >         github*](#sourcing-directly-from-github)
 > -   [*Citation files in action*](#citation-files-in-action)
-> -   [*Cite R packages used in a
->     project*](#cite-r-packages-used-in-a-project)
+> -   [*Contribute to this repo and community `.bib`
+>     file*](#contribute-to-this-repo-and-community-%60.bib%60-file)
+>     -   [*Bibliography syntax notes*](#bibliography-syntax-notes)
+>         -   [*Finding pre-formatted
+>             citations*](#finding-pre-formatted-citations)
+>         -   [*Forced case-sensitivity*](#forced-case-sensitivity)
+>         -   [*listing DOIs*](#listing-dois)
+>         -   [*Use Journal abbreviations*](#use-journal-abbreviations)
+>     -   [*Bibliography examples*](#bibliography-examples)
+>         -   [*NOAA technical memorandums/process
+>             reports*](#noaa-technical-memorandums/process-reports)
+>         -   [*NOAA Stock Assessments*](#noaa-stock-assessments)
+>         -   [*Journal articles *](#journal-articles-)
+>         -   [*Presentations*](#presentations)
+>         -   [*Data*](#data)
+>         -   [*Citing in-house built R
+>             packages*](#citing-in-house-built-r-packages)
+>         -   [*Legislation*](#legislation)
+>         -   [*Web pages*](#web-pages)
+>         -   [*Books*](#books)
+> -   [*Cite all R packages on a computer or used in a
+>     project*](#cite-all-r-packages-on-a-computer-or-used-in-a-project)
 > -   [*Suggestions and Comments*](#suggestions-and-comments)
 > -   [*R Version Metadata*](#r-version-metadata)
 >     -   [*NOAA README*](#noaa-readme)
 >     -   [*NOAA License*](#noaa-license)
-
-# Contribute to this repo and community `.bib` file
-
-This repository is meant to act as a resource for all members of GAP and
-beyond. Do you see that a citation is missing from our `.bib` file or
-you have a new publication? Please add it by submitting a [pull
-request](https://github.com/afsc-gap-products/citations/pulls) or
-speaking to one of the repository maintainers.
 
 # Citation style guides
 
@@ -196,7 +206,174 @@ trawl survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
 
 </div>
 
-# Cite R packages used in a project
+# Contribute to this repo and community `.bib` file
+
+This repository is meant to act as a resource for all members of GAP and
+beyond. Do you see that a citation is missing from our `.bib` file or
+you have a new publication? Please add it by submitting a [pull
+request](https://github.com/afsc-gap-products/citations/pulls) or
+speaking to one of the repository maintainers.
+
+## Bibliography syntax notes
+
+### Finding pre-formatted citations
+
+While not perfect, the below resources can use DOIs or other paper
+identifiers to find and construct bibliographies in the right format for
+you:
+
+-   <https://www.doi2bib.org/>
+-   <https://zbib.org/>
+
+### Forced case-sensitivity
+
+Use `{...}` to force capitalization. This may be needed for proper
+nouns.
+
+``` r
+...
+   title = {Results of the 2021 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna},
+...
+```
+
+### listing DOIs
+
+While the whole link for a DOI may be
+<https://doi.org/10.25923/9c3r-xp53>, only list the text after the
+“<https://doi.org/>” in the `.bib` file.
+
+``` r
+...
+  doi = {10.25923/9C3R-XP53},
+...
+```
+
+### Use Journal abbreviations
+
+Journal abbreviations can be found through the [Web of
+Science](https://images.webofknowledge.com/images/help/WOS/A_abrvjt.html)
+for any given scientific journal.
+
+``` r
+...
+  journal = {Fish. Oceanogr.},
+...
+```
+
+## Bibliography examples
+
+To make sure all bibliography listed in the `.bib` file are consistent,
+please refer to these common bibliography types and examples:
+
+### NOAA technical memorandums/process reports
+
+``` r
+@article{RN888,
+   author = {Alton, M. S. and Bakkala, R. G. and Walters G. E. and Munro, P. T.},
+   title = {Greenland turbot {(\emph{Reinhardtius hippoglossoides})} of the eastern {Bering Sea} and {Aleutian Islands} region},
+   url = {https://spo.nmfs.noaa.gov/content/tr-71-greenland-turbot-reinhardtius-hippoglossoides-eastern-bering-sea-and-aleutian-islands},
+   year = {1998},
+   publisher = {{U.S. Dep. Commer.}},
+   type = {NOAA Tech. Rep.}, 
+   number = {NMFS-71}
+}
+
+@article{2021NEBS2022,
+   author = {Markowitz, E. H. and Dawson, E. J. and Charriere, N. E. and Prohaska, B. K. and Rohan, S. K.  and Stevenson, D. E. and Britt, L. L.},
+   title = {Results of the 2021 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna},
+   publisher = {{U.S. Dep. Commer.}},
+   year = {2022},
+   type = {NOAA Tech. Memo.},
+   copyright = {Public domain}
+}
+
+@article{RN920,
+   author = {Pereyra, W. T. and Reeves, J. E. and Bakkala, R. G.},
+   title = {Demersal fish and shellfish resources of the eastern {Bering Sea} in the baseline year 1975},
+   publisher = {U.S. Dep. Commer.},
+   type = {NOAA Processed Rep.},
+   year = {1976},
+   copyright = {Public domain}
+}
+```
+
+### NOAA Stock Assessments
+
+``` r
+@inproceedings{RN921,
+   author = {Rose, C. S. and Walters, G. E.},
+   title = {Trawl width variation during bottom trawl surveys: causes and consequences},
+   booktitle = {Proceedings of the symposium on application of stock assessment techniques applies to gadids},
+   publisher = {International Northern {Pacific} Fisheries Communication Bulletin},
+   volume = {50},
+   pages = {p. 57-67},
+   year = {1990},
+   type = {Conference Proceedings}
+}
+
+@article{McGilliardetal2018,
+   author = {McGilliard, C. R. and Nichol, D. G. and Palsson, W. A.},
+   title = {Assessment of the flathead sole-Bering flounder stock in the {Bering Sea} and {Aleutian Islands}},
+    booktitle = {Stock assessment and fishery evaluation report for the groundfish resources of the {Bering Sea}/{Aleutian Islands} regions},
+   institution = {North Pacific Fishery Management Council},
+   address = {605 W. 4th Ave., Anchorage, AK 99501},
+   year = {2018}
+}
+```
+
+### Journal articles
+
+``` r
+@article{RN929,
+   author = {Spencer, P. D.},
+   title = {Density‐independent and density‐dependent factors affecting temporal changes in spatial distributions of eastern {Bering Sea} flatfish},
+  doi = {10.1111/j.1365-2419.2008.00486.x},
+  journal = {Fish. Oceanogr.},
+  publisher = {Wiley},
+   volume = {17},
+   number = {5},
+   pages = {p. 396-410},
+   ISSN = {1054-6006},
+   year = {2008}
+}
+```
+
+### Presentations
+
+> Example coming soon!
+
+### Data
+
+> Example coming soon! (e.g., FOSS)
+
+### Citing in-house built R packages
+
+For packages not on CRAN, package builders can use
+[Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
+to cite their R packages.
+
+> Example coming soon! (e.g., {coldpool})
+
+### Legislation
+
+> Example coming soon! (e.g., Magnuson-Stevenson)
+
+### Web pages
+
+> Example coming soon! (e.g., NOAA Fisheries’ website)
+
+### Books
+
+``` r
+@book{RN912,
+   author = {Mecklenburg, C. W. and Mecklenburg, T. A. and Thorsteinson, L. K.},
+   title = {Fishes of {Alaska}},
+   ISBN = {1888569077},
+   year = {2002}
+}
+```
+
+# Cite all R packages on a computer or used in a project
 
 Here is how the user can find all of the packages ever installed on the
 local computer
@@ -227,8 +404,8 @@ PKG <- names(sessionInfo()[7][[1]])
 PKG
 ```
 
-    FALSE  [1] "fansi"      "utf8"       "digest"     "R6"         "lifecycle"  "magrittr"   "evaluate"   "pillar"     "httr"       "rlang"      "stringi"    "cli"       
-    FALSE [13] "data.table" "rstudioapi" "vctrs"      "rmarkdown"  "tools"      "stringr"    "glue"       "xfun"       "yaml"       "fastmap"    "compiler"   "pkgconfig" 
+    FALSE  [1] "fansi"      "digest"     "utf8"       "R6"         "lifecycle"  "magrittr"   "evaluate"   "pillar"     "httr"       "rlang"      "stringi"    "cli"       
+    FALSE [13] "data.table" "rstudioapi" "vctrs"      "rmarkdown"  "tools"      "stringr"    "glue"       "yaml"       "fastmap"    "xfun"       "compiler"   "pkgconfig" 
     FALSE [25] "readtext"   "htmltools"  "knitr"      "tibble"
 
 Then to cite the packages loaded for this R project, create a .bib file
@@ -288,9 +465,9 @@ sessionInfo()
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] fansi_1.0.3       utf8_1.2.2        digest_0.6.30     R6_2.5.1          lifecycle_1.0.3   magrittr_2.0.3    evaluate_0.18     pillar_1.8.1      httr_1.4.4       
+    FALSE  [1] fansi_1.0.3       digest_0.6.30     utf8_1.2.2        R6_2.5.1          lifecycle_1.0.3   magrittr_2.0.3    evaluate_0.18     pillar_1.8.1      httr_1.4.4       
     FALSE [10] rlang_1.0.6       stringi_1.7.8     cli_3.4.1         data.table_1.14.4 rstudioapi_0.14   vctrs_0.5.0       rmarkdown_2.18    tools_4.2.0       stringr_1.4.1    
-    FALSE [19] glue_1.6.2        xfun_0.34         yaml_2.3.6        fastmap_1.1.0     compiler_4.2.0    pkgconfig_2.0.3   readtext_0.81     htmltools_0.5.3   knitr_1.40       
+    FALSE [19] glue_1.6.2        yaml_2.3.6        fastmap_1.1.0     xfun_0.34         compiler_4.2.0    pkgconfig_2.0.3   readtext_0.81     htmltools_0.5.3   knitr_1.40       
     FALSE [28] tibble_3.1.8
 
 ## NOAA README
