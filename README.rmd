@@ -3,11 +3,11 @@ output:
   md_document: 
     variant: gfm
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
-bibliography: "https://raw.githubusercontent.com//cite/master//bibliography.bib"
+bibliography: "./cite/bibliography.bib"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warnings = FALSE, error = FALSE, message = FALSE)
 link_repo <- "https://github.com/afsc-gap-products/citations"
 ```
 
@@ -38,7 +38,7 @@ Seattle, WA 98195
 
 > This code is always in development. Find code used for various reports in the code [releases](paste0(`r link_repo`, "/releases")).
 
-## Table of contents
+# Table of contents
 
 ```{r toc, echo = FALSE, eval = TRUE}
 toc <- strsplit(x = readtext::readtext(file = "./README.Rmd")[[2]], split = "\n")
@@ -57,27 +57,26 @@ toc <- paste0(toc_list, "*](#", toc_link, ")", collapse = "\n")
 
 `r toc`
 
-## Citation style guides
 
-The NOAA Library now recommends that we use [American Psychological Association 7th edition (no ampersand)](https://www.zotero.org/styles/apa-no-ampersand) for citing in NOAA technical memorandums and other NOAA process report publications. Learn more about APA 7th from this   
-[Purdue Owl](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/reference_list_author_authors.html) resoure.
+# Contribute to this repo and community `.bib` file
+
+This repository is meant to act as a resource for all members of GAP and beyond. Do you see that a citation is missing from our `.bib` file or you have a new publication? Please add it by submitting a [pull request](`r paste0(link_repo, "/pulls")`) or speaking to one of the repository maintainers. 
+
+# Citation style guides
+
+The NOAA Library now recommends that we use [American Psychological Association 7th edition (no ampersand)](https://www.zotero.org/styles/apa-no-ampersand) for citing in NOAA technical memorandums and other NOAA process report publications. Learn more about APA 7th from this [Purdue Owl](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/reference_list_author_authors.html) resoure.
 
 ![APA 7th no Ampersand](./img/apa7.png)
 
 The citation style guide for APA 7th can be downloaded from [github](https://github.com/citation-style-language/styles). This independent open source Citation Style Language (CSL) project aims to facilitate scholarly communication by automating the formatting of citations and bibliographies. 
 
-To download the CSL and save it to your project, you can use the following code:
+# How to cite using these `.bib` and `.csl` files
 
-```{r, eval = FALSE, echo = TRUE}
-csl <- readLines("https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl")
-readr::write_lines(x = csl, file = "./cite/citestyle.csl")
-```
+Add the link to the [`.bib`](https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib) and [`.csl`](https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl) files in the YAML of your `rmarkdown` ro `quarto` file like so:
 
-## How to cite using these `.bib` and `.csl` files
+## As local files:
 
-Add the link to the `.bib` and `.csl` files in the YAML of your `rmarkdown` ro `quarto` file like so:
-
-As local files:
+Note that "../" before the file names refers to directory navigation. 
 
 ```{r, eval = FALSE, echo = TRUE}
 ---
@@ -90,7 +89,19 @@ bibliography: "../cite/bibliography.bib"
 
 ```
 
-Sourcing directly from github (requires internet access):
+To download the CSL and save it to your project, you can use the following code:
+
+```{r, eval = FALSE, echo = TRUE}
+csl <- readLines("https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl")
+readr::write_lines(x = csl, file = "./cite/citestyle.csl")
+
+bib <- readLines("https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib")
+readr::write_lines(x = bib, file = "./cite/bibliography.csl")
+```
+
+## Sourcing directly from github (requires internet access):
+
+Sourcing directly from this repo ensures that you will always have the most up to date citation style library and bibliography references. 
 
 ```{r, eval = FALSE, echo = TRUE}
 ---
@@ -98,7 +109,7 @@ title: "untitled"
 date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
 output: html_document
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
-bibliography: "https://raw.githubusercontent.com//cite/master//bibliography.bib"
+bibliography: "https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib"
 ---
 
 ```
@@ -111,7 +122,7 @@ Use the `[@...]` notation in your `rmarkdown` or `quarto` call a reference numbe
 For example, here are **Annual Bering Sea Data Report** [@2022NEBS2022; @2021NEBS2022; @2019NEBS2022; @2018EBS2022]
 ```
 
-*(Which renders as:)*
+*Which renders as:*
 
 For example, here are **Annual Bering Sea Data Report** [@2022NEBS2022; @2021NEBS2022; @2019NEBS2022; @2018EBS2022]
 
@@ -121,15 +132,36 @@ Naturally, without writing anything else, references will appear at the of the d
 <div id="refs"></div>
 ```
 
-*(Which renders as:)*
+*Which renders as:*
 
 <div id="refs"></div>
 
-# Please add to this repo!
+# Cite R packages used in a project
 
-This repository is meant to act as a resource for all members of GAP and beyond. Do you see that a citation is missing from our `.bib` file or you have a new publication? Please add it by submitting a pull request or speaking to one of the repository maintainers. 
+Here is how the user can find all of the packages ever installed on the local computer
 
-## Suggestions and Comments
+```{r, eval = TRUE, echo = TRUE}
+PKG <- tibble::tibble(
+  Package = names(installed.packages()[,3]),
+  Version = unname(installed.packages()[,3])
+)
+head(PKG)
+```
+
+Here is how the user can find all of the packages ever installed on the local computer
+
+```{r, eval = TRUE, echo = TRUE}
+PKG <- names(sessionInfo()[7][[1]])
+```
+
+Then to cite them, create a .bib file for R packages:
+
+```{r, echo = TRUE, eval = TRUE}
+knitr::write_bib(x = PKG,
+                 file = "./cite/bibliography_RPack.bib")
+```
+
+# Suggestions and Comments
 
 If you see that the data, product, or metadata can be improved, you are invited to create a 
 [pull request](`r paste0(link_repo, "/pulls")`), 

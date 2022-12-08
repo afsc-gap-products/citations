@@ -31,28 +31,41 @@ Seattle, WA 98195
 > in the code
 > [releases](paste0(https://github.com/afsc-gap-products/citations,%20%22/releases%22)).
 
-## Table of contents
+# Table of contents
 
     ## Warning in get_source(x, text_field = text_field, docid_field = docid_field, : Unsupported extension 'rmd' of file ./README.Rmd treating as plain text.
 
+> -   [*Contribute to this repo and community `.bib`
+>     file*](#contribute-to-this-repo-and-community-%60.bib%60-file)
 > -   [*Citation style guides*](#citation-style-guides)
 > -   [*How to cite using these `.bib` and `.csl`
 >     files*](#how-to-cite-using-these-%60.bib%60-and-%60.csl%60-files)
+> -   [*As local files:*](#as-local-files:)
+> -   [*Sourcing directly from github (requires internet
+>     access):*](#sourcing-directly-from-github-(requires-internet-access):)
 > -   [*Citation files in action*](#citation-files-in-action)
-> -   [*Please add to this repo!*](#please-add-to-this-repo!)
+> -   [*Cite R packages used in a
+>     project*](#cite-r-packages-used-in-a-project)
 > -   [*Suggestions and Comments*](#suggestions-and-comments)
 > -   [*R Version Metadata*](#r-version-metadata)
 > -   [*NOAA README*](#noaa-readme)
 > -   [*NOAA License*](#noaa-license)
 
-## Citation style guides
+# Contribute to this repo and community `.bib` file
+
+This repository is meant to act as a resource for all members of GAP and
+beyond. Do you see that a citation is missing from our `.bib` file or
+you have a new publication? Please add it by submitting a [pull
+request](https://github.com/afsc-gap-products/citations/pulls) or
+speaking to one of the repository maintainers.
+
+# Citation style guides
 
 The NOAA Library now recommends that we use [American Psychological
 Association 7th edition (no
 ampersand)](https://www.zotero.org/styles/apa-no-ampersand) for citing
 in NOAA technical memorandums and other NOAA process report
-publications. Learn more about APA 7th from this  
-[Purdue
+publications. Learn more about APA 7th from this [Purdue
 Owl](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/reference_list_author_authors.html)
 resoure.
 
@@ -64,20 +77,17 @@ independent open source Citation Style Language (CSL) project aims to
 facilitate scholarly communication by automating the formatting of
 citations and bibliographies.
 
-To download the CSL and save it to your project, you can use the
-following code:
+# How to cite using these `.bib` and `.csl` files
 
-``` r
-csl <- readLines("https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl")
-readr::write_lines(x = csl, file = "./cite/citestyle.csl")
-```
+Add the link to the
+[`.bib`](https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib)
+and
+[`.csl`](https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl)
+files in the YAML of your `rmarkdown` ro `quarto` file like so:
 
-## How to cite using these `.bib` and `.csl` files
+## As local files:
 
-Add the link to the `.bib` and `.csl` files in the YAML of your
-`rmarkdown` ro `quarto` file like so:
-
-As local files:
+Note that “../” before the file names refers to directory navigation.
 
 ``` r
 ---
@@ -89,7 +99,21 @@ bibliography: "../cite/bibliography.bib"
 ---
 ```
 
-Sourcing directly from github (requires internet access):
+To download the CSL and save it to your project, you can use the
+following code:
+
+``` r
+csl <- readLines("https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl")
+readr::write_lines(x = csl, file = "./cite/citestyle.csl")
+
+bib <- readLines("https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib")
+readr::write_lines(x = bib, file = "./cite/bibliography.csl")
+```
+
+## Sourcing directly from github (requires internet access):
+
+Sourcing directly from this repo ensures that you will always have the
+most up to date citation style library and bibliography references.
 
 ``` r
 ---
@@ -97,7 +121,7 @@ title: "untitled"
 date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
 output: html_document
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
-bibliography: "https://raw.githubusercontent.com//cite/master//bibliography.bib"
+bibliography: "https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib"
 ---
 ```
 
@@ -110,11 +134,12 @@ reference number for a citation.
 For example, here are **Annual Bering Sea Data Report** [@2022NEBS2022; @2021NEBS2022; @2019NEBS2022; @2018EBS2022]
 ```
 
-*(Which renders as:)*
+*Which renders as:*
 
-For example, here are **Annual Bering Sea Data Report**
-(**2022NEBS2022?**; **2021NEBS2022?**; **2019NEBS2022?**;
-**2018EBS2022?**)
+For example, here are **Annual Bering Sea Data Report** (Markowitz,
+Dawson, Charriere, Prohaska, Rohan, Stevenson, et al., 2022b, 2022a, In
+review; Markowitz, Dawson, Charriere, Prohaska, Rohan, Haehn, et al.,
+2022)
 
 Naturally, without writing anything else, references will appear at the
 of the document. If you want them to render at a specific place in your
@@ -124,20 +149,87 @@ document, call the code below:
 <div id="refs"></div>
 ```
 
-*(Which renders as:)*
+*Which renders as:*
 
-<div id="refs">
+<div id="refs" class="references csl-bib-body hanging-indent"
+line-spacing="2">
+
+<div id="ref-2018EBS2022" class="csl-entry">
+
+Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
+Rohan, S. K., Haehn, R. A., Stevenson, D. E., and Britt, L. L. (2022).
+*Results of the 2018 eastern Bering Sea continental shelf bottom trawl
+survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
 
 </div>
 
-# Please add to this repo!
+<div id="ref-2019NEBS2022" class="csl-entry">
 
-This repository is meant to act as a resource for all members of GAP and
-beyond. Do you see that a citation is missing from our `.bib` file or
-you have a new publication? Please add it by submitting a pull request
-or speaking to one of the repository maintainers.
+Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
+Rohan, S. K., Stevenson, D. E., and Britt, L. L. (2022a). *Results of
+the 2019 eastern and northern Bering Sea continental shelf bottom trawl
+survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
 
-## Suggestions and Comments
+</div>
+
+<div id="ref-2021NEBS2022" class="csl-entry">
+
+Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
+Rohan, S. K., Stevenson, D. E., and Britt, L. L. (2022b). *Results of
+the 2021 eastern and northern Bering Sea continental shelf bottom trawl
+survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
+
+</div>
+
+<div id="ref-2022NEBS2022" class="csl-entry">
+
+Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
+Rohan, S. K., Stevenson, D. E., and Britt, L. L. (In review). *Results
+of the 2022 eastern and northern Bering Sea continental shelf bottom
+trawl survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
+
+</div>
+
+</div>
+
+# Cite R packages used in a project
+
+Here is how the user can find all of the packages ever installed on the
+local computer
+
+``` r
+PKG <- tibble::tibble(
+  Package = names(installed.packages()[,3]),
+  Version = unname(installed.packages()[,3])
+)
+head(PKG)
+```
+
+    ## # A tibble: 6 × 2
+    ##   Package      Version
+    ##   <chr>        <chr>  
+    ## 1 abind        1.4-5  
+    ## 2 adehabitatMA 0.3.15 
+    ## 3 akgfmaps     2.2.1  
+    ## 4 antiword     1.3.1  
+    ## 5 ape          5.6-2  
+    ## 6 asciicast    2.2.0
+
+Here is how the user can find all of the packages ever installed on the
+local computer
+
+``` r
+PKG <- names(sessionInfo()[7][[1]])
+```
+
+Then to cite them, create a .bib file for R packages:
+
+``` r
+knitr::write_bib(x = PKG,
+                 file = "./cite/bibliography_RPack.bib")
+```
+
+# Suggestions and Comments
 
 If you see that the data, product, or metadata can be improved, you are
 invited to create a [pull
