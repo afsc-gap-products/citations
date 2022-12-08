@@ -7,7 +7,7 @@ bibliography: "./cite/bibliography.bib"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warnings = FALSE, error = FALSE, message = FALSE)
+knitr::opts_chunk$set(echo = TRUE, warnings = FALSE, error = FALSE, message = FALSE, comment = FALSE)
 link_repo <- "https://github.com/afsc-gap-products/citations"
 ```
 

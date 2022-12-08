@@ -33,7 +33,7 @@ Seattle, WA 98195
 
 # Table of contents
 
-    ## Warning in get_source(x, text_field = text_field, docid_field = docid_field, : Unsupported extension 'rmd' of file ./README.Rmd treating as plain text.
+    FALSE Warning in get_source(x, text_field = text_field, docid_field = docid_field, : Unsupported extension 'rmd' of file ./README.Rmd treating as plain text.
 
 > -   [*Contribute to this repo and community `.bib`
 >     file*](#contribute-to-this-repo-and-community-%60.bib%60-file)
@@ -204,15 +204,15 @@ PKG <- tibble::tibble(
 head(PKG)
 ```
 
-    ## # A tibble: 6 × 2
-    ##   Package      Version
-    ##   <chr>        <chr>  
-    ## 1 abind        1.4-5  
-    ## 2 adehabitatMA 0.3.15 
-    ## 3 akgfmaps     2.2.1  
-    ## 4 antiword     1.3.1  
-    ## 5 ape          5.6-2  
-    ## 6 asciicast    2.2.0
+    FALSE # A tibble: 6 × 2
+    FALSE   Package      Version
+    FALSE   <chr>        <chr>  
+    FALSE 1 abind        1.4-5  
+    FALSE 2 adehabitatMA 0.3.15 
+    FALSE 3 akgfmaps     2.2.1  
+    FALSE 4 antiword     1.3.1  
+    FALSE 5 ape          5.6-2  
+    FALSE 6 asciicast    2.2.0
 
 Here is how the user can find all of the packages ever installed on the
 local computer
@@ -222,9 +222,9 @@ PKG <- names(sessionInfo()[7][[1]])
 PKG
 ```
 
-    ##  [1] "fansi"      "utf8"       "digest"     "R6"         "lifecycle"  "magrittr"   "evaluate"   "pillar"     "httr"       "rlang"      "stringi"    "cli"       
-    ## [13] "data.table" "rstudioapi" "vctrs"      "rmarkdown"  "tools"      "stringr"    "glue"       "xfun"       "yaml"       "fastmap"    "compiler"   "pkgconfig" 
-    ## [25] "readtext"   "htmltools"  "knitr"      "tibble"
+    FALSE  [1] "fansi"      "utf8"       "digest"     "R6"         "lifecycle"  "magrittr"   "evaluate"   "pillar"     "httr"       "rlang"      "stringi"    "cli"       
+    FALSE [13] "data.table" "rstudioapi" "vctrs"      "rmarkdown"  "tools"      "stringr"    "glue"       "xfun"       "yaml"       "fastmap"    "compiler"   "pkgconfig" 
+    FALSE [25] "readtext"   "htmltools"  "knitr"      "tibble"
 
 Then to cite the packages loaded for this R project, create a .bib file
 for R packages:
@@ -236,10 +236,10 @@ knitr::write_bib(x = PKG,
 
 *Which looks like*
 
-    ## [1] "@Manual{R-cli,"                                                   "  title = {cli: Helpers for Developing Command Line Interfaces},"
-    ## [3] "  author = {Gábor Csárdi},"                                       "  year = {2022},"                                                
-    ## [5] "  note = {R package version 3.4.1},"                              "  url = {https://CRAN.R-project.org/package=cli},"               
-    ## [7] "}"                                                                ""
+    FALSE [1] "@Manual{R-cli,"                                                   "  title = {cli: Helpers for Developing Command Line Interfaces},"
+    FALSE [3] "  author = {Gábor Csárdi},"                                       "  year = {2022},"                                                
+    FALSE [5] "  note = {R package version 3.4.1},"                              "  url = {https://CRAN.R-project.org/package=cli},"               
+    FALSE [7] "}"                                                                ""
 
 And add your new bibliography file to your YAML:
 
@@ -269,24 +269,24 @@ repository](https://github.com/afsc-gap-products/citations/issues).
 sessionInfo()
 ```
 
-    ## R version 4.2.0 (2022-04-22 ucrt)
-    ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-    ## Running under: Windows 10 x64 (build 19044)
-    ## 
-    ## Matrix products: default
-    ## 
-    ## locale:
-    ## [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
-    ## [5] LC_TIME=English_United States.utf8    
-    ## 
-    ## attached base packages:
-    ## [1] stats     graphics  grDevices utils     datasets  methods   base     
-    ## 
-    ## loaded via a namespace (and not attached):
-    ##  [1] fansi_1.0.3       utf8_1.2.2        digest_0.6.30     R6_2.5.1          lifecycle_1.0.3   magrittr_2.0.3    evaluate_0.18     pillar_1.8.1      httr_1.4.4       
-    ## [10] rlang_1.0.6       stringi_1.7.8     cli_3.4.1         data.table_1.14.4 rstudioapi_0.14   vctrs_0.5.0       rmarkdown_2.18    tools_4.2.0       stringr_1.4.1    
-    ## [19] glue_1.6.2        xfun_0.34         yaml_2.3.6        fastmap_1.1.0     compiler_4.2.0    pkgconfig_2.0.3   readtext_0.81     htmltools_0.5.3   knitr_1.40       
-    ## [28] tibble_3.1.8
+    FALSE R version 4.2.0 (2022-04-22 ucrt)
+    FALSE Platform: x86_64-w64-mingw32/x64 (64-bit)
+    FALSE Running under: Windows 10 x64 (build 19044)
+    FALSE 
+    FALSE Matrix products: default
+    FALSE 
+    FALSE locale:
+    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
+    FALSE [5] LC_TIME=English_United States.utf8    
+    FALSE 
+    FALSE attached base packages:
+    FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
+    FALSE 
+    FALSE loaded via a namespace (and not attached):
+    FALSE  [1] fansi_1.0.3       utf8_1.2.2        digest_0.6.30     R6_2.5.1          lifecycle_1.0.3   magrittr_2.0.3    evaluate_0.18     pillar_1.8.1      httr_1.4.4       
+    FALSE [10] rlang_1.0.6       stringi_1.7.8     cli_3.4.1         data.table_1.14.4 rstudioapi_0.14   vctrs_0.5.0       rmarkdown_2.18    tools_4.2.0       stringr_1.4.1    
+    FALSE [19] glue_1.6.2        xfun_0.34         yaml_2.3.6        fastmap_1.1.0     compiler_4.2.0    pkgconfig_2.0.3   readtext_0.81     htmltools_0.5.3   knitr_1.40       
+    FALSE [28] tibble_3.1.8
 
 ## NOAA README
 
