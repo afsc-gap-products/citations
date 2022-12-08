@@ -38,11 +38,9 @@ Seattle, WA 98195
 > -   [*Contribute to this repo and community `.bib`
 >     file*](#contribute-to-this-repo-and-community-%60.bib%60-file)
 > -   [*Citation style guides*](#citation-style-guides)
-> -   [*How to cite using these `.bib` and `.csl`
->     files*](#how-to-cite-using-these-%60.bib%60-and-%60.csl%60-files)
-> -   [*As local files:*](#as-local-files:)
-> -   [*Sourcing directly from github (requires internet
->     access):*](#sourcing-directly-from-github-(requires-internet-access):)
+> -   [*How to cite*](#how-to-cite)
+> -   [*As local files*](#as-local-files)
+> -   [*Sourcing directly from github*](#sourcing-directly-from-github)
 > -   [*Citation files in action*](#citation-files-in-action)
 > -   [*Cite R packages used in a
 >     project*](#cite-r-packages-used-in-a-project)
@@ -77,7 +75,7 @@ independent open source Citation Style Language (CSL) project aims to
 facilitate scholarly communication by automating the formatting of
 citations and bibliographies.
 
-# How to cite using these `.bib` and `.csl` files
+# How to cite
 
 Add the link to the
 [`.bib`](https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib)
@@ -85,7 +83,7 @@ and
 [`.csl`](https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl)
 files in the YAML of your `rmarkdown` ro `quarto` file like so:
 
-## As local files:
+## As local files
 
 Note that “../” before the file names refers to directory navigation.
 
@@ -110,10 +108,11 @@ bib <- readLines("https://github.com/afsc-gap-products/citations/blob/main/cite/
 readr::write_lines(x = bib, file = "./cite/bibliography.csl")
 ```
 
-## Sourcing directly from github (requires internet access):
+## Sourcing directly from github
 
-Sourcing directly from this repo ensures that you will always have the
-most up to date citation style library and bibliography references.
+Sourcing directly from github requires internet access, but ensures that
+you will always have the most up to date citation style library and
+bibliography references.
 
 ``` r
 ---
@@ -228,6 +227,13 @@ Then to cite them, create a .bib file for R packages:
 knitr::write_bib(x = PKG,
                  file = "./cite/bibliography_RPack.bib")
 ```
+
+*Which looks like*
+
+    ## [1] "@Manual{R-cli,"                                                   "  title = {cli: Helpers for Developing Command Line Interfaces},"
+    ## [3] "  author = {Gábor Csárdi},"                                       "  year = {2022},"                                                
+    ## [5] "  note = {R package version 3.4.1},"                              "  url = {https://CRAN.R-project.org/package=cli},"               
+    ## [7] "}"                                                                ""
 
 # Suggestions and Comments
 

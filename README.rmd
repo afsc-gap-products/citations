@@ -70,11 +70,11 @@ The NOAA Library now recommends that we use [American Psychological Association 
 
 The citation style guide for APA 7th can be downloaded from [github](https://github.com/citation-style-language/styles). This independent open source Citation Style Language (CSL) project aims to facilitate scholarly communication by automating the formatting of citations and bibliographies. 
 
-# How to cite using these `.bib` and `.csl` files
+# How to cite
 
 Add the link to the [`.bib`](https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib) and [`.csl`](https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl) files in the YAML of your `rmarkdown` ro `quarto` file like so:
 
-## As local files:
+## As local files
 
 Note that "../" before the file names refers to directory navigation. 
 
@@ -99,9 +99,9 @@ bib <- readLines("https://github.com/afsc-gap-products/citations/blob/main/cite/
 readr::write_lines(x = bib, file = "./cite/bibliography.csl")
 ```
 
-## Sourcing directly from github (requires internet access):
+## Sourcing directly from github
 
-Sourcing directly from this repo ensures that you will always have the most up to date citation style library and bibliography references. 
+Sourcing directly from github requires internet access, but ensures that you will always have the most up to date citation style library and bibliography references. 
 
 ```{r, eval = FALSE, echo = TRUE}
 ---
@@ -159,6 +159,12 @@ Then to cite them, create a .bib file for R packages:
 ```{r, echo = TRUE, eval = TRUE}
 knitr::write_bib(x = PKG,
                  file = "./cite/bibliography_RPack.bib")
+```
+
+*Which looks like*
+
+```{r, eval = TRUE, echo = FALSE}
+readLines(con = "./cite/bibliography_RPack.bib", n = 8)
 ```
 
 # Suggestions and Comments
