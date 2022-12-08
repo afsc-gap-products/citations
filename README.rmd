@@ -178,7 +178,6 @@ Journal abbreviations can be found through the [Web of Science](https://images.w
 ...
 ```
 
-
 ## Bibliography examples
 
 To make sure all bibliography listed in the `.bib` file are consistent, please refer to these common bibliography types and examples: 
@@ -264,11 +263,24 @@ To make sure all bibliography listed in the `.bib` file are consistent, please r
 
 > Example coming soon! (e.g., FOSS)
 
-### Citing in-house built R packages
+### R packages built in-house
 
 For packages not on CRAN, package builders can use [Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to cite their R packages. 
 
-> Example coming soon! (e.g., {coldpool})
+The [{trawllight}](https://zenodo.org/record/3688864#.Y5JIjHbMJnI) created by @sean-rohan-NOAA has a citation on zenodo that can be cited like below. 
+
+```{r, eval = FALSE, echo=TRUE}
+@software{sean_rohan_2020_3688864,
+  author       = {sean-rohan},
+  title        = {sean-rohan/trawllight: trawllight},
+  month        = feb,
+  year         = 2020,
+  publisher    = {Zenodo},
+  version      = {1.1.0},
+  doi          = {10.5281/zenodo.3688864},
+  url          = {https://doi.org/10.5281/zenodo.3688864}
+}
+```
 
 ### Legislation
 

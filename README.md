@@ -60,8 +60,7 @@ Seattle, WA 98195
 >         -   [*Journal articles *](#journal-articles-)
 >         -   [*Presentations*](#presentations)
 >         -   [*Data*](#data)
->         -   [*Citing in-house built R
->             packages*](#citing-in-house-built-r-packages)
+>         -   [*R packages built in-house*](#r-packages-built-in-house)
 >         -   [*Legislation*](#legislation)
 >         -   [*Web pages*](#web-pages)
 >         -   [*Books*](#books)
@@ -346,13 +345,28 @@ please refer to these common bibliography types and examples:
 
 > Example coming soon! (e.g., FOSS)
 
-### Citing in-house built R packages
+### R packages built in-house
 
 For packages not on CRAN, package builders can use
 [Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
 to cite their R packages.
 
-> Example coming soon! (e.g., {coldpool})
+The [{trawllight}](https://zenodo.org/record/3688864#.Y5JIjHbMJnI)
+created by (**sean-rohan-NOAA?**) has a citation on zenodo that can be
+cited like below.
+
+``` r
+@software{sean_rohan_2020_3688864,
+  author       = {sean-rohan},
+  title        = {sean-rohan/trawllight: trawllight},
+  month        = feb,
+  year         = 2020,
+  publisher    = {Zenodo},
+  version      = {1.1.0},
+  doi          = {10.5281/zenodo.3688864},
+  url          = {https://doi.org/10.5281/zenodo.3688864}
+}
+```
 
 ### Legislation
 
