@@ -40,7 +40,8 @@ Seattle, WA 98195
 # Table of contents
 
 > -   [*Citation style guides*](#citation-style-guides)
-> -   [*How to cite*](#how-to-cite)
+> -   [*How to use this citation
+>     resouce*](#how-to-use-this-citation-resouce)
 >     -   [*As local files*](#as-local-files)
 >     -   [*Sourcing directly from
 >         github*](#sourcing-directly-from-github)
@@ -89,7 +90,7 @@ independent open source Citation Style Language (CSL) project aims to
 facilitate scholarly communication by automating the formatting of
 citations and bibliographies.
 
-# How to cite
+# How to use this citation resouce
 
 Add the link to the
 [`.bib`](https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib)
@@ -444,7 +445,7 @@ PKG <- names(sessionInfo()[7][[1]])
 PKG
 ```
 
-    FALSE [1] "remotes"
+    FALSE [1] "trawllight" "ggplot2"    "remotes"
 
 Then to cite the packages loaded for this R project, create a .bib file
 for R packages:
@@ -454,16 +455,18 @@ knitr::write_bib(x = PKG,
                  file = "./cite/bibliography_RPack.bib")
 ```
 
+    FALSE Warning in utils::citation(..., lib.loc = lib.loc): no date field in DESCRIPTION file of package 'trawllight'
+
 *Which looks like*
 
-    FALSE [1] "@Manual{R-remotes,"                                                                                                
-    FALSE [2] "  title = {remotes: R Package Installation from Remote Repositories, Including"                                    
-    FALSE [3] "GitHub},"                                                                                                          
-    FALSE [4] "  author = {Gábor Csárdi and Jim Hester and Hadley Wickham and Winston Chang and Martin Morgan and Dan Tenenbaum},"
-    FALSE [5] "  year = {2021},"                                                                                                  
-    FALSE [6] "  note = {R package version 2.4.2},"                                                                               
-    FALSE [7] "  url = {https://CRAN.R-project.org/package=remotes},"                                                             
-    FALSE [8] "}"
+    FALSE [1] "@Manual{R-ggplot2,"                                                                                                                                                               
+    FALSE [2] "  title = {ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics},"                                                                                           
+    FALSE [3] "  author = {Hadley Wickham and Winston Chang and Lionel Henry and Thomas Lin Pedersen and Kohske Takahashi and Claus Wilke and Kara Woo and Hiroaki Yutani and Dewey Dunnington},"
+    FALSE [4] "  year = {2022},"                                                                                                                                                                 
+    FALSE [5] "  note = {R package version 3.4.0},"                                                                                                                                              
+    FALSE [6] "  url = {https://CRAN.R-project.org/package=ggplot2},"                                                                                                                            
+    FALSE [7] "}"                                                                                                                                                                                
+    FALSE [8] ""
 
 And add your new bibliography file to your YAML:
 
@@ -507,14 +510,15 @@ sessionInfo()
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
     FALSE other attached packages:
-    FALSE [1] remotes_2.4.2
+    FALSE [1] trawllight_3.1.6 ggplot2_3.4.0    remotes_2.4.2   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] rstudioapi_0.14   knitr_1.40        magrittr_2.0.3    R6_2.5.1          rlang_1.0.6       fastmap_1.1.0     fansi_1.0.3       stringr_1.5.0     httr_1.4.4       
-    FALSE [10] tools_4.2.0       pkgbuild_1.3.1    data.table_1.14.4 xfun_0.34         utf8_1.2.2        cli_3.4.1         withr_2.5.0       htmltools_0.5.3   rprojroot_2.0.3  
-    FALSE [19] yaml_2.3.6        digest_0.6.30     tibble_3.1.8      lifecycle_1.0.3   crayon_1.5.2      processx_3.8.0    callr_3.7.3       ps_1.7.2          vctrs_0.5.0      
-    FALSE [28] curl_4.3.3        glue_1.6.2        evaluate_0.18     rmarkdown_2.18    stringi_1.7.8     compiler_4.2.0    pillar_1.8.1      prettyunits_1.1.1 readtext_0.81    
-    FALSE [37] pkgconfig_2.0.3
+    FALSE  [1] pillar_1.8.1      compiler_4.2.0    prettyunits_1.1.1 tools_4.2.0       readtext_0.81     digest_0.6.30     pkgbuild_1.3.1    gtable_0.3.1      evaluate_0.18    
+    FALSE [10] lifecycle_1.0.3   tibble_3.1.8      pkgconfig_2.0.3   rlang_1.0.6       DBI_1.1.3         cli_3.4.1         rstudioapi_0.14   curl_4.3.3        yaml_2.3.6       
+    FALSE [19] xfun_0.34         fastmap_1.1.0     stringr_1.5.0     dplyr_1.0.10      withr_2.5.0       httr_1.4.4        knitr_1.40        generics_0.1.3    vctrs_0.5.0      
+    FALSE [28] tidyselect_1.2.0  rprojroot_2.0.3   grid_4.2.0        glue_1.6.2        data.table_1.14.4 R6_2.5.1          processx_3.8.0    fansi_1.0.3       rmarkdown_2.18   
+    FALSE [37] callr_3.7.3       magrittr_2.0.3    scales_1.2.1      ps_1.7.2          htmltools_0.5.3   assertthat_0.2.1  colorspace_2.0-3  utf8_1.2.2        stringi_1.7.8    
+    FALSE [46] munsell_0.5.0     crayon_1.5.2
 
 ## NOAA README
 

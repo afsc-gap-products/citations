@@ -68,7 +68,7 @@ The NOAA Library now recommends that we use [American Psychological Association 
 
 The citation style guide for APA 7th can be downloaded from [github](https://github.com/citation-style-language/styles). This independent open source Citation Style Language (CSL) project aims to facilitate scholarly communication by automating the formatting of citations and bibliographies. 
 
-# How to cite
+# How to use this citation resouce
 
 Add the link to the [`.bib`](https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib) and [`.csl`](https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl) files in the YAML of your `rmarkdown` ro `quarto` file like so:
 
