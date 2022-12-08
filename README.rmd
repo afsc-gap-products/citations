@@ -282,7 +282,7 @@ To use the citation:
 
 ```{r, echo = TRUE, eval = FALSE}
 library(trawllight)
-utils::citation(trawllight)
+utils::citation("trawllight")
 ```
 
 **From Zenodo**

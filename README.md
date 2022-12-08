@@ -369,7 +369,7 @@ To use the citation:
 
 ``` r
 library(trawllight)
-utils::citation(trawllight)
+utils::citation("trawllight")
 ```
 
 **From Zenodo**
