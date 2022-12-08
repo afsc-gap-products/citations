@@ -216,6 +216,11 @@ speaking to one of the repository maintainers.
 
 ## Bibliography syntax notes
 
+To learn more about the elements of a bibtext citation, refer to:
+
+-   <https://www.bibtex.com/g/bibtex-format/>
+-   <https://libguides.nps.edu/citation/ieee-bibtex>
+
 ### Finding pre-formatted citations
 
 While not perfect, the below resources can use DOIs or other paper
