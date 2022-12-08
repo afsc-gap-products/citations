@@ -5,6 +5,10 @@
 The scripts therein reproducibly produce our citations for our data,
 annual data reports, presentations, and other outreach documents.
 
+> This code is always in development. Find code used for various reports
+> in the code
+> [releases](paste0(https://github.com/afsc-gap-products/citations,%20%22/releases%22)).
+
 ## This code is primarally maintained by:
 
 **Emily Markowitz** (Emily.Markowitz AT noaa.gov;
@@ -27,27 +31,22 @@ National Oceanic and Atmospheric Administration,
 
 Seattle, WA 98195
 
-> This code is always in development. Find code used for various reports
-> in the code
-> [releases](paste0(https://github.com/afsc-gap-products/citations,%20%22/releases%22)).
-
 # Table of contents
-
-    FALSE Warning in get_source(x, text_field = text_field, docid_field = docid_field, : Unsupported extension 'rmd' of file ./README.Rmd treating as plain text.
 
 > -   [*Contribute to this repo and community `.bib`
 >     file*](#contribute-to-this-repo-and-community-%60.bib%60-file)
 > -   [*Citation style guides*](#citation-style-guides)
 > -   [*How to cite*](#how-to-cite)
-> -   [*As local files*](#as-local-files)
-> -   [*Sourcing directly from github*](#sourcing-directly-from-github)
+>     -   [*As local files*](#as-local-files)
+>     -   [*Sourcing directly from
+>         github*](#sourcing-directly-from-github)
 > -   [*Citation files in action*](#citation-files-in-action)
 > -   [*Cite R packages used in a
 >     project*](#cite-r-packages-used-in-a-project)
 > -   [*Suggestions and Comments*](#suggestions-and-comments)
 > -   [*R Version Metadata*](#r-version-metadata)
-> -   [*NOAA README*](#noaa-readme)
-> -   [*NOAA License*](#noaa-license)
+>     -   [*NOAA README*](#noaa-readme)
+>     -   [*NOAA License*](#noaa-license)
 
 # Contribute to this repo and community `.bib` file
 
