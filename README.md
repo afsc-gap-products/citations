@@ -219,9 +219,15 @@ local computer
 
 ``` r
 PKG <- names(sessionInfo()[7][[1]])
+PKG
 ```
 
-Then to cite them, create a .bib file for R packages:
+    ##  [1] "fansi"      "utf8"       "digest"     "R6"         "lifecycle"  "magrittr"   "evaluate"   "pillar"     "httr"       "rlang"      "stringi"    "cli"       
+    ## [13] "data.table" "rstudioapi" "vctrs"      "rmarkdown"  "tools"      "stringr"    "glue"       "xfun"       "yaml"       "fastmap"    "compiler"   "pkgconfig" 
+    ## [25] "readtext"   "htmltools"  "knitr"      "tibble"
+
+Then to cite the packages loaded for this R project, create a .bib file
+for R packages:
 
 ``` r
 knitr::write_bib(x = PKG,
@@ -234,6 +240,18 @@ knitr::write_bib(x = PKG,
     ## [3] "  author = {Gábor Csárdi},"                                       "  year = {2022},"                                                
     ## [5] "  note = {R package version 3.4.1},"                              "  url = {https://CRAN.R-project.org/package=cli},"               
     ## [7] "}"                                                                ""
+
+And add your new bibliography file to your YAML:
+
+``` r
+---
+title: "untitled"
+date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
+output: html_document
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
+bibliography: "../cite/bibliography_RPack.bib"
+---
+```
 
 # Suggestions and Comments
 

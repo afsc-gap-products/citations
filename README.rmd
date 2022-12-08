@@ -152,9 +152,10 @@ Here is how the user can find all of the packages ever installed on the local co
 
 ```{r, eval = TRUE, echo = TRUE}
 PKG <- names(sessionInfo()[7][[1]])
+PKG
 ```
 
-Then to cite them, create a .bib file for R packages:
+Then to cite the packages loaded for this R project, create a .bib file for R packages:
 
 ```{r, echo = TRUE, eval = TRUE}
 knitr::write_bib(x = PKG,
@@ -165,6 +166,18 @@ knitr::write_bib(x = PKG,
 
 ```{r, eval = TRUE, echo = FALSE}
 readLines(con = "./cite/bibliography_RPack.bib", n = 8)
+```
+And add your new bibliography file to your YAML:
+
+```{r, eval = FALSE, echo = TRUE}
+---
+title: "untitled"
+date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
+output: html_document
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
+bibliography: "../cite/bibliography_RPack.bib"
+---
+
 ```
 
 # Suggestions and Comments
