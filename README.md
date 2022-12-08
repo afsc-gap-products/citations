@@ -372,6 +372,23 @@ library(trawllight)
 utils::citation("trawllight")
 ```
 
+    FALSE Warning in utils::citation("trawllight"): no date field in DESCRIPTION file of package 'trawllight'
+
+    FALSE 
+    FALSE To cite package 'trawllight' in publications use:
+    FALSE 
+    FALSE   Rohan S, Laman N (2022). _trawllight: Derive apparent optical properties from trawl-mounted light sensors_. R package version 3.1.6.
+    FALSE 
+    FALSE A BibTeX entry for LaTeX users is
+    FALSE 
+    FALSE   @Manual{,
+    FALSE     title = {trawllight: Derive apparent optical properties from trawl-mounted light
+    FALSE sensors},
+    FALSE     author = {Sean Rohan and Ned Laman},
+    FALSE     year = {2022},
+    FALSE     note = {R package version 3.1.6},
+    FALSE   }
+
 **From Zenodo**
 
 For packages not on CRAN, package builders can use

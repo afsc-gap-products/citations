@@ -280,7 +280,7 @@ remotes::install_github("afsc-gap-products/trawllight")
 
 To use the citation: 
 
-```{r, echo = TRUE, eval = FALSE}
+```{r, echo = TRUE, eval = TRUE}
 library(trawllight)
 utils::citation("trawllight")
 ```
