@@ -67,7 +67,7 @@ Seattle, WA 98195
 > -   [*Cite all R packages on a computer or used in a
 >     project*](#cite-all-r-packages-on-a-computer-or-used-in-a-project)
 > -   [*Suggestions and Comments*](#suggestions-and-comments)
-> -   [*R Version Metadata*](#r-version-metadata)
+>     -   [*R Version Metadata*](#r-version-metadata)
 >     -   [*NOAA README*](#noaa-readme)
 >     -   [*NOAA License*](#noaa-license)
 
@@ -347,24 +347,40 @@ please refer to these common bibliography types and examples:
 
 ### R packages built in-house
 
+**From suggested citations**
+
+To find the citation:
+
+``` r
+require(remotes)
+remotes::install_github("afsc-gap-products/trawllight")
+```
+
+``` r
+library(trawllight)
+utils::citation(trawllight)
+```
+
+**From Zenodo**
+
 For packages not on CRAN, package builders can use
 [Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
 to cite their R packages.
 
-The [{trawllight}](https://zenodo.org/record/3688864#.Y5JIjHbMJnI)
-created by (**sean-rohan-NOAA?**) has a citation on zenodo that can be
-cited like below.
+The [{trawllight}](https://zenodo.org/record/3700877) created by
+[@sean-rohan-NOAA](https://github.com/sean-rohan-NOAA) has a citation on
+zenodo that can be cited like below.
 
 ``` r
-@software{sean_rohan_2020_3688864,
+@software{sean_rohan_2020_3700877,
   author       = {sean-rohan},
-  title        = {sean-rohan/trawllight: trawllight},
-  month        = feb,
+  title        = {sean-rohan/trawllight: Light conversion features},
+  month        = mar,
   year         = 2020,
   publisher    = {Zenodo},
-  version      = {1.1.0},
-  doi          = {10.5281/zenodo.3688864},
-  url          = {https://doi.org/10.5281/zenodo.3688864}
+  version      = {1.2.0},
+  doi          = {10.5281/zenodo.3700877},
+  url          = {https://doi.org/10.5281/zenodo.3700877}
 }
 ```
 
@@ -418,9 +434,7 @@ PKG <- names(sessionInfo()[7][[1]])
 PKG
 ```
 
-    FALSE  [1] "fansi"      "digest"     "utf8"       "R6"         "lifecycle"  "magrittr"   "evaluate"   "pillar"     "httr"       "rlang"      "stringi"    "cli"       
-    FALSE [13] "data.table" "rstudioapi" "vctrs"      "rmarkdown"  "tools"      "stringr"    "glue"       "yaml"       "fastmap"    "xfun"       "compiler"   "pkgconfig" 
-    FALSE [25] "readtext"   "htmltools"  "knitr"      "tibble"
+    FALSE [1] "remotes"
 
 Then to cite the packages loaded for this R project, create a .bib file
 for R packages:
@@ -432,10 +446,14 @@ knitr::write_bib(x = PKG,
 
 *Which looks like*
 
-    FALSE [1] "@Manual{R-cli,"                                                   "  title = {cli: Helpers for Developing Command Line Interfaces},"
-    FALSE [3] "  author = {Gábor Csárdi},"                                       "  year = {2022},"                                                
-    FALSE [5] "  note = {R package version 3.4.1},"                              "  url = {https://CRAN.R-project.org/package=cli},"               
-    FALSE [7] "}"                                                                ""
+    FALSE [1] "@Manual{R-remotes,"                                                                                                
+    FALSE [2] "  title = {remotes: R Package Installation from Remote Repositories, Including"                                    
+    FALSE [3] "GitHub},"                                                                                                          
+    FALSE [4] "  author = {Gábor Csárdi and Jim Hester and Hadley Wickham and Winston Chang and Martin Morgan and Dan Tenenbaum},"
+    FALSE [5] "  year = {2021},"                                                                                                  
+    FALSE [6] "  note = {R package version 2.4.2},"                                                                               
+    FALSE [7] "  url = {https://CRAN.R-project.org/package=remotes},"                                                             
+    FALSE [8] "}"
 
 And add your new bibliography file to your YAML:
 
@@ -459,7 +477,7 @@ organization](https://github.com/afsc-gap-products/data-requests/issues),
 or [submit an issue to the code’s
 repository](https://github.com/afsc-gap-products/citations/issues).
 
-# R Version Metadata
+## R Version Metadata
 
 ``` r
 sessionInfo()
@@ -478,11 +496,15 @@ sessionInfo()
     FALSE attached base packages:
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
+    FALSE other attached packages:
+    FALSE [1] remotes_2.4.2
+    FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] fansi_1.0.3       digest_0.6.30     utf8_1.2.2        R6_2.5.1          lifecycle_1.0.3   magrittr_2.0.3    evaluate_0.18     pillar_1.8.1      httr_1.4.4       
-    FALSE [10] rlang_1.0.6       stringi_1.7.8     cli_3.4.1         data.table_1.14.4 rstudioapi_0.14   vctrs_0.5.0       rmarkdown_2.18    tools_4.2.0       stringr_1.4.1    
-    FALSE [19] glue_1.6.2        yaml_2.3.6        fastmap_1.1.0     xfun_0.34         compiler_4.2.0    pkgconfig_2.0.3   readtext_0.81     htmltools_0.5.3   knitr_1.40       
-    FALSE [28] tibble_3.1.8
+    FALSE  [1] rstudioapi_0.14   knitr_1.40        magrittr_2.0.3    R6_2.5.1          rlang_1.0.6       fastmap_1.1.0     fansi_1.0.3       stringr_1.5.0     httr_1.4.4       
+    FALSE [10] tools_4.2.0       pkgbuild_1.3.1    data.table_1.14.4 xfun_0.34         utf8_1.2.2        cli_3.4.1         withr_2.5.0       htmltools_0.5.3   rprojroot_2.0.3  
+    FALSE [19] yaml_2.3.6        digest_0.6.30     tibble_3.1.8      lifecycle_1.0.3   crayon_1.5.2      processx_3.8.0    callr_3.7.3       ps_1.7.2          vctrs_0.5.0      
+    FALSE [28] curl_4.3.3        glue_1.6.2        evaluate_0.18     rmarkdown_2.18    stringi_1.7.8     compiler_4.2.0    pillar_1.8.1      prettyunits_1.1.1 readtext_0.81    
+    FALSE [37] pkgconfig_2.0.3
 
 ## NOAA README
 
