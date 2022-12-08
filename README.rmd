@@ -184,6 +184,8 @@ To make sure all bibliography listed in the `.bib` file are consistent, please r
 
 ### NOAA technical memorandums/process reports
 
+NOAA publications are listed and searchable on the NOAA website and [AFSC website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-science-center-publications). 
+
 ```{r, eval = FALSE, echo=TRUE}
 @article{RN888,
    author = {Alton, M. S. and Bakkala, R. G. and Walters G. E. and Munro, P. T.},

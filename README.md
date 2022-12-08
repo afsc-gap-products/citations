@@ -266,6 +266,10 @@ please refer to these common bibliography types and examples:
 
 ### NOAA technical memorandums/process reports
 
+NOAA publications are listed and searchable on the NOAA website and
+[AFSC
+website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-science-center-publications).
+
 ``` r
 @article{RN888,
    author = {Alton, M. S. and Bakkala, R. G. and Walters G. E. and Munro, P. T.},
@@ -349,12 +353,18 @@ please refer to these common bibliography types and examples:
 
 **From suggested citations**
 
+The {trawllight} created by
+[@sean-rohan-NOAA](https://github.com/sean-rohan-NOAA) has a built in
+citation that can be cited like below.
+
 To find the citation:
 
 ``` r
 require(remotes)
 remotes::install_github("afsc-gap-products/trawllight")
 ```
+
+To use the citation:
 
 ``` r
 library(trawllight)
