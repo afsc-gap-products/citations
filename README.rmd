@@ -39,7 +39,7 @@ National Marine Fisheries Service,
 
 National Oceanic and Atmospheric Administration,
 
-Seattle, WA 98195
+Seattle, WA 98115
 
 # Table of contents
 
@@ -137,7 +137,7 @@ Naturally, without writing anything else, references will appear at the of the d
 
 # Contribute to this repo and community `.bib` file
 
-This repository is meant to act as a resource for all members of GAP and beyond. Do you see that a citation is missing from our `.bib` file or you have a new publication? Please add it by submitting a [pull request](`r paste0(link_repo, "/pulls")`) or speaking to one of the repository maintainers. 
+This repository is meant to act as a resource for all members of GAP and beyond. Do you see that a citation is missing from our `.bib` file, needs to be edited or you have a new publication? Please add it by submitting a [pull request](`r paste0(link_repo, "/pulls")`) or speaking to one of the repository maintainers. 
 
 ## Bibliography syntax notes
 
@@ -178,7 +178,9 @@ NOAA publications are listed and searchable on the NOAA website and [AFSC websit
    publisher = {{U.S. Dep. Commer.}},
    year = {2022},
    type = {NOAA Tech. Memo.},
-   copyright = {Public domain}
+   copyright = {Public domain},
+   doi = {https://doi.org/10.25923/g1ny-y360},
+   number = {NMFS-AFSC-452}
 }
 
 @article{RN920,
@@ -200,7 +202,7 @@ NOAA publications are listed and searchable on the NOAA website and [AFSC websit
    booktitle = {Proceedings of the symposium on application of stock assessment techniques applies to gadids},
    publisher = {International Northern {Pacific} Fisheries Communication Bulletin},
    volume = {50},
-   pages = {p. 57-67},
+   pages = {57-67},
    year = {1990},
    type = {Conference Proceedings}
 }
@@ -226,7 +228,7 @@ NOAA publications are listed and searchable on the NOAA website and [AFSC websit
   publisher = {Wiley},
    volume = {17},
    number = {5},
-   pages = {p. 396-410},
+   pages = {396-410},
    ISSN = {1054-6006},
    year = {2008}
 }
