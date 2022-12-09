@@ -49,11 +49,6 @@ Seattle, WA 98195
 > -   [*Contribute to this repo and community `.bib`
 >     file*](#contribute-to-this-repo-and-community-%60.bib%60-file)
 >     -   [*Bibliography syntax notes*](#bibliography-syntax-notes)
->         -   [*Finding pre-formatted
->             citations*](#finding-pre-formatted-citations)
->         -   [*Forced case-sensitivity*](#forced-case-sensitivity)
->         -   [*listing DOIs*](#listing-dois)
->         -   [*Use Journal abbreviations*](#use-journal-abbreviations)
 >     -   [*Bibliography examples*](#bibliography-examples)
 >         -   [*NOAA technical memorandums/process
 >             reports*](#noaa-technical-memorandums/process-reports)
@@ -219,51 +214,30 @@ speaking to one of the repository maintainers.
 To learn more about the elements of a bibtext citation, refer to:
 
 -   <https://www.bibtex.com/g/bibtex-format/>
+
 -   <https://libguides.nps.edu/citation/ieee-bibtex>
 
-### Finding pre-formatted citations
+-   **Finding pre-formatted citations**: While not perfect, the below
+    resources can use DOIs or other paper identifiers to find and
+    construct bibliographies in the right format for you:
 
-While not perfect, the below resources can use DOIs or other paper
-identifiers to find and construct bibliographies in the right format for
-you:
+    -   <https://www.doi2bib.org/>
+    -   <https://zbib.org/>
 
--   <https://www.doi2bib.org/>
--   <https://zbib.org/>
+-   **Forced case-sensitivity**: Use `{...}` to force capitalization.
+    This may be needed for proper nouns. For example
+    `title = {Results of the 2021 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna}`,\`.
 
-### Forced case-sensitivity
+-   **Listing DOIs**: While the whole link for a DOI may be
+    <https://doi.org/10.25923/9c3r-xp53>, only list the text after the
+    “<https://doi.org/>” in the `.bib` file as such:
+    `doi = {10.25923/9C3R-XP53}`.
 
-Use `{...}` to force capitalization. This may be needed for proper
-nouns.
-
-``` r
-...
-   title = {Results of the 2021 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna},
-...
-```
-
-### listing DOIs
-
-While the whole link for a DOI may be
-<https://doi.org/10.25923/9c3r-xp53>, only list the text after the
-“<https://doi.org/>” in the `.bib` file.
-
-``` r
-...
-  doi = {10.25923/9C3R-XP53},
-...
-```
-
-### Use Journal abbreviations
-
-Journal abbreviations can be found through the [Web of
-Science](https://images.webofknowledge.com/images/help/WOS/A_abrvjt.html)
-for any given scientific journal.
-
-``` r
-...
-  journal = {Fish. Oceanogr.},
-...
-```
+-   **Use Journal abbreviations**: Journal abbreviations can be found
+    through the [Web of
+    Science](https://images.webofknowledge.com/images/help/WOS/A_abrvjt.html)
+    for any given scientific journal as such
+    `journal = {Fish. Oceanogr.}`.
 
 ## Bibliography examples
 
