@@ -74,6 +74,16 @@ Add the link to the [`.bib`](https://github.com/afsc-gap-products/citations/blob
 
 ## As local files
 
+To download the CSL and save it to your project, you can use the following code:
+
+```{r, eval = FALSE, echo = TRUE}
+csl <- readLines("https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl")
+readr::write_lines(x = csl, file = "./cite/citestyle.csl")
+
+bib <- readLines("https://raw.githubusercontent.com/afsc-gap-products/citations/main/cite/bibliography.bib")
+readr::write_lines(x = bib, file = "./cite/bibliography.csl")
+```
+
 Note that "../" before the file names refers to directory navigation. 
 
 ```{r, eval = FALSE, echo = TRUE}
@@ -87,15 +97,6 @@ bibliography: "../cite/bibliography.bib"
 
 ```
 
-To download the CSL and save it to your project, you can use the following code:
-
-```{r, eval = FALSE, echo = TRUE}
-csl <- readLines("https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl")
-readr::write_lines(x = csl, file = "./cite/citestyle.csl")
-
-bib <- readLines("https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib")
-readr::write_lines(x = bib, file = "./cite/bibliography.csl")
-```
 
 ## Sourcing directly from github
 
@@ -107,7 +108,7 @@ title: "untitled"
 date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
 output: html_document
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
-bibliography: "https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib"
+bibliography: "https://raw.githubusercontent.com/afsc-gap-products/citations/main/cite/bibliography.bib"
 ---
 
 ```
@@ -133,7 +134,6 @@ Naturally, without writing anything else, references will appear at the of the d
 *Which renders as:*
 
 <div id="refs"></div>
-
 
 # Contribute to this repo and community `.bib` file
 
