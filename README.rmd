@@ -146,6 +146,8 @@ To learn more about the elements of a bibtext citation, refer to:
  - https://www.bibtex.com/g/bibtex-format/
  - https://libguides.nps.edu/citation/ieee-bibtex
 
+ - **'in review' or 'in press'**: use `year = {in review}` and `year = {in press}`, respectively. 
+ - **Reference numbers must be unique**: When entering a new citation, ensure that the reference number is not used anywhere else in the `.bib` doc. 
  - **Finding pre-formatted citations**: While not perfect, the below resources can use DOIs or other paper identifiers to find and construct bibliographies in the right format for you:
    - https://www.doi2bib.org/
    - https://zbib.org/

@@ -35,7 +35,7 @@ National Marine Fisheries Service,
 
 National Oceanic and Atmospheric Administration,
 
-Seattle, WA 98195
+Seattle, WA 98115
 
 # Table of contents
 
@@ -169,6 +169,7 @@ Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
 Rohan, S. K., Haehn, R. A., Stevenson, D. E., and Britt, L. L. (2022).
 *Results of the 2018 eastern Bering Sea continental shelf bottom trawl
 survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
+https://doi.org/<https://doi.org/10.25923/m4pw-t510>
 
 </div>
 
@@ -178,6 +179,7 @@ Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
 Rohan, S. K., Stevenson, D. E., and Britt, L. L. (2022a). *Results of
 the 2019 eastern and northern Bering Sea continental shelf bottom trawl
 survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
+https://doi.org/<https://doi.org/10.25923/d641-xb21>
 
 </div>
 
@@ -187,6 +189,7 @@ Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
 Rohan, S. K., Stevenson, D. E., and Britt, L. L. (2022b). *Results of
 the 2021 eastern and northern Bering Sea continental shelf bottom trawl
 survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
+https://doi.org/<https://doi.org/10.25923/g1ny-y360>
 
 </div>
 
@@ -204,8 +207,9 @@ trawl survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
 # Contribute to this repo and community `.bib` file
 
 This repository is meant to act as a resource for all members of GAP and
-beyond. Do you see that a citation is missing from our `.bib` file or
-you have a new publication? Please add it by submitting a [pull
+beyond. Do you see that a citation is missing from our `.bib` file,
+needs to be edited or you have a new publication? Please add it by
+submitting a [pull
 request](https://github.com/afsc-gap-products/citations/pulls) or
 speaking to one of the repository maintainers.
 
@@ -216,6 +220,13 @@ To learn more about the elements of a bibtext citation, refer to:
 -   <https://www.bibtex.com/g/bibtex-format/>
 
 -   <https://libguides.nps.edu/citation/ieee-bibtex>
+
+-   **‘in review’ or ‘in press’**: use `year = {in review}` and
+    `year = {in press}`, respectively.
+
+-   **Reference numbers must be unique**: When entering a new citation,
+    ensure that the reference number is not used anywhere else in the
+    `.bib` doc.
 
 -   **Finding pre-formatted citations**: While not perfect, the below
     resources can use DOIs or other paper identifiers to find and
@@ -267,7 +278,9 @@ website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-sci
    publisher = {{U.S. Dep. Commer.}},
    year = {2022},
    type = {NOAA Tech. Memo.},
-   copyright = {Public domain}
+   copyright = {Public domain},
+   doi = {https://doi.org/10.25923/g1ny-y360},
+   number = {NMFS-AFSC-452}
 }
 
 @article{RN920,
@@ -289,7 +302,7 @@ website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-sci
    booktitle = {Proceedings of the symposium on application of stock assessment techniques applies to gadids},
    publisher = {International Northern {Pacific} Fisheries Communication Bulletin},
    volume = {50},
-   pages = {p. 57-67},
+   pages = {57-67},
    year = {1990},
    type = {Conference Proceedings}
 }
@@ -315,7 +328,7 @@ website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-sci
   publisher = {Wiley},
    volume = {17},
    number = {5},
-   pages = {p. 396-410},
+   pages = {396-410},
    ISSN = {1054-6006},
    year = {2008}
 }
