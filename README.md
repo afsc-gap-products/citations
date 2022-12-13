@@ -39,10 +39,14 @@ Seattle, WA 98115
 
 # Table of contents
 
+> -   [*Objective*](#objective)
 > -   [*Citation style guides*](#citation-style-guides)
+> -   [*BibTeX citation format*](#bibtex-citation-format)
 > -   [*How to use this citation
 >     resouce*](#how-to-use-this-citation-resouce)
->     -   [*As local files*](#as-local-files)
+>     -   [*As a local file Endnote, Zotero, etc.
+>         *](#as-a-local-file-endnote,-zotero,-etc.-)
+>     -   [*As a local file in R*](#as-a-local-file-in-r)
 >     -   [*Sourcing directly from
 >         github*](#sourcing-directly-from-github)
 > -   [*Citation files in action*](#citation-files-in-action)
@@ -67,7 +71,48 @@ Seattle, WA 98115
 >     -   [*NOAA README*](#noaa-readme)
 >     -   [*NOAA License*](#noaa-license)
 
+# Objective
+
+> As you, a GAP team member, publishes, that publication should be
+> codified and linked within the `bibliography.bib` file so you and your
+> peers accurately and appropriately cite your work. Learn how to
+> contribute in the [*Suggestions and
+> Comments*](#suggestions-and-comments) section.
+
+**A shared citation repository has several benefits for the team:**
+
+-   We all consistently format and use the most up-to-date citations
+-   We have an increasingly-complete list of all papers done by us and
+    our colleagues
+-   The bib file is very versatile and can be pulled directly into any
+    project by URL link
+-   We can manage our citations as a group instead of individually
+    (e.g., as if we all shared an Endnote, Zotero, or other citation
+    manager)
+-   We can collectively add and improve citations as new papers, data
+    products, websites, presentatinos, and other resources are published
+
+**What citations should be added to the
+[`bibliography.bib`](https://github.com/afsc-gap-products/citations/cite/bibliography.bib)
+file in this repository?**
+
+-   journal articles
+-   tech memos
+-   stock assessments
+-   data
+-   websites
+-   laws and regulation
+-   presentations
+-   … and more! Any resource that anyone in the GAP group may need to
+    cite!
+
 # Citation style guides
+
+Citation styles provide the particular formats for in-text citations and
+bibliographies that appear in your research paper. Usually, the choice
+of citation style will be based on the discipline in which you are
+writing. Often a journal will indicate the citation style he/she would
+like you to use.
 
 The NOAA Library now recommends that we use [American Psychological
 Association 7th edition (no
@@ -85,15 +130,50 @@ independent open source Citation Style Language (CSL) project aims to
 facilitate scholarly communication by automating the formatting of
 citations and bibliographies.
 
+# BibTeX citation format
+
+BibTex is a bibliographic tool that is used with LaTeX to help organize
+the user’s references and create a bibliography. A BibTex user creates a
+bibliography file that is separate from the LaTeX source file, with a
+file extension of .bib. Each reference in the bibliography file is
+formatted with a certain structure and is given a “key” by which the
+author can refer to it in the source file.
+
 # How to use this citation resouce
 
-Add the link to the
-[`.bib`](https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib)
-and
-[`.csl`](https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl)
-files in the YAML of your `rmarkdown` ro `quarto` file like so:
+## As a local file Endnote, Zotero, etc.
 
-## As local files
+**Zotero**
+
+[Watch this video](https://www.youtube.com/watch?v=bWQFzM1Eu34)
+
+**Endnote**
+
+Doesn’t work as well as it should. Please submit a pull request or edit
+this `README` if anyone finds a better solution. However, it should work
+something like this:
+
+Step 1: Open EndNote and select `File` \> `Import` \> `File`
+
+![Step 1: `File` \> `Import` \> `File`](./img/endnote_import1.png){width
+= 50%}
+
+Step 2: Open EndNote and select the `.bib` file you wish to import.
+
+![Step 2: Select the `.bib` file you wish to
+import.](./img/endnote_import2.png){width = 50%}
+
+Step 3: Select the import fiilter file you wish to import. For Bibtex,
+you’ll have to select “Other filters” and then “BibTex”. However,
+something seems to be wrong with the filter file and… it only kind of
+works.
+
+![Step 3: Select the import fiilter file you wish to import. For Bibtex,
+you’ll have to select “Other filters” and then “BibTex”. However,
+something seems to be wrong with the filter file and… it only kind of
+works.](./img/endnote_import3.png){width = 50%}
+
+## As a local file in R
 
 To download the CSL and save it to your project, you can use the
 following code:
@@ -105,6 +185,12 @@ readr::write_lines(x = csl, file = "./cite/citestyle.csl")
 bib <- readLines("https://raw.githubusercontent.com/afsc-gap-products/citations/main/cite/bibliography.bib")
 readr::write_lines(x = bib, file = "./cite/bibliography.csl")
 ```
+
+Add the link to the
+[`.bib`](https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib)
+and
+[`.csl`](https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl)
+files in the YAML of your `rmarkdown` ro `quarto` file like so:
 
 Note that “../” before the file names refers to directory navigation.
 
@@ -218,32 +304,27 @@ speaking to one of the repository maintainers.
 To learn more about the elements of a bibtext citation, refer to:
 
 -   <https://www.bibtex.com/g/bibtex-format/>
-
 -   <https://libguides.nps.edu/citation/ieee-bibtex>
+
+Common formatting questions, answered (feel free to add!)
 
 -   **‘in review’ or ‘in press’**: use `year = {in review}` and
     `year = {in press}`, respectively.
-
 -   **Reference numbers must be unique**: When entering a new citation,
     ensure that the reference number is not used anywhere else in the
     `.bib` doc.
-
 -   **Finding pre-formatted citations**: While not perfect, the below
     resources can use DOIs or other paper identifiers to find and
     construct bibliographies in the right format for you:
-
     -   <https://www.doi2bib.org/>
     -   <https://zbib.org/>
-
 -   **Forced case-sensitivity**: Use `{...}` to force capitalization.
     This may be needed for proper nouns. For example
-    `title = {Results of the 2021 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna}`,\`.
-
+    `title = {Results of the 2021 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna}`.
 -   **Listing DOIs**: While the whole link for a DOI may be
     <https://doi.org/10.25923/9c3r-xp53>, only list the text after the
     “<https://doi.org/>” in the `.bib` file as such:
     `doi = {10.25923/9C3R-XP53}`.
-
 -   **Use Journal abbreviations**: Journal abbreviations can be found
     through the [Web of
     Science](https://images.webofknowledge.com/images/help/WOS/A_abrvjt.html)
@@ -361,11 +442,6 @@ To use the citation:
 
 ``` r
 library(trawllight)
-```
-
-    FALSE Warning: package 'ggplot2' was built under R version 4.2.2
-
-``` r
 utils::citation("trawllight")
 ```
 
@@ -517,8 +593,8 @@ sessionInfo()
     FALSE Matrix products: default
     FALSE 
     FALSE locale:
-    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
-    FALSE [5] LC_TIME=English_United States.utf8    
+    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8
+    FALSE [4] LC_NUMERIC=C                           LC_TIME=English_United States.utf8    
     FALSE 
     FALSE attached base packages:
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
@@ -527,11 +603,11 @@ sessionInfo()
     FALSE [1] trawllight_3.1.6 ggplot2_3.4.0   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] pillar_1.8.1      compiler_4.2.0    tools_4.2.0       readtext_0.81     digest_0.6.30     evaluate_0.18     lifecycle_1.0.3   tibble_3.1.8      gtable_0.3.1     
-    FALSE [10] pkgconfig_2.0.3   rlang_1.0.6       cli_3.4.1         DBI_1.1.3         rstudioapi_0.14   yaml_2.3.6        xfun_0.35         fastmap_1.1.0     withr_2.5.0      
-    FALSE [19] httr_1.4.4        stringr_1.5.0     dplyr_1.0.10      knitr_1.41        generics_0.1.3    vctrs_0.5.1       grid_4.2.0        tidyselect_1.2.0  glue_1.6.2       
-    FALSE [28] data.table_1.14.6 R6_2.5.1          fansi_1.0.3       rmarkdown_2.18    magrittr_2.0.3    scales_1.2.1      htmltools_0.5.4   assertthat_0.2.1  colorspace_2.0-3 
-    FALSE [37] utf8_1.2.2        stringi_1.7.8     munsell_0.5.0
+    FALSE  [1] pillar_1.8.1      compiler_4.2.0    tools_4.2.0       readtext_0.81     digest_0.6.30     evaluate_0.18     lifecycle_1.0.3   tibble_3.1.8     
+    FALSE  [9] gtable_0.3.1      pkgconfig_2.0.3   rlang_1.0.6       cli_3.4.1         DBI_1.1.3         rstudioapi_0.14   yaml_2.3.6        xfun_0.35        
+    FALSE [17] fastmap_1.1.0     withr_2.5.0       httr_1.4.4        stringr_1.5.0     dplyr_1.0.10      knitr_1.41        generics_0.1.3    vctrs_0.5.1      
+    FALSE [25] grid_4.2.0        tidyselect_1.2.0  glue_1.6.2        data.table_1.14.6 R6_2.5.1          fansi_1.0.3       rmarkdown_2.18    magrittr_2.0.3   
+    FALSE [33] scales_1.2.1      htmltools_0.5.4   assertthat_0.2.1  colorspace_2.0-3  utf8_1.2.2        stringi_1.7.8     munsell_0.5.0
 
 ## NOAA README
 
