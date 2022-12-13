@@ -99,27 +99,21 @@ BibTex is a bibliographic tool that is used with LaTeX to help organize the user
 
 # How to use this citation resouce
 
-## As a local file Endnote, Zotero, or other citation manager
 
- **Zotero**
- 
-[Watch this video](https://www.youtube.com/watch?v=bWQFzM1Eu34)
+## Sourcing directly from github
 
-**Endnote**
+Sourcing directly from github requires internet access, but ensures that you will always have the most up to date citation style library and bibliography references. 
 
-*Doesn't work as well as it should. Please submit a pull request or edit this `README` if anyone finds a better solution. However, it should work something like this:*
+```{r, eval = FALSE, echo = TRUE}
+---
+title: "untitled"
+date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
+output: html_document
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
+bibliography: "https://raw.githubusercontent.com/afsc-gap-products/citations/main/cite/bibliography.bib"
+---
 
-Step 1: Open EndNote and select `File` > `Import` > `File`
-
-![Step 1: `File` > `Import` > `File`](./img/endnote_import1.png)
-
-Step 2: Open EndNote and select the `.bib` file you wish to import. 
-
-![Step 2: Select the `.bib` file you wish to import. ](./img/endnote_import2.png)
-
-Step 3: Select the import filter file you wish to import. For Bibtex, you'll have to select "Other filters" and then "BibTex". However, something seems to be wrong with the filter file and... it only kind of works. 
-
-![Step 3: Select the import fiilter file you wish to import. For Bibtex, you'll have to select "Other filters" and then "BibTex". However, something seems to be wrong with the filter file and... it only kind of works. ](./img/endnote_import3.png)
+```
 
 ## As a local file in R
 
@@ -148,21 +142,27 @@ bibliography: "../cite/bibliography.bib"
 
 ```
 
+## As a local file Endnote, Zotero, or other citation manager
 
-## Sourcing directly from github
+ **Zotero**
+ 
+[Watch this video](https://www.youtube.com/watch?v=bWQFzM1Eu34)
 
-Sourcing directly from github requires internet access, but ensures that you will always have the most up to date citation style library and bibliography references. 
+**Endnote**
 
-```{r, eval = FALSE, echo = TRUE}
----
-title: "untitled"
-date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
-output: html_document
-csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
-bibliography: "https://raw.githubusercontent.com/afsc-gap-products/citations/main/cite/bibliography.bib"
----
+*Doesn't work as well as it should. Please submit a pull request or edit this `README` if anyone finds a better solution. However, it should work something like this:*
 
-```
+Step 1: Open EndNote and select `File` > `Import` > `File`
+
+![Step 1: `File` > `Import` > `File`](./img/endnote_import1.png)
+
+Step 2: Open EndNote and select the `.bib` file you wish to import. 
+
+![Step 2: Select the `.bib` file you wish to import. ](./img/endnote_import2.png)
+
+Step 3: Select the import filter file you wish to import. For Bibtex, you'll have to select "Other filters" and then "BibTex". However, something seems to be wrong with the filter file and... it only kind of works. 
+
+![Step 3: Select the import fiilter file you wish to import. For Bibtex, you'll have to select "Other filters" and then "BibTex". However, something seems to be wrong with the filter file and... it only kind of works. ](./img/endnote_import3.png)
 
 # Citation files in action
 

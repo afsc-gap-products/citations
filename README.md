@@ -44,11 +44,11 @@ Seattle, WA 98115
 > -   [*BibTeX citation format*](#bibtex-citation-format)
 > -   [*How to use this citation
 >     resouce*](#how-to-use-this-citation-resouce)
->     -   [*As a local file Endnote, Zotero, or other citation
->         manager*](#as-a-local-file-endnote,-zotero,-or-other-citation-manager)
->     -   [*As a local file in R*](#as-a-local-file-in-r)
 >     -   [*Sourcing directly from
 >         github*](#sourcing-directly-from-github)
+>     -   [*As a local file in R*](#as-a-local-file-in-r)
+>     -   [*As a local file Endnote, Zotero, or other citation
+>         manager*](#as-a-local-file-endnote,-zotero,-or-other-citation-manager)
 > -   [*Citation files in action*](#citation-files-in-action)
 > -   [*Contribute to this repo and community `.bib`
 >     file*](#contribute-to-this-repo-and-community-%60.bib%60-file)
@@ -141,36 +141,21 @@ author can refer to it in the source file.
 
 # How to use this citation resouce
 
-## As a local file Endnote, Zotero, or other citation manager
+## Sourcing directly from github
 
-**Zotero**
+Sourcing directly from github requires internet access, but ensures that
+you will always have the most up to date citation style library and
+bibliography references.
 
-[Watch this video](https://www.youtube.com/watch?v=bWQFzM1Eu34)
-
-**Endnote**
-
-*Doesn’t work as well as it should. Please submit a pull request or edit
-this `README` if anyone finds a better solution. However, it should work
-something like this:*
-
-Step 1: Open EndNote and select `File` \> `Import` \> `File`
-
-![Step 1: `File` \> `Import` \> `File`](./img/endnote_import1.png)
-
-Step 2: Open EndNote and select the `.bib` file you wish to import.
-
-![Step 2: Select the `.bib` file you wish to
-import.](./img/endnote_import2.png)
-
-Step 3: Select the import filter file you wish to import. For Bibtex,
-you’ll have to select “Other filters” and then “BibTex”. However,
-something seems to be wrong with the filter file and… it only kind of
-works.
-
-![Step 3: Select the import fiilter file you wish to import. For Bibtex,
-you’ll have to select “Other filters” and then “BibTex”. However,
-something seems to be wrong with the filter file and… it only kind of
-works.](./img/endnote_import3.png)
+``` r
+---
+title: "untitled"
+date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
+output: html_document
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
+bibliography: "https://raw.githubusercontent.com/afsc-gap-products/citations/main/cite/bibliography.bib"
+---
+```
 
 ## As a local file in R
 
@@ -203,21 +188,36 @@ bibliography: "../cite/bibliography.bib"
 ---
 ```
 
-## Sourcing directly from github
+## As a local file Endnote, Zotero, or other citation manager
 
-Sourcing directly from github requires internet access, but ensures that
-you will always have the most up to date citation style library and
-bibliography references.
+**Zotero**
 
-``` r
----
-title: "untitled"
-date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
-output: html_document
-csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
-bibliography: "https://raw.githubusercontent.com/afsc-gap-products/citations/main/cite/bibliography.bib"
----
-```
+[Watch this video](https://www.youtube.com/watch?v=bWQFzM1Eu34)
+
+**Endnote**
+
+*Doesn’t work as well as it should. Please submit a pull request or edit
+this `README` if anyone finds a better solution. However, it should work
+something like this:*
+
+Step 1: Open EndNote and select `File` \> `Import` \> `File`
+
+![Step 1: `File` \> `Import` \> `File`](./img/endnote_import1.png)
+
+Step 2: Open EndNote and select the `.bib` file you wish to import.
+
+![Step 2: Select the `.bib` file you wish to
+import.](./img/endnote_import2.png)
+
+Step 3: Select the import filter file you wish to import. For Bibtex,
+you’ll have to select “Other filters” and then “BibTex”. However,
+something seems to be wrong with the filter file and… it only kind of
+works.
+
+![Step 3: Select the import fiilter file you wish to import. For Bibtex,
+you’ll have to select “Other filters” and then “BibTex”. However,
+something seems to be wrong with the filter file and… it only kind of
+works.](./img/endnote_import3.png)
 
 # Citation files in action
 
