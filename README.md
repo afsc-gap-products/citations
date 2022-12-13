@@ -149,21 +149,20 @@ author can refer to it in the source file.
 
 **Endnote**
 
-Doesn’t work as well as it should. Please submit a pull request or edit
+*Doesn’t work as well as it should. Please submit a pull request or edit
 this `README` if anyone finds a better solution. However, it should work
-something like this:
+something like this:*
 
 Step 1: Open EndNote and select `File` \> `Import` \> `File`
 
-![Step 1: `File` \> `Import` \> `File`](./img/endnote_import1.png){width
-= 50%}
+![Step 1: `File` \> `Import` \> `File`](./img/endnote_import1.png)
 
 Step 2: Open EndNote and select the `.bib` file you wish to import.
 
 ![Step 2: Select the `.bib` file you wish to
-import.](./img/endnote_import2.png){width = 50%}
+import.](./img/endnote_import2.png)
 
-Step 3: Select the import fiilter file you wish to import. For Bibtex,
+Step 3: Select the import filter file you wish to import. For Bibtex,
 you’ll have to select “Other filters” and then “BibTex”. However,
 something seems to be wrong with the filter file and… it only kind of
 works.
@@ -171,7 +170,7 @@ works.
 ![Step 3: Select the import fiilter file you wish to import. For Bibtex,
 you’ll have to select “Other filters” and then “BibTex”. However,
 something seems to be wrong with the filter file and… it only kind of
-works.](./img/endnote_import3.png){width = 50%}
+works.](./img/endnote_import3.png)
 
 ## As a local file in R
 
