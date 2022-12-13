@@ -99,7 +99,7 @@ BibTex is a bibliographic tool that is used with LaTeX to help organize the user
 
 # How to use this citation resouce
 
-## As a local file Endnote, Zotero, etc. 
+## As a local file Endnote, Zotero, or other citation manager
 
  **Zotero**
  

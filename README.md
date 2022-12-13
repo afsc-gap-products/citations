@@ -44,8 +44,8 @@ Seattle, WA 98115
 > -   [*BibTeX citation format*](#bibtex-citation-format)
 > -   [*How to use this citation
 >     resouce*](#how-to-use-this-citation-resouce)
->     -   [*As a local file Endnote, Zotero, etc.
->         *](#as-a-local-file-endnote,-zotero,-etc.-)
+>     -   [*As a local file Endnote, Zotero, or other citation
+>         manager*](#as-a-local-file-endnote,-zotero,-or-other-citation-manager)
 >     -   [*As a local file in R*](#as-a-local-file-in-r)
 >     -   [*Sourcing directly from
 >         github*](#sourcing-directly-from-github)
@@ -141,7 +141,7 @@ author can refer to it in the source file.
 
 # How to use this citation resouce
 
-## As a local file Endnote, Zotero, etc.
+## As a local file Endnote, Zotero, or other citation manager
 
 **Zotero**
 
