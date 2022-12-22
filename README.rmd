@@ -400,6 +400,14 @@ bibliography: "../cite/bibliography_RPack.bib"
 
 ```
 
+# Other resources
+
+Other resources for developing bibliographies for papers and reports include:
+
+- The [`{journals}`](https://github.com/nmfs-fish-tools/journals) package in nmfs-fish-tools
+- The [`{RefManageR}`](https://cran.r-project.org/web/packages/RefManageR/index.html) package for searching .bib files
+
+
 # Suggestions and Comments
 
 If you see that the data, product, or metadata can be improved, you are invited to create a 
