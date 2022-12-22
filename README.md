@@ -3,10 +3,7 @@
 # [AFSC RACE GAP Citations Resource](https://github.com/afsc-gap-products/citations) <img src="https://avatars.githubusercontent.com/u/91760178?s=96&amp;v=4" alt="Logo." align="right" width="139" height="139"/>
 
 The scripts therein reproducibly produce our citations for our data,
-annual data reports, presentations, and other outreach documents. Other resources for developing bibliographies for papers and reports include:
-
-- The [`{journals}`](https://github.com/nmfs-fish-tools/journals) package in nmfs-fish-tools
-- The [`{RefManageR}`](https://cran.r-project.org/web/packages/RefManageR/index.html) package for searching .bib files
+annual data reports, presentations, and other outreach documents.
 
 > This code is always in development. Find code used for various reports
 > in the code
