@@ -44,7 +44,7 @@ Seattle, WA 98115
 # Table of contents
 
 ```{r toc, echo = FALSE, eval = TRUE, warning=FALSE}
-toc <- strsplit(x = readtext::readtext(file = "./README.Rmd")[[2]], split = "\n")
+toc <- strsplit(x = readtext::readtext(file = "./README.Rmd", verbosity = 0)[[2]], split = "\n")
 toc <- toc[[1]][substr(x = toc[[1]], start = 1, stop = 1) == "#"]
 toc <- toc[-c(1:3)]
 toc_list <- toc
@@ -60,7 +60,32 @@ toc <- paste0(toc_list, "*](#", toc_link, ")", collapse = "\n")
 
 `r toc`
 
+# Objective
+
+> As you, a GAP team member, publishes, that publication should be codified and linked within the `bibliography.bib` file so you and your peers accurately and appropriately cite your work. Learn how to contribute in the [*Suggestions and Comments*](#suggestions-and-comments) section. 
+
+**A shared citation repository has several benefits for the team:** 
+
+ - We all consistently format and use the most up-to-date citations 
+ - We have an increasingly-complete list of all papers done by us and our colleagues
+ - The bib file is very versatile and can be pulled directly into any project by URL link
+ - We can manage our citations as a group instead of individually (e.g., as if we all shared an Endnote, Zotero, or other citation manager)
+ - We can collectively add and improve citations as new papers, data products, websites, presentatinos, and other resources are published
+
+**What citations should be added to the [`bibliography.bib`](`r paste0(link_repo, "/cite/bibliography.bib")`) file in this repository?**
+
+ - journal articles
+ - tech memos
+ - stock assessments
+ - data
+ - websites
+ - laws and regulation
+ - presentations
+ - ... and more! Any resource that anyone in the GAP group may need to cite!
+
 # Citation style guides
+
+Citation styles provide the particular formats for in-text citations and bibliographies that appear in your research paper. Usually, the choice of citation style will be based on the discipline in which you are writing. Often a journal will indicate the citation style he/she would like you to use. 
 
 The NOAA Library now recommends that we use [American Psychological Association 7th edition (no ampersand)](https://www.zotero.org/styles/apa-no-ampersand) for citing in NOAA technical memorandums and other NOAA process report publications. Learn more about APA 7th from this [Purdue Owl](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/reference_list_author_authors.html) resoure.
 
@@ -68,11 +93,41 @@ The NOAA Library now recommends that we use [American Psychological Association 
 
 The citation style guide for APA 7th can be downloaded from [github](https://github.com/citation-style-language/styles). This independent open source Citation Style Language (CSL) project aims to facilitate scholarly communication by automating the formatting of citations and bibliographies. 
 
+# BibTeX citation format
+
+BibTex is a bibliographic tool that is used with LaTeX to help organize the user's references and create a bibliography.  A BibTex user creates a bibliography file that is separate from the LaTeX source file, with a file extension of .bib. Each reference in the bibliography file is formatted with a certain structure and is given a "key" by which the author can refer to it in the source file. 
+
 # How to use this citation resouce
 
-Add the link to the [`.bib`](https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib) and [`.csl`](https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl) files in the YAML of your `rmarkdown` ro `quarto` file like so:
 
-## As local files
+## Sourcing directly from github
+
+Sourcing directly from github requires internet access, but ensures that you will always have the most up to date citation style library and bibliography references. 
+
+```{r, eval = FALSE, echo = TRUE}
+---
+title: "untitled"
+date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
+output: html_document
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
+bibliography: "https://raw.githubusercontent.com/afsc-gap-products/citations/main/cite/bibliography.bib"
+---
+
+```
+
+## As a local file in R
+
+To download the CSL and save it to your project, you can use the following code:
+
+```{r, eval = FALSE, echo = TRUE}
+csl <- readLines("https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl")
+readr::write_lines(x = csl, file = "./cite/citestyle.csl")
+
+bib <- readLines("https://raw.githubusercontent.com/afsc-gap-products/citations/main/cite/bibliography.bib")
+readr::write_lines(x = bib, file = "./cite/bibliography.csl")
+```
+
+Add the link to the [`.bib`](https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib) and [`.csl`](https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl) files in the YAML of your `rmarkdown` ro `quarto` file like so:
 
 Note that "../" before the file names refers to directory navigation. 
 
@@ -87,30 +142,27 @@ bibliography: "../cite/bibliography.bib"
 
 ```
 
-To download the CSL and save it to your project, you can use the following code:
+## As a local file Endnote, Zotero, or other citation manager
 
-```{r, eval = FALSE, echo = TRUE}
-csl <- readLines("https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl")
-readr::write_lines(x = csl, file = "./cite/citestyle.csl")
+ **Zotero**
+ 
+[Watch this video](https://www.youtube.com/watch?v=bWQFzM1Eu34)
 
-bib <- readLines("https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib")
-readr::write_lines(x = bib, file = "./cite/bibliography.csl")
-```
+**Endnote**
 
-## Sourcing directly from github
+*Doesn't work as well as it should. Please submit a pull request or edit this `README` if anyone finds a better solution. However, it should work something like this:*
 
-Sourcing directly from github requires internet access, but ensures that you will always have the most up to date citation style library and bibliography references. 
+Step 1: Open EndNote and select `File` > `Import` > `File`
 
-```{r, eval = FALSE, echo = TRUE}
----
-title: "untitled"
-date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
-output: html_document
-csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
-bibliography: "https://github.com/afsc-gap-products/citations/blob/main/cite/bibliography.bib"
----
+![Step 1: `File` > `Import` > `File`](./img/endnote_import1.png)
 
-```
+Step 2: Open EndNote and select the `.bib` file you wish to import. 
+
+![Step 2: Select the `.bib` file you wish to import. ](./img/endnote_import2.png)
+
+Step 3: Select the import filter file you wish to import. For Bibtex, you'll have to select "Other filters" and then "BibTex". However, something seems to be wrong with the filter file and... it only kind of works. 
+
+![Step 3: Select the import fiilter file you wish to import. For Bibtex, you'll have to select "Other filters" and then "BibTex". However, something seems to be wrong with the filter file and... it only kind of works. ](./img/endnote_import3.png)
 
 # Citation files in action
 
@@ -134,7 +186,6 @@ Naturally, without writing anything else, references will appear at the of the d
 
 <div id="refs"></div>
 
-
 # Contribute to this repo and community `.bib` file
 
 This repository is meant to act as a resource for all members of GAP and beyond. Do you see that a citation is missing from our `.bib` file, needs to be edited or you have a new publication? Please add it by submitting a [pull request](`r paste0(link_repo, "/pulls")`) or speaking to one of the repository maintainers. 
@@ -145,11 +196,15 @@ To learn more about the elements of a bibtext citation, refer to:
 
  - https://www.bibtex.com/g/bibtex-format/
  - https://libguides.nps.edu/citation/ieee-bibtex
+ 
+Common formatting questions, answered (feel free to add!)
 
+ - **'in review' or 'in press'**: use `year = {in review}` and `year = {in press}`, respectively. 
+ - **Reference numbers must be unique**: When entering a new citation, ensure that the reference number is not used anywhere else in the `.bib` doc. 
  - **Finding pre-formatted citations**: While not perfect, the below resources can use DOIs or other paper identifiers to find and construct bibliographies in the right format for you:
    - https://www.doi2bib.org/
    - https://zbib.org/
- - **Forced case-sensitivity**: Use `{...}` to force capitalization. This may be needed for proper nouns. For example `title = {Results of the 2021 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna}`,`.
+ - **Forced case-sensitivity**: Use `{...}` to force capitalization. This may be needed for proper nouns. For example `title = {Results of the 2021 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna}`.
  - **Listing DOIs**: While the whole link for a DOI may be https://doi.org/10.25923/9c3r-xp53, only list the text after the "https://doi.org/" in the `.bib` file as such: `doi = {10.25923/9C3R-XP53}`.
  - **Use Journal abbreviations**: Journal abbreviations can be found through the [Web of Science](https://images.webofknowledge.com/images/help/WOS/A_abrvjt.html) for any given scientific journal as such `journal = {Fish. Oceanogr.}`.
 
@@ -344,6 +399,14 @@ bibliography: "../cite/bibliography_RPack.bib"
 ---
 
 ```
+
+# Other resources
+
+Other resources for developing bibliographies for papers and reports include:
+
+- The [`{journals}`](https://github.com/nmfs-fish-tools/journals) package in nmfs-fish-tools
+- The [`{RefManageR}`](https://cran.r-project.org/web/packages/RefManageR/index.html) package for searching .bib files
+
 
 # Suggestions and Comments
 
