@@ -1,0 +1,27 @@
+---
+title: "Check bibliography output"
+output: word_document
+date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
+bibliography: "../cite/bibliography.bib"
+---
+
+
+```{r}
+a <- readLines(con = paste0("../cite/bibliography.bib"))
+# a <- readLines("https://raw.githubusercontent.com/afsc-gap-products/citations/main/cite/bibliography.bib")
+a <- a[grep(pattern = "@article{", x = a, fixed = TRUE)]
+a <- gsub(pattern = "@article{", replacement = "", x = a, fixed = TRUE)
+a <- gsub(pattern = ",", replacement = "", x = a, fixed = TRUE)
+a <- trimws(a)
+
+b <- unlist(paste0(
+            "@", unlist(a), 
+"
+
+", 
+            collapse = ""))
+```
+
+`r b`
+
