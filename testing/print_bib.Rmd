@@ -8,19 +8,35 @@ bibliography: "../cite/bibliography.bib"
 
 
 ```{r}
-a <- readLines(con = paste0("../cite/bibliography.bib"))
-# a <- readLines("https://raw.githubusercontent.com/afsc-gap-products/citations/main/cite/bibliography.bib")
-a <- a[grep(pattern = "@article{", x = a, fixed = TRUE)]
-a <- gsub(pattern = "@article{", replacement = "", x = a, fixed = TRUE)
-a <- gsub(pattern = ",", replacement = "", x = a, fixed = TRUE)
-a <- trimws(a)
+bibfiletext <- readLines(con = paste0("../cite/bibliography.bib"))
+
+output_citations <- function(bibfiletext, 
+                             year = NA) {
+  
+  bibfiletext0 <- bibfiletext
+  
+  bibfiletext1 <- bibfiletext0
+  if (!is.na(year)) {
+bibfiletext1 <- c(bibfiletext1, 
+                  bibfiletext0[grep(pattern = paste0("year = {",year,"}"), x = bibfiletext0, fixed = TRUE)])
+  
+  }
+  
+bibfiletext0 <- bibfiletext0[grep(pattern = "@article{", x = bibfiletext0, fixed = TRUE)]
+bibfiletext0 <- gsub(pattern = "@article{", replacement = "", x = bibfiletext0, fixed = TRUE)
+bibfiletext0 <- gsub(pattern = ",", replacement = "", x = bibfiletext0, fixed = TRUE)
+bibfiletext0 <- trimws(bibfiletext0)
 
 b <- unlist(paste0(
-            "@", unlist(a), 
+            "@", unlist(bibfiletext0), 
 "
 
 ", 
             collapse = ""))
+return(b)
+}
+
+output_citations(bibfiletext = bibfiletext)
 ```
 
 `r b`

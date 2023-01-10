@@ -8,7 +8,9 @@ a <- readLines(con = paste0("./cite/bibliography.bib"))
 
 # remove mention of the following terms
 
-terms0 <- c("https://doi.org/")
+terms0 <- c("https://doi.org/", " }", 
+"},
+}")
 
 for (i in 1:lenght(terms0)){
 b <- a[grep(pattern = terms0[i], x = a, fixed = TRUE)]
