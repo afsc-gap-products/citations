@@ -176,13 +176,7 @@ For example, here are **Annual Bering Sea Data Report** [@2022NEBS2022; @2021NEB
 
 For example, here are **Annual Bering Sea Data Report** [@2022NEBS2022; @2021NEBS2022; @2019NEBS2022; @2018EBS2022]
 
-Naturally, without writing anything else, references will appear at the of the document. If you want them to render at a specific place in your document, call the code below: 
-
-```{r, eval = FALSE, echo = TRUE}
-<div id="refs"></div>
-```
-
-*Which renders as:*
+Naturally, without writing anything else, references will appear at the of the document. If you want them to render at a specific place in your document, call this code `<div id="refs"></div>` which renders as:
 
 <div id="refs"></div>
 
