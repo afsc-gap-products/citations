@@ -1,8 +1,8 @@
 ---
 title: "Check bibliography output"
 output: 
-  pdf_document
-  # word_document
+  # pdf_document
+  word_document
 date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
 bibliography: "../cite/bibliography.bib"
