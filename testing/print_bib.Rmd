@@ -97,14 +97,14 @@ b <- output_citations(bibfiletext = bibfiletext)
 
 <div id="refs"></div>
 
-## All in-line text citations from 2022
 
 ```{r, echo = FALSE, eval=FALSE}
+## All in-line text citations from 2022
 # Test
 b <- output_citations(bibfiletext = bibfiletext, year = 2021:2022)
+# `r b`
 ```
 
-`r b`
 
 
 
