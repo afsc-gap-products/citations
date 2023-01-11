@@ -78,7 +78,7 @@ bibfiletext0 <- trimws(bibfiletext0)
     dplyr::arrange(auth, year)
   
 b <- unlist(paste0(
-            "@", unlist(bibfiletext0), 
+            "@", unlist(bibfiletext1), 
 "
 
 ", 
