@@ -4,7 +4,7 @@ output:
   # pdf_document
   word_document
 date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
-csl: "../cite/citestyle.csl"
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
 bibliography: "../cite/bibliography.bib"
 ---
 
@@ -94,7 +94,7 @@ b <- output_citations(bibfiletext = bibfiletext)
 
 ## All in-line text citations from 2022
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, eval=FALSE}
 # Test
 b <- output_citations(bibfiletext = bibfiletext, year = 2021:2022)
 ```
