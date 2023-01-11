@@ -11,6 +11,7 @@ bibliography: "../cite/bibliography.bib"
 
 ```{r, echo = FALSE}
 bibfiletext <- readLines(con = paste0("../cite/bibliography.bib"))
+library(magrittr)
 
 output_citations <- function(bibfiletext, 
                              year = NULL, 
@@ -19,23 +20,23 @@ output_citations <- function(bibfiletext,
   bibfiletext0 <- bibfiletext00 <- bibfiletext
   cite_start <- grep(pattern = "@", x = bibfiletext0, fixed = TRUE)
   
-  # pull out data for speific years
-  cite_start0 <- c()
-  if (!is.null(year)) {
-    for (i in 1:length(year)){
-      cite_year <- grep(pattern = paste0("year = {",year[i],"}"), 
-                        x = bibfiletext0, fixed = TRUE)
-      cite_year0 <- c()
-      for (ii in 1:length(cite_year)) {
-        temp <- which(cite_start<cite_year[ii])
-        cite_year0 <- c(cite_year0, 
-                        cite_start[length(temp)])
-      }
-      cite_start0 <- c(cite_start0, cite_year0)
-    }
-   cite_start <- cite_start0
-  }
-  
+  # # pull out data for speific years
+  # cite_start0 <- c()
+  # if (!is.null(year)) {
+  #   for (i in 1:length(year)){
+  #     cite_year <- grep(pattern = paste0("year = {",year[i],"}"), 
+  #                       x = bibfiletext0, fixed = TRUE)
+  #     cite_year0 <- c()
+  #     for (ii in 1:length(cite_year)) {
+  #       temp <- which(cite_start<cite_year[ii])
+  #       cite_year0 <- c(cite_year0, 
+  #                       cite_start[length(temp)])
+  #     }
+  #     cite_start0 <- c(cite_start0, cite_year0)
+  #   }
+  #  cite_start <- cite_start0
+  # }
+  # 
   
   # # pull out data for speific authors
   # cite_start0 <- c()
@@ -58,19 +59,23 @@ output_citations <- function(bibfiletext,
   
 bibfiletext0 <- bibfiletext0[cite_start]
 bibfiletext0 <- unlist(lapply(X = strsplit(split = "{", x = bibfiletext0, fixed = TRUE), "[[", 2))
-# bibfiletext0 <- gsub(pattern = "@*\\{", replacement = "", x = bibfiletext0)
 bibfiletext0 <- gsub(pattern = ",", replacement = "", x = bibfiletext0, fixed = TRUE)
 bibfiletext0 <- trimws(bibfiletext0)
 
 # find author and year order
   cite_auth <- bibfiletext00[grep(pattern = "author = {", x = bibfiletext00, fixed = TRUE)]
+  cite_auth <- gsub(pattern = " = {{", replacement = " = {", x = cite_auth, fixed = TRUE)
+  cite_auth <- unlist(lapply(X = strsplit(split = "{", x = cite_auth, fixed = TRUE), "[[", 2))
+
   cite_yr <- bibfiletext00[grep(pattern = "year = {", x = bibfiletext00, fixed = TRUE)]
+  cite_yr <- unlist(lapply(X = strsplit(split = "{", x = cite_yr, fixed = TRUE), "[[", 2))
 
 
   bibfiletext1 <- data.frame(
     rn = bibfiletext0, 
     auth = cite_auth, 
-    year = cite_yr)
+    year = cite_yr) %>% 
+    dplyr::arrange(auth, year)
   
 b <- unlist(paste0(
             "@", unlist(bibfiletext0), 
