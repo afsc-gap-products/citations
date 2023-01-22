@@ -382,13 +382,14 @@ website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-sci
    type = {Conference Proceedings}
 }
 
-@article{McGilliardetal2018,
-   author = {McGilliard, C. R. and Nichol, D. G. and Palsson, W. A.},
-   title = {Assessment of the flathead sole-Bering flounder stock in the {Bering Sea} and {Aleutian Islands}},
-    booktitle = {Stock assessment and fishery evaluation report for the groundfish resources of the {Bering Sea}/{Aleutian Islands} regions},
-   institution = {North Pacific Fishery Management Council},
+@inbook{SS2022ch15,
+   author = {Shotwell, S. K. and Sullivan, J. and Echave, K. and Markowitz, E.H. and Ortiz, I. and Siddon, E. and Spencer, P. and Spies, I.},
+   title = {{NPFMC Bering Sea and Aleutian Islands SAFE}},
+   chapter = {Chapter 15: Assessment of the shortraker rockfish stock in the {Bering Sea} and {Aleutian Islands}},
+   publisher = {North Pacific Fishery Management Council},
    address = {605 W. 4th Ave., Anchorage, AK 99501},
-   year = {2018}
+   year = {2022}, 
+   url = {https://www.fisheries.noaa.gov/resource/data/2022-assessment-shortraker-rockfish-stock-bering-sea-and-aleutian-islands}
 }
 ```
 
