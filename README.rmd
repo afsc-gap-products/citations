@@ -285,11 +285,30 @@ NOAA publications are listed and searchable on the NOAA website and [AFSC websit
 
 ### Presentations
 
-> Example coming soon!
+```{r, eval = FALSE, echo=TRUE}
+@presentation{2022Community,
+   author = {Markowitz, E. H. and Dawson, E. J. and Anderson, C. and Charriere, N. E. and Richar, J. I. and Rohan, S. K. and Prohaska, B. K. and Haehn, R. A. and Stevenson, D. E},
+   title = {2022 northern {Bering Sea} groundfish and crab trawl survey highlights},
+   institution = {University of Alaska Fairbanks Strait Science Seminar}, 
+   year = {2022},
+   type = {Outreach},
+   copyright = {Public domain}, 
+   url = {https://www.youtube.com/watch?v=TGXN2pIDhfc}
+}
+```
 
 ### Data
 
-> Example coming soon! (e.g., FOSS)
+```{r, eval = FALSE, echo=TRUE}
+@misc{FOSSAFSCData,
+   author = {{NOAA Fisheries Alaska Fisheries Science Center}},
+   year = {2023}, 
+   title = {Fisheries One Stop Shop Public Data: RACE Division Bottom Trawl Survey Data Query},
+   howpublished = {https://www.fisheries.noaa.gov/foss/f?p=215:28:2283554735243:::::},
+   publisher = {{U.S. Dep. Commer.}},
+   copyright = {Public Domain} 
+}
+```
 
 ### R packages built in-house
 

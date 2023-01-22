@@ -66,6 +66,7 @@ Seattle, WA 98115
 >         -   [*Books*](#books)
 > -   [*Cite all R packages on a computer or used in a
 >     project*](#cite-all-r-packages-on-a-computer-or-used-in-a-project)
+> -   [*Other resources*](#other-resources)
 > -   [*Suggestions and Comments*](#suggestions-and-comments)
 >     -   [*R Version Metadata*](#r-version-metadata)
 >     -   [*NOAA README*](#noaa-readme)
@@ -237,13 +238,7 @@ review; Markowitz, Dawson, Charriere, Prohaska, Rohan, Haehn, et al.,
 
 Naturally, without writing anything else, references will appear at the
 of the document. If you want them to render at a specific place in your
-document, call the code below:
-
-``` r
-<div id="refs"></div>
-```
-
-*Which renders as:*
+document, call this code `<div id="refs"></div>` which renders as:
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 line-spacing="2">
@@ -254,7 +249,7 @@ Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
 Rohan, S. K., Haehn, R. A., Stevenson, D. E., and Britt, L. L. (2022).
 *Results of the 2018 eastern Bering Sea continental shelf bottom trawl
 survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
-https://doi.org/<https://doi.org/10.25923/m4pw-t510>
+*NMFS-F/SPO-450*, 183. <https://doi.org/10.25923/m4pw-t510>
 
 </div>
 
@@ -264,7 +259,7 @@ Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
 Rohan, S. K., Stevenson, D. E., and Britt, L. L. (2022a). *Results of
 the 2019 eastern and northern Bering Sea continental shelf bottom trawl
 survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
-https://doi.org/<https://doi.org/10.25923/d641-xb21>
+*NMFS-F/SPO-451*, 225. <https://doi.org/10.25923/d641-xb21>
 
 </div>
 
@@ -274,7 +269,7 @@ Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
 Rohan, S. K., Stevenson, D. E., and Britt, L. L. (2022b). *Results of
 the 2021 eastern and northern Bering Sea continental shelf bottom trawl
 survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
-https://doi.org/<https://doi.org/10.25923/g1ny-y360>
+*NMFS-F/SPO-452*, 227. <https://doi.org/10.25923/g1ny-y360>
 
 </div>
 
@@ -416,11 +411,30 @@ website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-sci
 
 ### Presentations
 
-> Example coming soon!
+``` r
+@presentation{2022Community,
+   author = {Markowitz, E. H. and Dawson, E. J. and Anderson, C. and Charriere, N. E. and Richar, J. I. and Rohan, S. K. and Prohaska, B. K. and Haehn, R. A. and Stevenson, D. E},
+   title = {2022 northern {Bering Sea} groundfish and crab trawl survey highlights},
+   institution = {University of Alaska Fairbanks Strait Science Seminar}, 
+   year = {2022},
+   type = {Outreach},
+   copyright = {Public domain}, 
+   url = {https://www.youtube.com/watch?v=TGXN2pIDhfc}
+}
+```
 
 ### Data
 
-> Example coming soon! (e.g., FOSS)
+``` r
+@misc{FOSSAFSCData,
+   author = {{NOAA Fisheries Alaska Fisheries Science Center}},
+   year = {2023}, 
+   title = {Fisheries One Stop Shop Public Data: RACE Division Bottom Trawl Survey Data Query},
+   howpublished = {https://www.fisheries.noaa.gov/foss/f?p=215:28:2283554735243:::::},
+   publisher = {{U.S. Dep. Commer.}},
+   copyright = {Public Domain} 
+}
+```
 
 ### R packages built in-house
 
@@ -441,15 +455,23 @@ To use the citation:
 
 ``` r
 library(trawllight)
+```
+
+    FALSE Warning: package 'ggplot2' was built under R version 4.2.2
+
+``` r
 utils::citation("trawllight")
 ```
 
-    FALSE Warning in utils::citation("trawllight"): no date field in DESCRIPTION file of package 'trawllight'
+    FALSE Warning in utils::citation("trawllight"): no date field in DESCRIPTION file of
+    FALSE package 'trawllight'
 
     FALSE 
     FALSE To cite package 'trawllight' in publications use:
     FALSE 
-    FALSE   Rohan S, Laman N (2022). _trawllight: Derive apparent optical properties from trawl-mounted light sensors_. R package version 3.1.6.
+    FALSE   Rohan S, Laman N (2022). _trawllight: Derive apparent optical
+    FALSE   properties from trawl-mounted light sensors_. R package version
+    FALSE   3.1.6.
     FALSE 
     FALSE A BibTeX entry for LaTeX users is
     FALSE 
@@ -544,7 +566,8 @@ knitr::write_bib(x = PKG,
                  file = "./cite/bibliography_RPack.bib")
 ```
 
-    FALSE Warning in utils::citation(..., lib.loc = lib.loc): no date field in DESCRIPTION file of package 'trawllight'
+    FALSE Warning in utils::citation(..., lib.loc = lib.loc): no date field in DESCRIPTION
+    FALSE file of package 'trawllight'
 
 *Which looks like*
 
@@ -569,6 +592,17 @@ bibliography: "../cite/bibliography_RPack.bib"
 ---
 ```
 
+# Other resources
+
+Other resources for developing bibliographies for papers and reports
+include:
+
+-   The [`{journals}`](https://github.com/nmfs-fish-tools/journals)
+    package in nmfs-fish-tools
+-   The
+    [`{RefManageR}`](https://cran.r-project.org/web/packages/RefManageR/index.html)
+    package for searching .bib files
+
 # Suggestions and Comments
 
 If you see that the data, product, or metadata can be improved, you are
@@ -592,8 +626,11 @@ sessionInfo()
     FALSE Matrix products: default
     FALSE 
     FALSE locale:
-    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8
-    FALSE [4] LC_NUMERIC=C                           LC_TIME=English_United States.utf8    
+    FALSE [1] LC_COLLATE=English_United States.utf8 
+    FALSE [2] LC_CTYPE=English_United States.utf8   
+    FALSE [3] LC_MONETARY=English_United States.utf8
+    FALSE [4] LC_NUMERIC=C                          
+    FALSE [5] LC_TIME=English_United States.utf8    
     FALSE 
     FALSE attached base packages:
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
@@ -602,11 +639,16 @@ sessionInfo()
     FALSE [1] trawllight_3.1.6 ggplot2_3.4.0   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] pillar_1.8.1      compiler_4.2.0    tools_4.2.0       readtext_0.81     digest_0.6.30     evaluate_0.18     lifecycle_1.0.3   tibble_3.1.8     
-    FALSE  [9] gtable_0.3.1      pkgconfig_2.0.3   rlang_1.0.6       cli_3.4.1         DBI_1.1.3         rstudioapi_0.14   yaml_2.3.6        xfun_0.35        
-    FALSE [17] fastmap_1.1.0     withr_2.5.0       httr_1.4.4        stringr_1.5.0     dplyr_1.0.10      knitr_1.41        generics_0.1.3    vctrs_0.5.1      
-    FALSE [25] grid_4.2.0        tidyselect_1.2.0  glue_1.6.2        data.table_1.14.6 R6_2.5.1          fansi_1.0.3       rmarkdown_2.18    magrittr_2.0.3   
-    FALSE [33] scales_1.2.1      htmltools_0.5.4   assertthat_0.2.1  colorspace_2.0-3  utf8_1.2.2        stringi_1.7.8     munsell_0.5.0
+    FALSE  [1] pillar_1.8.1      compiler_4.2.0    tools_4.2.0       readtext_0.81    
+    FALSE  [5] digest_0.6.31     evaluate_0.19     lifecycle_1.0.3   tibble_3.1.8     
+    FALSE  [9] gtable_0.3.1      pkgconfig_2.0.3   rlang_1.0.6       cli_3.4.1        
+    FALSE [13] DBI_1.1.3         rstudioapi_0.14   yaml_2.3.6        xfun_0.35        
+    FALSE [17] fastmap_1.1.0     withr_2.5.0       httr_1.4.4        stringr_1.5.0    
+    FALSE [21] dplyr_1.0.10      knitr_1.41        generics_0.1.3    vctrs_0.5.1      
+    FALSE [25] grid_4.2.0        tidyselect_1.2.0  glue_1.6.2        data.table_1.14.6
+    FALSE [29] R6_2.5.1          fansi_1.0.3       rmarkdown_2.19    magrittr_2.0.3   
+    FALSE [33] scales_1.2.1      htmltools_0.5.4   assertthat_0.2.1  colorspace_2.0-3 
+    FALSE [37] utf8_1.2.2        stringi_1.7.8     munsell_0.5.0
 
 ## NOAA README
 
