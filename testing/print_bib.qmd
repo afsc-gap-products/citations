@@ -32,7 +32,7 @@ for (p in PKG) {
 ```
 
 
-```{r}
+```{r output_citations_fn}
 bibfiletext <- readLines(con = paste0("../cite/bibliography.bib"))
 
 output_citations <- function(bibfiletext, 
@@ -120,7 +120,7 @@ b <- output_citations(bibfiletext = bibfiletext)
 <div id="refs"></div>
 
 
-```{r, eval=FALSE}
+```{r output_citations_of_specific_year, eval=FALSE}
 ## All in-line text citations from 2022
 # Test
 # b <- output_citations(bibfiletext = bibfiletext, year = 2021:2022)
@@ -129,7 +129,7 @@ b <- output_citations(bibfiletext = bibfiletext)
 
 # Check elements of the citations: 
 
-```{r}
+```{r find_refnum}
 bibfiletext0 <- stringr::str_to_lower(bibfiletext)
 bibfiletext0 <- trimws(bibfiletext0)
 cite_start <- grep(pattern = "@", x = bibfiletext0, fixed = TRUE)
@@ -223,7 +223,7 @@ checkLinks <- function(URLs,
 
 Are there duplicated reference numbers?
 
-```{r}
+```{r refnum_dups}
 refnum <- unlist(lapply(X = strsplit(x = bibfiletext0[cite_start], split = "{", fixed = TRUE), "[[", 2))
 temp <- refnum[which(duplicated(refnum))]
 ifelse(length(temp) == 0, "There are no citation reference number duplicates", paste0("check reference number  ", temp))
@@ -231,7 +231,7 @@ ifelse(length(temp) == 0, "There are no citation reference number duplicates", p
 
 Are all of the DOIs properly recorded? 
 
-```{r}
+```{r doi_issues}
 term0 <- "doi.org/"
 temp <- grep(pattern = term0, x = bibfiletext0, fixed = TRUE)
 ifelse(length(temp) == 0, paste0('There are no citations with the "', term0, '"'), paste0("check line(s) ", temp))
@@ -239,7 +239,7 @@ ifelse(length(temp) == 0, paste0('There are no citations with the "', term0, '"'
 
 Do the doi links work? 
 
-```{r}
+```{r doi_link_check}
 term0 <- "doi ="
 temp <- bibfiletext0[grep(pattern = term0, x = bibfiletext0, ignore.case = TRUE)]
 temp <- unlist(lapply(X = strsplit(x = temp, split = "{", fixed = TRUE), "[[", 2))
@@ -250,7 +250,7 @@ checkLinks(URLs = paste0("https://doi.org/", temp))
 
 Do the url links work? 
 
-```{r}
+```{r url_link_check}
 term0 <- "url ="
 temp <- bibfiletext0[grep(pattern = term0, x = bibfiletext0, ignore.case = TRUE)]
 temp <- unlist(lapply(X = strsplit(x = temp, split = "{", fixed = TRUE), "[[", 2))
@@ -261,7 +261,7 @@ checkLinks(URLs = temp)
 
 ## are author, year, and title listed for each listing? 
 
-```{r}
+```{r search_dups_fn}
 
 search0 <- function(pattern, bibfiletext00){
   cite_ <- bibfiletext00[grep(pattern = paste0(pattern, " = {"), x = bibfiletext00, fixed = TRUE)]
@@ -311,14 +311,14 @@ for (i in 1:length(cite_start)) { # length(cite_start)
 
 citations a missing entry for title, author, or year: 
 
-```{r}
+```{r search_dups_missing_flag}
 bibfiletext_flag %>% 
   dplyr::filter(is.na(auth) | is.na(year) | is.na(title))
 ```
 
 citations with more than one entry in title, author, or year: 
 
-```{r}
+```{r search_dups_mult_flag}
 bibfiletext_flag %>% 
   dplyr::filter(auth == ">1" | year == ">1" | title == ">1")
 ```
