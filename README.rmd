@@ -256,14 +256,16 @@ NOAA publications are listed and searchable on the NOAA website and [AFSC websit
    type = {Conference Proceedings}
 }
 
-@article{McGilliardetal2018,
-   author = {McGilliard, C. R. and Nichol, D. G. and Palsson, W. A.},
-   title = {Assessment of the flathead sole-Bering flounder stock in the {Bering Sea} and {Aleutian Islands}},
-    booktitle = {Stock assessment and fishery evaluation report for the groundfish resources of the {Bering Sea}/{Aleutian Islands} regions},
-   institution = {North Pacific Fishery Management Council},
+@inbook{SS2022ch15,
+   author = {Shotwell, S. K. and Sullivan, J. and Echave, K. and Markowitz, E.H. and Ortiz, I. and Siddon, E. and Spencer, P. and Spies, I.},
+   title = {{NPFMC Bering Sea and Aleutian Islands SAFE}},
+   chapter = {Chapter 15: Assessment of the shortraker rockfish stock in the {Bering Sea} and {Aleutian Islands}},
+   publisher = {North Pacific Fishery Management Council},
    address = {605 W. 4th Ave., Anchorage, AK 99501},
-   year = {2018}
+   year = {2022}, 
+   url = {https://www.fisheries.noaa.gov/resource/data/2022-assessment-shortraker-rockfish-stock-bering-sea-and-aleutian-islands}
 }
+
 ```
 
 ### Journal articles
@@ -285,11 +287,30 @@ NOAA publications are listed and searchable on the NOAA website and [AFSC websit
 
 ### Presentations
 
-> Example coming soon!
+```{r, eval = FALSE, echo=TRUE}
+@presentation{2022Community,
+   author = {Markowitz, E. H. and Dawson, E. J. and Anderson, C. and Charriere, N. E. and Richar, J. I. and Rohan, S. K. and Prohaska, B. K. and Haehn, R. A. and Stevenson, D. E},
+   title = {2022 northern {Bering Sea} groundfish and crab trawl survey highlights},
+   institution = {University of Alaska Fairbanks Strait Science Seminar}, 
+   year = {2022},
+   type = {Outreach},
+   copyright = {Public domain}, 
+   url = {https://www.youtube.com/watch?v=TGXN2pIDhfc}
+}
+```
 
 ### Data
 
-> Example coming soon! (e.g., FOSS)
+```{r, eval = FALSE, echo=TRUE}
+@misc{FOSSAFSCData,
+   author = {{NOAA Fisheries Alaska Fisheries Science Center}},
+   year = {2023}, 
+   title = {Fisheries One Stop Shop Public Data: RACE Division Bottom Trawl Survey Data Query},
+   howpublished = {https://www.fisheries.noaa.gov/foss/f?p=215:28:2283554735243:::::},
+   publisher = {{U.S. Dep. Commer.}},
+   copyright = {Public Domain} 
+}
+```
 
 ### R packages built in-house
 
