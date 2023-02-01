@@ -1,10 +1,26 @@
 ---
 title: "Check bibliography output"
+subtitle: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
 # output: 
-#   # pdf_document
+#   pdf_document
 #   word_document
-format: pdf
-date: "`r paste0(format(Sys.time(), '%B %d, %Y'))`"
+format: 
+  pdf: 
+    geometry:
+      - top=0.75in
+      - right=0.75in
+      - bottom=0.75in
+      - left=0.75in
+      - heightrounded
+    number-sections: true
+    toc: false
+  # docx:
+  #   reference-doc: "../testing/styles_reference.docx"
+execute:
+  warning: false
+  echo: false
+  message: false
+  error: false
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
 bibliography: "../cite/bibliography.bib"
 editor: visual
@@ -308,7 +324,6 @@ for (i in 1:length(cite_start)) { # length(cite_start)
 }
 ```
 
-
 citations a missing entry for title, author, or year: 
 
 ```{r search_dups_missing_flag}
@@ -322,4 +337,39 @@ citations with more than one entry in title, author, or year:
 bibfiletext_flag %>% 
   dplyr::filter(auth == ">1" | year == ">1" | title == ">1")
 ```
+
+Test citing a report (@2022NEBS2022). Here are all of the publishers represented in our .bib data file (@fig-publishers; @tbl-publishers): 
+
+```{r publishers-wrangle} 
+cite_pub <- grep(pattern = "publisher = ", x = bibfiletext0, fixed = TRUE)
+cite_pub <- gsub(pattern = "}", replacement = "", 
+               x = gsub(pattern = "{", replacement = "", x = bibfiletext0[cite_pub], 
+                        fixed = TRUE), fixed = TRUE)
+cite_pub <- gsub(pattern = "publisher = ", replacement = "", x = cite_pub, fixed = TRUE)
+cite_pub <- tolower(cite_pub)
+cite_pub <- ifelse(substr(x = cite_pub, start = nchar(cite_pub), stop = nchar(cite_pub)) == ",", 
+                   substr(x = cite_pub, start = 1, stop = (nchar(cite_pub)-1)), 
+                   cite_pub)
+dat <- data.frame(table(cite_pub))
+```
+
+
+```{r, results='asis'}
+#| label: fig-publishers
+#| fig-cap: "Publishers in our citation bib data file."
+#| fig-height: 4
+library(ggplot2)
+ggplot(data = dat, mapping = aes(x = Freq, y = cite_pub)) +
+    geom_bar(stat="identity") +
+    ggplot2::theme_bw()
+```
+
+```{r, results='asis'}
+#| label: tbl-publishers
+#| tbl-cap: "Publishers in our citation bib data file."
+
+library(gt)
+gt(dat)
+```
+
 
