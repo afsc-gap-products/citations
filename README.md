@@ -39,38 +39,37 @@ Seattle, WA 98115
 
 # Table of contents
 
-> -   [*Objective*](#objective)
-> -   [*Citation style guides*](#citation-style-guides)
-> -   [*BibTeX citation format*](#bibtex-citation-format)
-> -   [*How to use this citation
->     resouce*](#how-to-use-this-citation-resouce)
->     -   [*Sourcing directly from
->         github*](#sourcing-directly-from-github)
->     -   [*As a local file in R*](#as-a-local-file-in-r)
->     -   [*As a local file Endnote, Zotero, or other citation
->         manager*](#as-a-local-file-endnote,-zotero,-or-other-citation-manager)
-> -   [*Citation files in action*](#citation-files-in-action)
-> -   [*Contribute to this repo and community `.bib`
->     file*](#contribute-to-this-repo-and-community-%60.bib%60-file)
->     -   [*Bibliography syntax notes*](#bibliography-syntax-notes)
->     -   [*Bibliography examples*](#bibliography-examples)
->         -   [*NOAA technical memorandums/process
->             reports*](#noaa-technical-memorandums/process-reports)
->         -   [*NOAA Stock Assessments*](#noaa-stock-assessments)
->         -   [*Journal articles*](#journal-articles)
->         -   [*Presentations*](#presentations)
->         -   [*Data*](#data)
->         -   [*R packages built in-house*](#r-packages-built-in-house)
->         -   [*Legislation*](#legislation)
->         -   [*Web pages*](#web-pages)
->         -   [*Books*](#books)
-> -   [*Cite all R packages on a computer or used in a
->     project*](#cite-all-r-packages-on-a-computer-or-used-in-a-project)
-> -   [*Other resources*](#other-resources)
-> -   [*Suggestions and Comments*](#suggestions-and-comments)
->     -   [*R Version Metadata*](#r-version-metadata)
->     -   [*NOAA README*](#noaa-readme)
->     -   [*NOAA License*](#noaa-license)
+> - [*Objective*](#objective)
+> - [*Citation style guides*](#citation-style-guides)
+> - [*BibTeX citation format*](#bibtex-citation-format)
+> - [*How to use this citation
+>   resouce*](#how-to-use-this-citation-resouce)
+>   - [*Sourcing directly from github*](#sourcing-directly-from-github)
+>   - [*As a local file in R*](#as-a-local-file-in-r)
+>   - [*As a local file Endnote, Zotero, or other citation
+>     manager*](#as-a-local-file-endnote,-zotero,-or-other-citation-manager)
+> - [*Citation files in action*](#citation-files-in-action)
+> - [*Contribute to this repo and community `.bib`
+>   file*](#contribute-to-this-repo-and-community-%60.bib%60-file)
+>   - [*Bibliography syntax notes*](#bibliography-syntax-notes)
+>   - [*Bibliography examples*](#bibliography-examples)
+>     - [*NOAA technical memorandums/process
+>       reports*](#noaa-technical-memorandums/process-reports)
+>     - [*NOAA Stock Assessments*](#noaa-stock-assessments)
+>     - [*Journal articles*](#journal-articles)
+>     - [*Presentations*](#presentations)
+>     - [*Data*](#data)
+>     - [*R packages built in-house*](#r-packages-built-in-house)
+>     - [*Legislation*](#legislation)
+>     - [*Web pages*](#web-pages)
+>     - [*Books*](#books)
+> - [*Cite all R packages on a computer or used in a
+>   project*](#cite-all-r-packages-on-a-computer-or-used-in-a-project)
+> - [*Other resources*](#other-resources)
+> - [*Suggestions and Comments*](#suggestions-and-comments)
+>   - [*R Version Metadata*](#r-version-metadata)
+>   - [*NOAA README*](#noaa-readme)
+>   - [*NOAA License*](#noaa-license)
 
 # Objective
 
@@ -82,30 +81,29 @@ Seattle, WA 98115
 
 **A shared citation repository has several benefits for the team:**
 
--   We all consistently format and use the most up-to-date citations
--   We have an increasingly-complete list of all papers done by us and
-    our colleagues
--   The bib file is very versatile and can be pulled directly into any
-    project by URL link
--   We can manage our citations as a group instead of individually
-    (e.g., as if we all shared an Endnote, Zotero, or other citation
-    manager)
--   We can collectively add and improve citations as new papers, data
-    products, websites, presentatinos, and other resources are published
+- We all consistently format and use the most up-to-date citations
+- We have an increasingly-complete list of all papers done by us and our
+  colleagues
+- The bib file is very versatile and can be pulled directly into any
+  project by URL link
+- We can manage our citations as a group instead of individually (e.g.,
+  as if we all shared an Endnote, Zotero, or other citation manager)
+- We can collectively add and improve citations as new papers, data
+  products, websites, presentatinos, and other resources are published
 
 **What citations should be added to the
 [`bibliography.bib`](https://github.com/afsc-gap-products/citations/cite/bibliography.bib)
 file in this repository?**
 
--   journal articles
--   tech memos
--   stock assessments
--   data
--   websites
--   laws and regulation
--   presentations
--   … and more! Any resource that anyone in the GAP group may need to
-    cite!
+- journal articles
+- tech memos
+- stock assessments
+- data
+- websites
+- laws and regulation
+- presentations
+- … and more! Any resource that anyone in the GAP group may need to
+  cite!
 
 # Citation style guides
 
@@ -297,33 +295,33 @@ speaking to one of the repository maintainers.
 
 To learn more about the elements of a bibtext citation, refer to:
 
--   <https://www.bibtex.com/g/bibtex-format/>
--   <https://libguides.nps.edu/citation/ieee-bibtex>
+- <https://www.bibtex.com/g/bibtex-format/>
+- <https://libguides.nps.edu/citation/ieee-bibtex>
 
 Common formatting questions, answered (feel free to add!)
 
--   **‘in review’ or ‘in press’**: use `year = {in review}` and
-    `year = {in press}`, respectively.
--   **Reference numbers must be unique**: When entering a new citation,
-    ensure that the reference number is not used anywhere else in the
-    `.bib` doc.
--   **Finding pre-formatted citations**: While not perfect, the below
-    resources can use DOIs or other paper identifiers to find and
-    construct bibliographies in the right format for you:
-    -   <https://www.doi2bib.org/>
-    -   <https://zbib.org/>
--   **Forced case-sensitivity**: Use `{...}` to force capitalization.
-    This may be needed for proper nouns. For example
-    `title = {Results of the 2021 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna}`.
--   **Listing DOIs**: While the whole link for a DOI may be
-    <https://doi.org/10.25923/9c3r-xp53>, only list the text after the
-    “<https://doi.org/>” in the `.bib` file as such:
-    `doi = {10.25923/9C3R-XP53}`.
--   **Use Journal abbreviations**: Journal abbreviations can be found
-    through the [Web of
-    Science](https://images.webofknowledge.com/images/help/WOS/A_abrvjt.html)
-    for any given scientific journal as such
-    `journal = {Fish. Oceanogr.}`.
+- **‘in review’ or ‘in press’**: use `year = {in review}` and
+  `year = {in press}`, respectively.
+- **Reference numbers must be unique**: When entering a new citation,
+  ensure that the reference number is not used anywhere else in the
+  `.bib` doc.
+- **Finding pre-formatted citations**: While not perfect, the below
+  resources can use DOIs or other paper identifiers to find and
+  construct bibliographies in the right format for you:
+  - <https://www.doi2bib.org/>
+  - <https://zbib.org/>
+- **Forced case-sensitivity**: Use `{...}` to force capitalization. This
+  may be needed for proper nouns. For example
+  `title = {Results of the 2021 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna}`.
+- **Listing DOIs**: While the whole link for a DOI may be
+  <https://doi.org/10.25923/9c3r-xp53>, only list the text after the
+  “<https://doi.org/>” in the `.bib` file as such:
+  `doi = {10.25923/9C3R-XP53}`.
+- **Use Journal abbreviations**: Journal abbreviations can be found
+  through the [Web of
+  Science](https://images.webofknowledge.com/images/help/WOS/A_abrvjt.html)
+  for any given scientific journal as such
+  `journal = {Fish. Oceanogr.}`.
 
 ## Bibliography examples
 
@@ -348,14 +346,16 @@ website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-sci
 }
 
 @article{2021NEBS2022,
-   author = {Markowitz, E. H. and Dawson, E. J. and Charriere, N. E. and Prohaska, B. K. and Rohan, S. K.  and Stevenson, D. E. and Britt, L. L.},
+   author = {Markowitz, E. H. and Dawson, E. J. and Charriere, N. E. and Prohaska, B. K. and Rohan, S. K. and Stevenson, D. E. and Britt, L. L.},
    title = {Results of the 2021 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna},
    publisher = {{U.S. Dep. Commer.}},
    year = {2022},
    type = {NOAA Tech. Memo.},
    copyright = {Public domain},
-   doi = {https://doi.org/10.25923/g1ny-y360},
-   number = {NMFS-AFSC-452}
+   number = {NMFS-F/SPO-452}, 
+   pages = {227}, 
+   doi = {10.25923/g1ny-y360}, 
+   url = {https://repository.library.noaa.gov/view/noaa/47710}
 }
 
 @article{RN920,
@@ -371,25 +371,32 @@ website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-sci
 ### NOAA Stock Assessments
 
 ``` r
-@inproceedings{RN921,
-   author = {Rose, C. S. and Walters, G. E.},
-   title = {Trawl width variation during bottom trawl surveys: causes and consequences},
-   booktitle = {Proceedings of the symposium on application of stock assessment techniques applies to gadids},
-   publisher = {International Northern {Pacific} Fisheries Communication Bulletin},
-   volume = {50},
-   pages = {57-67},
-   year = {1990},
-   type = {Conference Proceedings}
+@book{NPFMC2022,
+   author = {{The Plan Team for the Groundfish Fisheries of the Bering Sea and Aleutian Islands}},
+   title = {Stock assessment and fishery evaluation report for the groundfish resources of the {Bering Sea/Aleutian Islands} regions},
+   institution = {North {Pacific} Fishery Management Council},
+   address = {605 W. 4th Ave., Anchorage, AK 99501},
+   year = {2022},
+   url = {https://www.fisheries.noaa.gov/alaska/population-assessments/north-pacific-groundfish-stock-assessments-and-fishery-evaluation}
 }
 
-@inbook{SS2022ch15,
-   author = {Shotwell, S. K. and Sullivan, J. and Echave, K. and Markowitz, E.H. and Ortiz, I. and Siddon, E. and Spencer, P. and Spies, I.},
+@book{NPFMCBSAIcrab2022,
+   author = {{The Plan Team for the Groundfish Fisheries of the Bering Sea and Aleutian Islands}},
+   title = {Stock Assessment and Fishery Evaluation Report for the King and Tanner Crab Fisheries of the {Bering Sea} and {Aleutian Islands} Regions},
+   institution = {North {Pacific} Fishery Management Council},
+   address = {605 W. 4th Ave., Anchorage, AK 99501},
+   year = {2022},
+   url = {https://meetings.npfmc.org/CommentReview/DownloadFile?p=c0a7a6cc-fed5-4369-a441-b487db9bd60f.pdf&fileName=BSAI%20Crab%20SAFE%202022%20Introduction.pdf}
+}
+
+@inbook{SS2022ch6,
+   author = {Shotwell, S. K. and Bryan, M and Hanselman, D. H. and Markowitz, E. H. and Siddon, E. and Spies, I. and Sullivan, J.},
    title = {{NPFMC Bering Sea and Aleutian Islands SAFE}},
-   chapter = {Chapter 15: Assessment of the shortraker rockfish stock in the {Bering Sea} and {Aleutian Islands}},
+   chapter = {Chapter 6. Assessment of the arrowtooth flounder stock in the {Bering Sea} and {Aleutian Islands}},
    publisher = {North Pacific Fishery Management Council},
    address = {605 W. 4th Ave., Anchorage, AK 99501},
    year = {2022}, 
-   url = {https://www.fisheries.noaa.gov/resource/data/2022-assessment-shortraker-rockfish-stock-bering-sea-and-aleutian-islands}
+   url = {https://apps-afsc.fisheries.noaa.gov/Plan_Team/2022/BSAIatf.pdf}
 }
 ```
 
@@ -408,6 +415,17 @@ website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-sci
    ISSN = {1054-6006},
    year = {2008}
 }
+
+@article{Fedewaetal2020,
+  author = {Fedewa, E.J. and Jackson, T.M. and Richar, J.I. and Gardner, J.L. and Litzow, M.A.}, 
+  title = {Recent shifts in northern {Bering Sea} snow crab {(\emph{Chionoecetes opilio})} size structure and the potential role of climate-mediated range contraction},
+  journal = {Deep Sea Res. Part II Top. Stud. Oceanogr.},
+  doi = {10.1016/j.dsr2.2020.104878},
+  url = {https://www.sciencedirect.com/science/article/pii/S0967064520301284}, 
+  volume = {104878},
+  pages = {181–182},
+  year = {2020}
+}
 ```
 
 ### Presentations
@@ -422,6 +440,17 @@ website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-sci
    copyright = {Public domain}, 
    url = {https://www.youtube.com/watch?v=TGXN2pIDhfc}
 }
+
+@inproceedings{RN921,
+   author = {Rose, C. S. and Walters, G. E.},
+   title = {Trawl width variation during bottom trawl surveys: causes and consequences},
+   booktitle = {Proceedings of the symposium on application of stock assessment techniques applies to gadids},
+   publisher = {International Northern {Pacific} Fisheries Communication Bulletin},
+   volume = {50},
+   pages = {57-67},
+   year = {1990},
+   type = {Conference Proceedings}
+}
 ```
 
 ### Data
@@ -432,6 +461,15 @@ website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-sci
    year = {2023}, 
    title = {Fisheries One Stop Shop Public Data: RACE Division Bottom Trawl Survey Data Query},
    howpublished = {https://www.fisheries.noaa.gov/foss/f?p=215:28:2283554735243:::::},
+   publisher = {{U.S. Dep. Commer.}},
+   copyright = {Public Domain} 
+}
+
+@misc{DisMAPDataPortal,
+   author = {{NOAA Fisheries}},
+   year = {2023}, 
+   title = {Distribution Mapping and Analysis Portal (DisMAP) data records},
+   howpublished = {https://apps-st.fisheries.noaa.gov/dismap/},
    publisher = {{U.S. Dep. Commer.}},
    copyright = {Public Domain} 
 }
@@ -456,11 +494,6 @@ To use the citation:
 
 ``` r
 library(trawllight)
-```
-
-    FALSE Warning: package 'ggplot2' was built under R version 4.2.2
-
-``` r
 utils::citation("trawllight")
 ```
 
@@ -567,8 +600,8 @@ knitr::write_bib(x = PKG,
                  file = "./cite/bibliography_RPack.bib")
 ```
 
-    FALSE Warning in utils::citation(..., lib.loc = lib.loc): no date field in DESCRIPTION
-    FALSE file of package 'trawllight'
+    FALSE Warning in utils::citation(..., lib.loc = lib.loc): no date field in
+    FALSE DESCRIPTION file of package 'trawllight'
 
 *Which looks like*
 
@@ -598,11 +631,11 @@ bibliography: "../cite/bibliography_RPack.bib"
 Other resources for developing bibliographies for papers and reports
 include:
 
--   The [`{journals}`](https://github.com/nmfs-fish-tools/journals)
-    package in nmfs-fish-tools
--   The
-    [`{RefManageR}`](https://cran.r-project.org/web/packages/RefManageR/index.html)
-    package for searching .bib files
+- The [`{journals}`](https://github.com/nmfs-fish-tools/journals)
+  package in nmfs-fish-tools
+- The
+  [`{RefManageR}`](https://cran.r-project.org/web/packages/RefManageR/index.html)
+  package for searching .bib files
 
 # Suggestions and Comments
 
@@ -620,9 +653,9 @@ repository](https://github.com/afsc-gap-products/citations/issues).
 sessionInfo()
 ```
 
-    FALSE R version 4.2.0 (2022-04-22 ucrt)
+    FALSE R version 4.2.2 (2022-10-31 ucrt)
     FALSE Platform: x86_64-w64-mingw32/x64 (64-bit)
-    FALSE Running under: Windows 10 x64 (build 19044)
+    FALSE Running under: Windows 10 x64 (build 19045)
     FALSE 
     FALSE Matrix products: default
     FALSE 
@@ -640,16 +673,16 @@ sessionInfo()
     FALSE [1] trawllight_3.1.6 ggplot2_3.4.0   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] pillar_1.8.1      compiler_4.2.0    tools_4.2.0       readtext_0.81    
-    FALSE  [5] digest_0.6.31     evaluate_0.19     lifecycle_1.0.3   tibble_3.1.8     
-    FALSE  [9] gtable_0.3.1      pkgconfig_2.0.3   rlang_1.0.6       cli_3.4.1        
-    FALSE [13] DBI_1.1.3         rstudioapi_0.14   yaml_2.3.6        xfun_0.35        
-    FALSE [17] fastmap_1.1.0     withr_2.5.0       httr_1.4.4        stringr_1.5.0    
-    FALSE [21] dplyr_1.0.10      knitr_1.41        generics_0.1.3    vctrs_0.5.1      
-    FALSE [25] grid_4.2.0        tidyselect_1.2.0  glue_1.6.2        data.table_1.14.6
-    FALSE [29] R6_2.5.1          fansi_1.0.3       rmarkdown_2.19    magrittr_2.0.3   
-    FALSE [33] scales_1.2.1      htmltools_0.5.4   assertthat_0.2.1  colorspace_2.0-3 
-    FALSE [37] utf8_1.2.2        stringi_1.7.8     munsell_0.5.0
+    FALSE  [1] pillar_1.8.1      compiler_4.2.2    tools_4.2.2       readtext_0.81    
+    FALSE  [5] digest_0.6.31     evaluate_0.20     lifecycle_1.0.3   tibble_3.1.8     
+    FALSE  [9] gtable_0.3.1      pkgconfig_2.0.3   rlang_1.0.6       cli_3.6.0        
+    FALSE [13] DBI_1.1.3         rstudioapi_0.14   yaml_2.3.7        xfun_0.36        
+    FALSE [17] fastmap_1.1.0     withr_2.5.0       httr_1.4.4        dplyr_1.0.10     
+    FALSE [21] knitr_1.42        generics_0.1.3    vctrs_0.5.2       grid_4.2.2       
+    FALSE [25] tidyselect_1.2.0  glue_1.6.2        data.table_1.14.6 R6_2.5.1         
+    FALSE [29] fansi_1.0.4       rmarkdown_2.20    magrittr_2.0.3    scales_1.2.1     
+    FALSE [33] htmltools_0.5.4   assertthat_0.2.1  colorspace_2.1-0  utf8_1.2.2       
+    FALSE [37] stringi_1.7.12    munsell_0.5.0
 
 ## NOAA README
 

@@ -222,14 +222,16 @@ NOAA publications are listed and searchable on the NOAA website and [AFSC websit
 }
 
 @article{2021NEBS2022,
-   author = {Markowitz, E. H. and Dawson, E. J. and Charriere, N. E. and Prohaska, B. K. and Rohan, S. K.  and Stevenson, D. E. and Britt, L. L.},
+   author = {Markowitz, E. H. and Dawson, E. J. and Charriere, N. E. and Prohaska, B. K. and Rohan, S. K. and Stevenson, D. E. and Britt, L. L.},
    title = {Results of the 2021 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna},
    publisher = {{U.S. Dep. Commer.}},
    year = {2022},
    type = {NOAA Tech. Memo.},
    copyright = {Public domain},
-   doi = {https://doi.org/10.25923/g1ny-y360},
-   number = {NMFS-AFSC-452}
+   number = {NMFS-F/SPO-452}, 
+   pages = {227}, 
+   doi = {10.25923/g1ny-y360}, 
+   url = {https://repository.library.noaa.gov/view/noaa/47710}
 }
 
 @article{RN920,
@@ -245,25 +247,32 @@ NOAA publications are listed and searchable on the NOAA website and [AFSC websit
 ### NOAA Stock Assessments
 
 ```{r, eval = FALSE, echo=TRUE}
-@inproceedings{RN921,
-   author = {Rose, C. S. and Walters, G. E.},
-   title = {Trawl width variation during bottom trawl surveys: causes and consequences},
-   booktitle = {Proceedings of the symposium on application of stock assessment techniques applies to gadids},
-   publisher = {International Northern {Pacific} Fisheries Communication Bulletin},
-   volume = {50},
-   pages = {57-67},
-   year = {1990},
-   type = {Conference Proceedings}
+@book{NPFMC2022,
+   author = {{The Plan Team for the Groundfish Fisheries of the Bering Sea and Aleutian Islands}},
+   title = {Stock assessment and fishery evaluation report for the groundfish resources of the {Bering Sea/Aleutian Islands} regions},
+   institution = {North {Pacific} Fishery Management Council},
+   address = {605 W. 4th Ave., Anchorage, AK 99501},
+   year = {2022},
+   url = {https://www.fisheries.noaa.gov/alaska/population-assessments/north-pacific-groundfish-stock-assessments-and-fishery-evaluation}
 }
 
-@inbook{SS2022ch15,
-   author = {Shotwell, S. K. and Sullivan, J. and Echave, K. and Markowitz, E.H. and Ortiz, I. and Siddon, E. and Spencer, P. and Spies, I.},
+@book{NPFMCBSAIcrab2022,
+   author = {{The Plan Team for the Groundfish Fisheries of the Bering Sea and Aleutian Islands}},
+   title = {Stock Assessment and Fishery Evaluation Report for the King and Tanner Crab Fisheries of the {Bering Sea} and {Aleutian Islands} Regions},
+   institution = {North {Pacific} Fishery Management Council},
+   address = {605 W. 4th Ave., Anchorage, AK 99501},
+   year = {2022},
+   url = {https://meetings.npfmc.org/CommentReview/DownloadFile?p=c0a7a6cc-fed5-4369-a441-b487db9bd60f.pdf&fileName=BSAI%20Crab%20SAFE%202022%20Introduction.pdf}
+}
+
+@inbook{SS2022ch6,
+   author = {Shotwell, S. K. and Bryan, M and Hanselman, D. H. and Markowitz, E. H. and Siddon, E. and Spies, I. and Sullivan, J.},
    title = {{NPFMC Bering Sea and Aleutian Islands SAFE}},
-   chapter = {Chapter 15: Assessment of the shortraker rockfish stock in the {Bering Sea} and {Aleutian Islands}},
+   chapter = {Chapter 6. Assessment of the arrowtooth flounder stock in the {Bering Sea} and {Aleutian Islands}},
    publisher = {North Pacific Fishery Management Council},
    address = {605 W. 4th Ave., Anchorage, AK 99501},
    year = {2022}, 
-   url = {https://www.fisheries.noaa.gov/resource/data/2022-assessment-shortraker-rockfish-stock-bering-sea-and-aleutian-islands}
+   url = {https://apps-afsc.fisheries.noaa.gov/Plan_Team/2022/BSAIatf.pdf}
 }
 
 ```
@@ -283,6 +292,17 @@ NOAA publications are listed and searchable on the NOAA website and [AFSC websit
    ISSN = {1054-6006},
    year = {2008}
 }
+
+@article{Fedewaetal2020,
+  author = {Fedewa, E.J. and Jackson, T.M. and Richar, J.I. and Gardner, J.L. and Litzow, M.A.}, 
+  title = {Recent shifts in northern {Bering Sea} snow crab {(\emph{Chionoecetes opilio})} size structure and the potential role of climate-mediated range contraction},
+  journal = {Deep Sea Res. Part II Top. Stud. Oceanogr.},
+  doi = {10.1016/j.dsr2.2020.104878},
+  url = {https://www.sciencedirect.com/science/article/pii/S0967064520301284}, 
+  volume = {104878},
+  pages = {181–182},
+  year = {2020}
+}
 ```
 
 ### Presentations
@@ -297,6 +317,18 @@ NOAA publications are listed and searchable on the NOAA website and [AFSC websit
    copyright = {Public domain}, 
    url = {https://www.youtube.com/watch?v=TGXN2pIDhfc}
 }
+
+@inproceedings{RN921,
+   author = {Rose, C. S. and Walters, G. E.},
+   title = {Trawl width variation during bottom trawl surveys: causes and consequences},
+   booktitle = {Proceedings of the symposium on application of stock assessment techniques applies to gadids},
+   publisher = {International Northern {Pacific} Fisheries Communication Bulletin},
+   volume = {50},
+   pages = {57-67},
+   year = {1990},
+   type = {Conference Proceedings}
+}
+
 ```
 
 ### Data
@@ -307,6 +339,15 @@ NOAA publications are listed and searchable on the NOAA website and [AFSC websit
    year = {2023}, 
    title = {Fisheries One Stop Shop Public Data: RACE Division Bottom Trawl Survey Data Query},
    howpublished = {https://www.fisheries.noaa.gov/foss/f?p=215:28:2283554735243:::::},
+   publisher = {{U.S. Dep. Commer.}},
+   copyright = {Public Domain} 
+}
+
+@misc{DisMAPDataPortal,
+   author = {{NOAA Fisheries}},
+   year = {2023}, 
+   title = {Distribution Mapping and Analysis Portal (DisMAP) data records},
+   howpublished = {https://apps-st.fisheries.noaa.gov/dismap/},
    publisher = {{U.S. Dep. Commer.}},
    copyright = {Public Domain} 
 }
