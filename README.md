@@ -246,8 +246,9 @@ line-spacing="2">
 Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
 Rohan, S. K., Haehn, R. A., Stevenson, D. E., and Britt, L. L. (2022).
 *Results of the 2018 eastern Bering Sea continental shelf bottom trawl
-survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
-*NMFS-F/SPO-450*, 183. <https://doi.org/10.25923/m4pw-t510>
+survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
+NMFS-F/SPO-450; p. 183). U.S. Dep. Commer.
+<https://doi.org/10.25923/m4pw-t510>
 
 </div>
 
@@ -256,8 +257,9 @@ survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
 Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
 Rohan, S. K., Stevenson, D. E., and Britt, L. L. (2022a). *Results of
 the 2019 eastern and northern Bering Sea continental shelf bottom trawl
-survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
-*NMFS-F/SPO-451*, 225. <https://doi.org/10.25923/d641-xb21>
+survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
+NMFS-F/SPO-451; p. 225). U.S. Dep. Commer.
+<https://doi.org/10.25923/d641-xb21>
 
 </div>
 
@@ -266,8 +268,9 @@ survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
 Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
 Rohan, S. K., Stevenson, D. E., and Britt, L. L. (2022b). *Results of
 the 2021 eastern and northern Bering Sea continental shelf bottom trawl
-survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
-*NMFS-F/SPO-452*, 227. <https://doi.org/10.25923/g1ny-y360>
+survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
+NMFS-F/SPO-452; p. 227). U.S. Dep. Commer.
+<https://doi.org/10.25923/g1ny-y360>
 
 </div>
 
@@ -277,6 +280,7 @@ Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
 Rohan, S. K., Stevenson, D. E., and Britt, L. L. (In review). *Results
 of the 2022 eastern and northern Bering Sea continental shelf bottom
 trawl survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
+U.S. Dep. Commer.
 
 </div>
 
@@ -335,7 +339,7 @@ NOAA publications are listed and searchable on the NOAA website and
 website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-science-center-publications).
 
 ``` r
-@article{RN888,
+@techreport{RN888,
    author = {Alton, M. S. and Bakkala, R. G. and Walters G. E. and Munro, P. T.},
    title = {Greenland turbot {(\emph{Reinhardtius hippoglossoides})} of the eastern {Bering Sea} and {Aleutian Islands} region},
    url = {https://spo.nmfs.noaa.gov/content/tr-71-greenland-turbot-reinhardtius-hippoglossoides-eastern-bering-sea-and-aleutian-islands},
@@ -345,7 +349,7 @@ website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-sci
    number = {NMFS-71}
 }
 
-@article{2021NEBS2022,
+@techreport{2021NEBS2022,
    author = {Markowitz, E. H. and Dawson, E. J. and Charriere, N. E. and Prohaska, B. K. and Rohan, S. K. and Stevenson, D. E. and Britt, L. L.},
    title = {Results of the 2021 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna},
    publisher = {{U.S. Dep. Commer.}},
@@ -358,7 +362,7 @@ website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-sci
    url = {https://repository.library.noaa.gov/view/noaa/47710}
 }
 
-@article{RN920,
+@techreport{RN920,
    author = {Pereyra, W. T. and Reeves, J. E. and Bakkala, R. G.},
    title = {Demersal fish and shellfish resources of the eastern {Bering Sea} in the baseline year 1975},
    publisher = {U.S. Dep. Commer.},
@@ -431,25 +435,22 @@ website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-sci
 ### Presentations
 
 ``` r
-@presentation{2022Community,
-   author = {Markowitz, E. H. and Dawson, E. J. and Anderson, C. and Charriere, N. E. and Richar, J. I. and Rohan, S. K. and Prohaska, B. K. and Haehn, R. A. and Stevenson, D. E},
-   title = {2022 northern {Bering Sea} groundfish and crab trawl survey highlights},
-   institution = {University of Alaska Fairbanks Strait Science Seminar}, 
-   year = {2022},
+@misc{2021NBSCommunity,
+   title = {2021 northern {Bering Sea} groundfish and crab trawl survey highlights},
+   author = {Britt, L. L. and Markowitz, E. H. and Dawson, E. J. and Charriere, N. E. and Prohaska, B. K. and Rohan, S. K. and Stevenson, D. E. and Britt, L. L.},
+   year = {2021},
    type = {Outreach},
    copyright = {Public domain}, 
-   url = {https://www.youtube.com/watch?v=TGXN2pIDhfc}
+   howpublished = {https://youtu.be/putpYJtPRF8}
 }
 
-@inproceedings{RN921,
-   author = {Rose, C. S. and Walters, G. E.},
-   title = {Trawl width variation during bottom trawl surveys: causes and consequences},
-   booktitle = {Proceedings of the symposium on application of stock assessment techniques applies to gadids},
-   publisher = {International Northern {Pacific} Fisheries Communication Bulletin},
-   volume = {50},
-   pages = {57-67},
-   year = {1990},
-   type = {Conference Proceedings}
+@misc{2022NEBS2022PlanTeamPres,
+   author = {Stevenson, D. E. and Markowitz, E. H. and Dawson, E. J. and Charriere, N. E. and Prohaska, B. K. and Rohan, S. K. and Britt, L. L.},
+   title = {Results of the 2022 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna},
+   year = {2022},
+   publisher = {North Pacific Fishery Management Council},
+   copyright = {Public domain}, 
+   howpublished = {https://meetings.npfmc.org/CommentReview/DownloadFile?p=02e397c4-a1cc-46eb-b2ae-1c3cc368e682.pdf&fileName=2022_EBSsurvey_planteam.pdf}
 }
 ```
 
@@ -497,15 +498,13 @@ library(trawllight)
 utils::citation("trawllight")
 ```
 
-    FALSE Warning in utils::citation("trawllight"): no date field in DESCRIPTION file of
-    FALSE package 'trawllight'
+    FALSE Warning in utils::citation("trawllight"): no date field in DESCRIPTION file of package 'trawllight'
 
     FALSE 
     FALSE To cite package 'trawllight' in publications use:
     FALSE 
-    FALSE   Rohan S, Laman N (2022). _trawllight: Derive apparent optical
-    FALSE   properties from trawl-mounted light sensors_. R package version
-    FALSE   3.1.6.
+    FALSE   Rohan S, Laman N (2022). _trawllight: Derive apparent optical properties from trawl-mounted light
+    FALSE   sensors_. R package version 3.1.6.
     FALSE 
     FALSE A BibTeX entry for LaTeX users is
     FALSE 
@@ -600,8 +599,7 @@ knitr::write_bib(x = PKG,
                  file = "./cite/bibliography_RPack.bib")
 ```
 
-    FALSE Warning in utils::citation(..., lib.loc = lib.loc): no date field in
-    FALSE DESCRIPTION file of package 'trawllight'
+    FALSE Warning in utils::citation(..., lib.loc = lib.loc): no date field in DESCRIPTION file of package 'trawllight'
 
 *Which looks like*
 
@@ -660,10 +658,8 @@ sessionInfo()
     FALSE Matrix products: default
     FALSE 
     FALSE locale:
-    FALSE [1] LC_COLLATE=English_United States.utf8 
-    FALSE [2] LC_CTYPE=English_United States.utf8   
-    FALSE [3] LC_MONETARY=English_United States.utf8
-    FALSE [4] LC_NUMERIC=C                          
+    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8   
+    FALSE [3] LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
     FALSE [5] LC_TIME=English_United States.utf8    
     FALSE 
     FALSE attached base packages:
@@ -673,16 +669,13 @@ sessionInfo()
     FALSE [1] trawllight_3.1.6 ggplot2_3.4.0   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] pillar_1.8.1      compiler_4.2.2    tools_4.2.2       readtext_0.81    
-    FALSE  [5] digest_0.6.31     evaluate_0.20     lifecycle_1.0.3   tibble_3.1.8     
-    FALSE  [9] gtable_0.3.1      pkgconfig_2.0.3   rlang_1.0.6       cli_3.6.0        
-    FALSE [13] DBI_1.1.3         rstudioapi_0.14   yaml_2.3.7        xfun_0.36        
-    FALSE [17] fastmap_1.1.0     withr_2.5.0       httr_1.4.4        dplyr_1.0.10     
-    FALSE [21] knitr_1.42        generics_0.1.3    vctrs_0.5.2       grid_4.2.2       
-    FALSE [25] tidyselect_1.2.0  glue_1.6.2        data.table_1.14.6 R6_2.5.1         
-    FALSE [29] fansi_1.0.4       rmarkdown_2.20    magrittr_2.0.3    scales_1.2.1     
-    FALSE [33] htmltools_0.5.4   assertthat_0.2.1  colorspace_2.1-0  utf8_1.2.2       
-    FALSE [37] stringi_1.7.12    munsell_0.5.0
+    FALSE  [1] pillar_1.8.1      compiler_4.2.2    tools_4.2.2       readtext_0.81     digest_0.6.31     evaluate_0.20    
+    FALSE  [7] lifecycle_1.0.3   tibble_3.1.8      gtable_0.3.1      pkgconfig_2.0.3   rlang_1.0.6       cli_3.6.0        
+    FALSE [13] DBI_1.1.3         rstudioapi_0.14   yaml_2.3.7        xfun_0.36         fastmap_1.1.0     withr_2.5.0      
+    FALSE [19] dplyr_1.0.10      httr_1.4.4        stringr_1.5.0     knitr_1.42        generics_0.1.3    vctrs_0.5.2      
+    FALSE [25] grid_4.2.2        tidyselect_1.2.0  glue_1.6.2        data.table_1.14.6 R6_2.5.1          fansi_1.0.4      
+    FALSE [31] rmarkdown_2.20    magrittr_2.0.3    scales_1.2.1      htmltools_0.5.4   assertthat_0.2.1  colorspace_2.1-0 
+    FALSE [37] utf8_1.2.2        stringi_1.7.12    munsell_0.5.0
 
 ## NOAA README
 

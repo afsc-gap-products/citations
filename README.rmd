@@ -211,7 +211,7 @@ To make sure all bibliography listed in the `.bib` file are consistent, please r
 NOAA publications are listed and searchable on the NOAA website and [AFSC website](https://www.fisheries.noaa.gov/alaska/science-data/alaska-fisheries-science-center-publications). 
 
 ```{r, eval = FALSE, echo=TRUE}
-@article{RN888,
+@techreport{RN888,
    author = {Alton, M. S. and Bakkala, R. G. and Walters G. E. and Munro, P. T.},
    title = {Greenland turbot {(\emph{Reinhardtius hippoglossoides})} of the eastern {Bering Sea} and {Aleutian Islands} region},
    url = {https://spo.nmfs.noaa.gov/content/tr-71-greenland-turbot-reinhardtius-hippoglossoides-eastern-bering-sea-and-aleutian-islands},
@@ -221,7 +221,7 @@ NOAA publications are listed and searchable on the NOAA website and [AFSC websit
    number = {NMFS-71}
 }
 
-@article{2021NEBS2022,
+@techreport{2021NEBS2022,
    author = {Markowitz, E. H. and Dawson, E. J. and Charriere, N. E. and Prohaska, B. K. and Rohan, S. K. and Stevenson, D. E. and Britt, L. L.},
    title = {Results of the 2021 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna},
    publisher = {{U.S. Dep. Commer.}},
@@ -234,7 +234,7 @@ NOAA publications are listed and searchable on the NOAA website and [AFSC websit
    url = {https://repository.library.noaa.gov/view/noaa/47710}
 }
 
-@article{RN920,
+@techreport{RN920,
    author = {Pereyra, W. T. and Reeves, J. E. and Bakkala, R. G.},
    title = {Demersal fish and shellfish resources of the eastern {Bering Sea} in the baseline year 1975},
    publisher = {U.S. Dep. Commer.},
@@ -308,25 +308,22 @@ NOAA publications are listed and searchable on the NOAA website and [AFSC websit
 ### Presentations
 
 ```{r, eval = FALSE, echo=TRUE}
-@presentation{2022Community,
-   author = {Markowitz, E. H. and Dawson, E. J. and Anderson, C. and Charriere, N. E. and Richar, J. I. and Rohan, S. K. and Prohaska, B. K. and Haehn, R. A. and Stevenson, D. E},
-   title = {2022 northern {Bering Sea} groundfish and crab trawl survey highlights},
-   institution = {University of Alaska Fairbanks Strait Science Seminar}, 
-   year = {2022},
+@misc{2021NBSCommunity,
+   title = {2021 northern {Bering Sea} groundfish and crab trawl survey highlights},
+   author = {Britt, L. L. and Markowitz, E. H. and Dawson, E. J. and Charriere, N. E. and Prohaska, B. K. and Rohan, S. K. and Stevenson, D. E. and Britt, L. L.},
+   year = {2021},
    type = {Outreach},
    copyright = {Public domain}, 
-   url = {https://www.youtube.com/watch?v=TGXN2pIDhfc}
+   howpublished = {https://youtu.be/putpYJtPRF8}
 }
 
-@inproceedings{RN921,
-   author = {Rose, C. S. and Walters, G. E.},
-   title = {Trawl width variation during bottom trawl surveys: causes and consequences},
-   booktitle = {Proceedings of the symposium on application of stock assessment techniques applies to gadids},
-   publisher = {International Northern {Pacific} Fisheries Communication Bulletin},
-   volume = {50},
-   pages = {57-67},
-   year = {1990},
-   type = {Conference Proceedings}
+@misc{2022NEBS2022PlanTeamPres,
+   author = {Stevenson, D. E. and Markowitz, E. H. and Dawson, E. J. and Charriere, N. E. and Prohaska, B. K. and Rohan, S. K. and Britt, L. L.},
+   title = {Results of the 2022 eastern and northern {Bering Sea} continental shelf bottom trawl survey of groundfish and invertebrate fauna},
+   year = {2022},
+   publisher = {North Pacific Fishery Management Council},
+   copyright = {Public domain}, 
+   howpublished = {https://meetings.npfmc.org/CommentReview/DownloadFile?p=02e397c4-a1cc-46eb-b2ae-1c3cc368e682.pdf&fileName=2022_EBSsurvey_planteam.pdf}
 }
 
 ```
