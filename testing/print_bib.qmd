@@ -338,9 +338,11 @@ bibfiletext_flag %>%
   dplyr::filter(auth == ">1" | year == ">1" | title == ">1")
 ```
 
-Test citing a report (@2022NEBS2022). Here are all of the publishers represented in our .bib data file (@fig-publishers; @tbl-publishers): 
+Test citing a report (@2022NEBS2022). 
 
-```{r publishers-wrangle} 
+```{r publishers-wrangle, eval = FALSE} 
+# Here are all of the publishers represented in our .bib data file (\@fig-publishers; \@tbl-publishers): 
+  
 cite_pub <- grep(pattern = "publisher = ", x = bibfiletext0, fixed = TRUE)
 cite_pub <- gsub(pattern = "}", replacement = "", 
                x = gsub(pattern = "{", replacement = "", x = bibfiletext0[cite_pub], 
@@ -354,7 +356,7 @@ dat <- data.frame(table(cite_pub))
 ```
 
 
-```{r, results='asis'}
+```{r, results='asis', eval = FALSE}
 #| label: fig-publishers
 #| fig-cap: "Publishers in our citation bib data file."
 #| fig-height: 4
@@ -364,7 +366,7 @@ ggplot(data = dat, mapping = aes(x = Freq, y = cite_pub)) +
     ggplot2::theme_bw()
 ```
 
-```{r, results='asis'}
+```{r, results='asis', eval = FALSE}
 #| label: tbl-publishers
 #| tbl-cap: "Publishers in our citation bib data file."
 

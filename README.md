@@ -105,6 +105,12 @@ file in this repository?**
 - … and more! Any resource that anyone in the GAP group may need to
   cite!
 
+Find a print out of all of the citations currently included in this
+repo’s
+[`bibliography.bib`](https://github.com/afsc-gap-products/citations/cite/bibliography.bib)
+in this
+[document](https://github.com/afsc-gap-products/citations/blob/main/testing/print_bib.pdf)
+
 # Citation style guides
 
 Citation styles provide the particular formats for in-text citations and
@@ -503,8 +509,8 @@ utils::citation("trawllight")
     FALSE 
     FALSE To cite package 'trawllight' in publications use:
     FALSE 
-    FALSE   Rohan S, Laman N (2022). _trawllight: Derive apparent optical properties from trawl-mounted light
-    FALSE   sensors_. R package version 3.1.6.
+    FALSE   Rohan S, Laman N (2022). _trawllight: Derive apparent optical properties from trawl-mounted light sensors_.
+    FALSE   R package version 3.1.6.
     FALSE 
     FALSE A BibTeX entry for LaTeX users is
     FALSE 
@@ -589,7 +595,7 @@ PKG <- names(sessionInfo()[7][[1]])
 PKG
 ```
 
-    FALSE [1] "trawllight" "ggplot2"
+    FALSE [1] "gt"         "janitor"    "readr"      "magrittr"   "dplyr"      "tidyr"      "trawllight" "ggplot2"
 
 Then to cite the packages loaded for this R project, create a .bib file
 for R packages:
@@ -603,13 +609,13 @@ knitr::write_bib(x = PKG,
 
 *Which looks like*
 
-    FALSE [1] "@Manual{R-ggplot2,"                                                                                                                                                               
-    FALSE [2] "  title = {ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics},"                                                                                           
-    FALSE [3] "  author = {Hadley Wickham and Winston Chang and Lionel Henry and Thomas Lin Pedersen and Kohske Takahashi and Claus Wilke and Kara Woo and Hiroaki Yutani and Dewey Dunnington},"
-    FALSE [4] "  year = {2022},"                                                                                                                                                                 
-    FALSE [5] "  note = {R package version 3.4.0},"                                                                                                                                              
-    FALSE [6] "  url = {https://CRAN.R-project.org/package=ggplot2},"                                                                                                                            
-    FALSE [7] "}"                                                                                                                                                                                
+    FALSE [1] "@Manual{R-dplyr,"                                                                   
+    FALSE [2] "  title = {dplyr: A Grammar of Data Manipulation},"                                 
+    FALSE [3] "  author = {Hadley Wickham and Romain François and Lionel Henry and Kirill Müller},"
+    FALSE [4] "  year = {2022},"                                                                   
+    FALSE [5] "  note = {R package version 1.0.10},"                                               
+    FALSE [6] "  url = {https://CRAN.R-project.org/package=dplyr},"                                
+    FALSE [7] "}"                                                                                  
     FALSE [8] ""
 
 And add your new bibliography file to your YAML:
@@ -658,24 +664,26 @@ sessionInfo()
     FALSE Matrix products: default
     FALSE 
     FALSE locale:
-    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8   
-    FALSE [3] LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
-    FALSE [5] LC_TIME=English_United States.utf8    
+    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8
+    FALSE [4] LC_NUMERIC=C                           LC_TIME=English_United States.utf8    
     FALSE 
     FALSE attached base packages:
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
     FALSE other attached packages:
-    FALSE [1] trawllight_3.1.6 ggplot2_3.4.0   
+    FALSE [1] gt_0.8.0         janitor_2.2.0    readr_2.1.3      magrittr_2.0.3   dplyr_1.0.10     tidyr_1.3.0      trawllight_3.1.6
+    FALSE [8] ggplot2_3.4.1   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] pillar_1.8.1      compiler_4.2.2    tools_4.2.2       readtext_0.81     digest_0.6.31     evaluate_0.20    
-    FALSE  [7] lifecycle_1.0.3   tibble_3.1.8      gtable_0.3.1      pkgconfig_2.0.3   rlang_1.0.6       cli_3.6.0        
-    FALSE [13] DBI_1.1.3         rstudioapi_0.14   yaml_2.3.7        xfun_0.36         fastmap_1.1.0     withr_2.5.0      
-    FALSE [19] dplyr_1.0.10      httr_1.4.4        stringr_1.5.0     knitr_1.42        generics_0.1.3    vctrs_0.5.2      
-    FALSE [25] grid_4.2.2        tidyselect_1.2.0  glue_1.6.2        data.table_1.14.6 R6_2.5.1          fansi_1.0.4      
-    FALSE [31] rmarkdown_2.20    magrittr_2.0.3    scales_1.2.1      htmltools_0.5.4   assertthat_0.2.1  colorspace_2.1-0 
-    FALSE [37] utf8_1.2.2        stringi_1.7.12    munsell_0.5.0
+    FALSE  [1] tinytex_0.44      tidyselect_1.2.0  xfun_0.37         purrr_1.0.1       snakecase_0.11.0  colorspace_2.1-0 
+    FALSE  [7] vctrs_0.5.2       generics_0.1.3    htmltools_0.5.4   yaml_2.3.7        utf8_1.2.2        rlang_1.0.6      
+    FALSE [13] readtext_0.81     pillar_1.8.1      glue_1.6.2        withr_2.5.0       DBI_1.1.3         lifecycle_1.0.3  
+    FALSE [19] stringr_1.5.0     munsell_0.5.0     gtable_0.3.1      evaluate_0.20     labeling_0.4.2    knitr_1.42       
+    FALSE [25] tzdb_0.3.0        fastmap_1.1.0     curl_5.0.0        fansi_1.0.4       highr_0.10        scales_1.2.1     
+    FALSE [31] farver_2.1.1      hms_1.1.2         digest_0.6.31     stringi_1.7.12    grid_4.2.2        cli_3.6.0        
+    FALSE [37] tools_4.2.2       tibble_3.1.8      pkgconfig_2.0.3   ellipsis_0.3.2    data.table_1.14.6 xml2_1.3.3       
+    FALSE [43] lubridate_1.9.2   timechange_0.2.0  assertthat_0.2.1  rmarkdown_2.20    httr_1.4.4        rstudioapi_0.14  
+    FALSE [49] R6_2.5.1          compiler_4.2.2
 
 ## NOAA README
 
