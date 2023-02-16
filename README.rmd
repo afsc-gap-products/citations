@@ -83,7 +83,7 @@ toc <- paste0(toc_list, "*](#", toc_link, ")", collapse = "\n")
  - presentations
  - ... and more! Any resource that anyone in the GAP group may need to cite!
 
-Find a print out of all of the citations currently included in this repo's [`bibliography.bib`](`r paste0(link_repo, "/cite/bibliography.bib")`) in this [document](`r paste0(link_repo, "/blob/main/testing/print_bib.pdf")`)  
+> **Find a print out of all of the citations currently included in this repo's [`bibliography.bib`](`r paste0(link_repo, "/cite/bibliography.bib")`) in this [pdf document](`r paste0(link_repo, "/blob/main/testing/print_bib.pdf")`).* *
 
 # Citation style guides
 
