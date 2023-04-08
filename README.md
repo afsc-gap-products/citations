@@ -596,7 +596,7 @@ PKG <- names(sessionInfo()[7][[1]])
 PKG
 ```
 
-    FALSE [1] "trawllight" "ggplot2"
+    FALSE [1] "janitor"    "readr"      "magrittr"   "dplyr"      "tidyr"      "trawllight" "ggplot2"
 
 Then to cite the packages loaded for this R project, create a .bib file
 for R packages:
@@ -610,13 +610,13 @@ knitr::write_bib(x = PKG,
 
 *Which looks like*
 
-    FALSE [1] "@Manual{R-ggplot2,"                                                                                                                                                               
-    FALSE [2] "  title = {ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics},"                                                                                           
-    FALSE [3] "  author = {Hadley Wickham and Winston Chang and Lionel Henry and Thomas Lin Pedersen and Kohske Takahashi and Claus Wilke and Kara Woo and Hiroaki Yutani and Dewey Dunnington},"
-    FALSE [4] "  year = {2023},"                                                                                                                                                                 
-    FALSE [5] "  note = {R package version 3.4.1},"                                                                                                                                              
-    FALSE [6] "  url = {https://CRAN.R-project.org/package=ggplot2},"                                                                                                                            
-    FALSE [7] "}"                                                                                                                                                                                
+    FALSE [1] "@Manual{R-dplyr,"                                                                                     
+    FALSE [2] "  title = {dplyr: A Grammar of Data Manipulation},"                                                   
+    FALSE [3] "  author = {Hadley Wickham and Romain François and Lionel Henry and Kirill Müller and Davis Vaughan},"
+    FALSE [4] "  year = {2023},"                                                                                     
+    FALSE [5] "  note = {R package version 1.1.1},"                                                                  
+    FALSE [6] "  url = {https://CRAN.R-project.org/package=dplyr},"                                                  
+    FALSE [7] "}"                                                                                                    
     FALSE [8] ""
 
 And add your new bibliography file to your YAML:
@@ -673,16 +673,18 @@ sessionInfo()
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
     FALSE other attached packages:
-    FALSE [1] trawllight_3.1.6 ggplot2_3.4.1   
+    FALSE [1] janitor_2.2.0    readr_2.1.4      magrittr_2.0.3   dplyr_1.1.1      tidyr_1.3.0      trawllight_3.1.6
+    FALSE [7] ggplot2_3.4.1   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] rstudioapi_0.14   knitr_1.42        magrittr_2.0.3    munsell_0.5.0     tidyselect_1.2.0  colorspace_2.1-0 
-    FALSE  [7] R6_2.5.1          rlang_1.1.0       fastmap_1.1.1     fansi_1.0.4       stringr_1.5.0     httr_1.4.5       
-    FALSE [13] dplyr_1.1.1       tools_4.2.3       grid_4.2.3        gtable_0.3.3      data.table_1.14.8 xfun_0.38        
-    FALSE [19] utf8_1.2.3        cli_3.6.1         withr_2.5.0       htmltools_0.5.5   yaml_2.3.7        digest_0.6.31    
-    FALSE [25] tibble_3.2.1      lifecycle_1.0.3   vctrs_0.6.1       glue_1.6.2        evaluate_0.20     rmarkdown_2.20   
-    FALSE [31] stringi_1.7.12    compiler_4.2.3    pillar_1.9.0      scales_1.2.1      generics_0.1.3    readtext_0.81    
-    FALSE [37] pkgconfig_2.0.3
+    FALSE  [1] pillar_1.9.0      compiler_4.2.3    tools_4.2.3       readtext_0.81     digest_0.6.31     timechange_0.2.0 
+    FALSE  [7] lubridate_1.9.2   evaluate_0.20     lifecycle_1.0.3   tibble_3.2.1      gtable_0.3.3      pkgconfig_2.0.3  
+    FALSE [13] rlang_1.1.0       cli_3.6.1         rstudioapi_0.14   curl_5.0.0        yaml_2.3.7        xfun_0.38        
+    FALSE [19] fastmap_1.1.1     xml2_1.3.3        withr_2.5.0       httr_1.4.5        stringr_1.5.0     knitr_1.42       
+    FALSE [25] hms_1.1.3         generics_0.1.3    vctrs_0.6.1       grid_4.2.3        tidyselect_1.2.0  snakecase_0.11.0 
+    FALSE [31] glue_1.6.2        data.table_1.14.8 R6_2.5.1          fansi_1.0.4       rmarkdown_2.20    tzdb_0.3.0       
+    FALSE [37] purrr_1.0.1       scales_1.2.1      htmltools_0.5.5   colorspace_2.1-0  tinytex_0.44      utf8_1.2.3       
+    FALSE [43] stringi_1.7.12    munsell_0.5.0
 
 ## NOAA README
 
