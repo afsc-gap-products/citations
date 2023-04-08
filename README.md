@@ -510,8 +510,8 @@ utils::citation("trawllight")
     FALSE 
     FALSE To cite package 'trawllight' in publications use:
     FALSE 
-    FALSE   Rohan S, Laman N (2022). _trawllight: Derive apparent optical properties from trawl-mounted light sensors_.
-    FALSE   R package version 3.1.6.
+    FALSE   Rohan S, Laman N (2022). _trawllight: Derive apparent optical properties from trawl-mounted light
+    FALSE   sensors_. R package version 3.1.6.
     FALSE 
     FALSE A BibTeX entry for LaTeX users is
     FALSE 
@@ -579,14 +579,14 @@ head(PKG)
 ```
 
     FALSE # A tibble: 6 × 2
-    FALSE   Package      Version
-    FALSE   <chr>        <chr>  
-    FALSE 1 abind        1.4-5  
-    FALSE 2 adehabitatMA 0.3.15 
-    FALSE 3 akgfmaps     2.3.1  
-    FALSE 4 antiword     1.3.1  
-    FALSE 5 ape          5.6-2  
-    FALSE 6 asciicast    2.3.0
+    FALSE   Package      Version   
+    FALSE   <chr>        <chr>     
+    FALSE 1 abind        1.4-5     
+    FALSE 2 adehabitatMA 0.3.15    
+    FALSE 3 AFSC.GAP.DBE 0.0.0.9000
+    FALSE 4 akgfmaps     2.3.1     
+    FALSE 5 antiword     1.3.1     
+    FALSE 6 ape          5.7-1
 
 Here is how the user can find all of the packages ever installed on the
 local computer
@@ -658,15 +658,16 @@ repository](https://github.com/afsc-gap-products/citations/issues).
 sessionInfo()
 ```
 
-    FALSE R version 4.2.2 (2022-10-31 ucrt)
+    FALSE R version 4.2.3 (2023-03-15 ucrt)
     FALSE Platform: x86_64-w64-mingw32/x64 (64-bit)
     FALSE Running under: Windows 10 x64 (build 19045)
     FALSE 
     FALSE Matrix products: default
     FALSE 
     FALSE locale:
-    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8
-    FALSE [4] LC_NUMERIC=C                           LC_TIME=English_United States.utf8    
+    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8   
+    FALSE [3] LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
+    FALSE [5] LC_TIME=English_United States.utf8    
     FALSE 
     FALSE attached base packages:
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
@@ -675,13 +676,13 @@ sessionInfo()
     FALSE [1] trawllight_3.1.6 ggplot2_3.4.1   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] pillar_1.8.1      compiler_4.2.2    tools_4.2.2       readtext_0.81     digest_0.6.31     evaluate_0.20    
-    FALSE  [7] lifecycle_1.0.3   tibble_3.1.8      gtable_0.3.1      pkgconfig_2.0.3   rlang_1.0.6       cli_3.6.0        
-    FALSE [13] DBI_1.1.3         rstudioapi_0.14   yaml_2.3.7        xfun_0.37         fastmap_1.1.0     withr_2.5.0      
-    FALSE [19] dplyr_1.0.10      httr_1.4.4        stringr_1.5.0     knitr_1.42        generics_0.1.3    vctrs_0.5.2      
-    FALSE [25] grid_4.2.2        tidyselect_1.2.0  glue_1.6.2        data.table_1.14.6 R6_2.5.1          fansi_1.0.4      
-    FALSE [31] rmarkdown_2.20    magrittr_2.0.3    scales_1.2.1      htmltools_0.5.4   assertthat_0.2.1  colorspace_2.1-0 
-    FALSE [37] utf8_1.2.2        stringi_1.7.12    munsell_0.5.0
+    FALSE  [1] rstudioapi_0.14   knitr_1.42        magrittr_2.0.3    munsell_0.5.0     tidyselect_1.2.0  colorspace_2.1-0 
+    FALSE  [7] R6_2.5.1          rlang_1.1.0       fastmap_1.1.1     fansi_1.0.4       stringr_1.5.0     httr_1.4.5       
+    FALSE [13] dplyr_1.1.1       tools_4.2.3       grid_4.2.3        gtable_0.3.3      data.table_1.14.8 xfun_0.38        
+    FALSE [19] utf8_1.2.3        cli_3.6.1         withr_2.5.0       htmltools_0.5.5   yaml_2.3.7        digest_0.6.31    
+    FALSE [25] tibble_3.2.1      lifecycle_1.0.3   vctrs_0.6.1       glue_1.6.2        evaluate_0.20     rmarkdown_2.20   
+    FALSE [31] stringi_1.7.12    compiler_4.2.3    pillar_1.9.0      scales_1.2.1      generics_0.1.3    readtext_0.81    
+    FALSE [37] pkgconfig_2.0.3
 
 ## NOAA README
 
