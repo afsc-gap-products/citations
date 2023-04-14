@@ -582,7 +582,7 @@ head(PKG)
     FALSE   Package      Version   
     FALSE   <chr>        <chr>     
     FALSE 1 abind        1.4-5     
-    FALSE 2 adehabitatMA 0.3.15    
+    FALSE 2 adehabitatMA 0.3.16    
     FALSE 3 AFSC.GAP.DBE 0.0.0.9000
     FALSE 4 akgfmaps     2.3.1     
     FALSE 5 antiword     1.3.1     
