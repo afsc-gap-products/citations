@@ -47,7 +47,6 @@ for (p in PKG) {
 }
 ```
 
-
 ```{r output_citations_fn}
 bibfiletext <- readLines(con = paste0("../cite/bibliography.bib"))
 
@@ -133,8 +132,8 @@ b <- output_citations(bibfiletext = bibfiletext)
 
 ## Works cited
 
-<div id="refs"></div>
-
+::: {#refs}
+:::
 
 ```{r output_citations_of_specific_year, eval=FALSE}
 ## All in-line text citations from 2022
@@ -143,7 +142,7 @@ b <- output_citations(bibfiletext = bibfiletext)
 # `r b`
 ```
 
-# Check elements of the citations: 
+# Check elements of the citations:
 
 ```{r find_refnum}
 bibfiletext0 <- stringr::str_to_lower(bibfiletext)
@@ -157,7 +156,6 @@ refnum <- gsub(pattern = ",", replacement = "", x = refnum, fixed = TRUE)
 refnum <- trimws(refnum)
 
 ```
-
 
 ```{r functions}
 
@@ -245,7 +243,7 @@ temp <- refnum[which(duplicated(refnum))]
 ifelse(length(temp) == 0, "There are no citation reference number duplicates", paste0("check reference number  ", temp))
 ```
 
-Are all of the DOIs properly recorded? 
+Are all of the DOIs properly recorded?
 
 ```{r doi_issues}
 term0 <- "doi.org/"
@@ -253,7 +251,7 @@ temp <- grep(pattern = term0, x = bibfiletext0, fixed = TRUE)
 ifelse(length(temp) == 0, paste0('There are no citations with the "', term0, '"'), paste0("check line(s) ", temp))
 ```
 
-Do the doi links work? 
+Do the doi links work?
 
 ```{r doi_link_check}
 term0 <- "doi ="
@@ -264,7 +262,7 @@ temp <- unlist(lapply(X = strsplit(x = temp, split = "}", fixed = TRUE), "[[", 1
 checkLinks(URLs = paste0("https://doi.org/", temp))
 ```
 
-Do the url links work? 
+Do the url links work?
 
 ```{r url_link_check}
 term0 <- "url ="
@@ -275,7 +273,7 @@ temp <- unlist(lapply(X = strsplit(x = temp, split = "}", fixed = TRUE), "[[", 1
 checkLinks(URLs = temp)
 ```
 
-## are author, year, and title listed for each listing? 
+## are author, year, and title listed for each listing?
 
 ```{r search_dups_fn}
 
@@ -324,23 +322,23 @@ for (i in 1:length(cite_start)) { # length(cite_start)
 }
 ```
 
-citations a missing entry for title, author, or year: 
+citations a missing entry for title, author, or year:
 
 ```{r search_dups_missing_flag}
 bibfiletext_flag %>% 
   dplyr::filter(is.na(auth) | is.na(year) | is.na(title))
 ```
 
-citations with more than one entry in title, author, or year: 
+citations with more than one entry in title, author, or year:
 
 ```{r search_dups_mult_flag}
 bibfiletext_flag %>% 
   dplyr::filter(auth == ">1" | year == ">1" | title == ">1")
 ```
 
-Test citing a report (@2022NEBS2022). 
+Test citing a report (@2022NEBS2022).
 
-```{r publishers-wrangle, eval = FALSE} 
+```{r publishers-wrangle, eval = FALSE}
 # Here are all of the publishers represented in our .bib data file (\@fig-publishers; \@tbl-publishers): 
   
 cite_pub <- grep(pattern = "publisher = ", x = bibfiletext0, fixed = TRUE)
@@ -354,7 +352,6 @@ cite_pub <- ifelse(substr(x = cite_pub, start = nchar(cite_pub), stop = nchar(ci
                    cite_pub)
 dat <- data.frame(table(cite_pub))
 ```
-
 
 ```{r, results='asis', eval = FALSE}
 #| label: fig-publishers
@@ -373,5 +370,3 @@ ggplot(data = dat, mapping = aes(x = Freq, y = cite_pub)) +
 library(gt)
 gt(dat)
 ```
-
-

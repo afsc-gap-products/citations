@@ -231,15 +231,15 @@ Use the `[@...]` notation in your `rmarkdown` or `quarto` call a
 reference number for a citation.
 
 ``` r
-For example, here are **Annual Bering Sea Data Report** [@2022NEBS2022; @2021NEBS2022; @2019NEBS2022; @2018EBS2022]
+For example, here are **Annual Bering Sea Data Report** [@2022NEBS2023; @2021NEBS2022; @2019NEBS2022; @2018EBS2022]
 ```
 
 *Which renders as:*
 
 For example, here are **Annual Bering Sea Data Report** (Markowitz,
-Dawson, Charriere, Prohaska, Rohan, Stevenson, et al., 2022b, 2022a, In
-review; Markowitz, Dawson, Charriere, Prohaska, Rohan, Haehn, et al.,
-2022)
+Dawson, Charriere, Prohaska, Rohan, Stevenson, et al., 2022b, 2022a;
+Markowitz, Dawson, Charriere, Prohaska, Rohan, Haehn, et al., 2022;
+Markowitz et al., 2023)
 
 Naturally, without writing anything else, references will appear at the
 of the document. If you want them to render at a specific place in your
@@ -247,6 +247,16 @@ document, call this code `<div id="refs"></div>` which renders as:
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 line-spacing="2">
+
+<div id="ref-2022NEBS2023" class="csl-entry">
+
+Markowitz, E. H., Dawson, E. J., Anderson, A. B., Rohan, S. K.,
+Charriere, N. E., Prohaska, B. K., and Stevenson, D. E. (2023). *Results
+of the 2022 eastern and northern Bering Sea continental shelf bottom
+trawl survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
+NMFS-AFSC-469; p. 213). U.S. Dep. Commer.
+
+</div>
 
 <div id="ref-2018EBS2022" class="csl-entry">
 
@@ -278,16 +288,6 @@ the 2021 eastern and northern Bering Sea continental shelf bottom trawl
 survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
 NMFS-F/SPO-452; p. 227). U.S. Dep. Commer.
 <https://doi.org/10.25923/g1ny-y360>
-
-</div>
-
-<div id="ref-2022NEBS2022" class="csl-entry">
-
-Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
-Rohan, S. K., Stevenson, D. E., and Britt, L. L. (In review). *Results
-of the 2022 eastern and northern Bering Sea continental shelf bottom
-trawl survey of groundfish and invertebrate fauna* \[NOAA Tech. Memo.\].
-U.S. Dep. Commer.
 
 </div>
 
@@ -496,22 +496,20 @@ To find the citation:
 ``` r
 require(remotes)
 remotes::install_github("afsc-gap-products/trawllight")
-```
+<!-- ``` -->
 
-To use the citation:
+To use the citation: 
+```
 
 ``` r
 library(trawllight)
 utils::citation("trawllight")
 ```
 
-    FALSE Warning in utils::citation("trawllight"): no date field in DESCRIPTION file of package 'trawllight'
-
-    FALSE 
     FALSE To cite package 'trawllight' in publications use:
     FALSE 
-    FALSE   Rohan S, Laman N (2022). _trawllight: Derive apparent optical properties from trawl-mounted light
-    FALSE   sensors_. R package version 3.1.6.
+    FALSE   Rohan S, Laman N (2023). _trawllight: Derive apparent optical properties from
+    FALSE   trawl-mounted light sensors_. R package version 3.2.0.
     FALSE 
     FALSE A BibTeX entry for LaTeX users is
     FALSE 
@@ -519,8 +517,8 @@ utils::citation("trawllight")
     FALSE     title = {trawllight: Derive apparent optical properties from trawl-mounted light
     FALSE sensors},
     FALSE     author = {Sean Rohan and Ned Laman},
-    FALSE     year = {2022},
-    FALSE     note = {R package version 3.1.6},
+    FALSE     year = {2023},
+    FALSE     note = {R package version 3.2.0},
     FALSE   }
 
 **From Zenodo**
@@ -579,14 +577,14 @@ head(PKG)
 ```
 
     FALSE # A tibble: 6 × 2
-    FALSE   Package      Version   
-    FALSE   <chr>        <chr>     
-    FALSE 1 abind        1.4-5     
-    FALSE 2 adehabitatMA 0.3.16    
-    FALSE 3 AFSC.GAP.DBE 0.0.0.9000
-    FALSE 4 akgfmaps     2.3.1     
-    FALSE 5 antiword     1.3.1     
-    FALSE 6 ape          5.7-1
+    FALSE   Package   Version
+    FALSE   <chr>     <chr>  
+    FALSE 1 abind     1.4-5  
+    FALSE 2 akgfmaps  2.3.1  
+    FALSE 3 antiword  1.3.1  
+    FALSE 4 askpass   1.1    
+    FALSE 5 backports 1.4.1  
+    FALSE 6 base64enc 0.1-3
 
 Here is how the user can find all of the packages ever installed on the
 local computer
@@ -596,7 +594,7 @@ PKG <- names(sessionInfo()[7][[1]])
 PKG
 ```
 
-    FALSE [1] "trawllight" "ggplot2"
+    FALSE NULL
 
 Then to cite the packages loaded for this R project, create a .bib file
 for R packages:
@@ -605,8 +603,6 @@ for R packages:
 knitr::write_bib(x = PKG,
                  file = "./cite/bibliography_RPack.bib")
 ```
-
-    FALSE Warning in utils::citation(..., lib.loc = lib.loc): no date field in DESCRIPTION file of package 'trawllight'
 
 *Which looks like*
 
@@ -658,31 +654,38 @@ repository](https://github.com/afsc-gap-products/citations/issues).
 sessionInfo()
 ```
 
-    FALSE R version 4.2.3 (2023-03-15 ucrt)
+    FALSE R version 4.3.0 (2023-04-21 ucrt)
     FALSE Platform: x86_64-w64-mingw32/x64 (64-bit)
     FALSE Running under: Windows 10 x64 (build 19045)
     FALSE 
     FALSE Matrix products: default
+    FALSE 
     FALSE 
     FALSE locale:
     FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8   
     FALSE [3] LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
     FALSE [5] LC_TIME=English_United States.utf8    
     FALSE 
+    FALSE time zone: America/Los_Angeles
+    FALSE tzcode source: internal
+    FALSE 
     FALSE attached base packages:
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
     FALSE other attached packages:
-    FALSE [1] trawllight_3.1.6 ggplot2_3.4.1   
+    FALSE [1] janitor_2.2.0    readr_2.1.4      magrittr_2.0.3   dplyr_1.1.2      tidyr_1.3.0     
+    FALSE [6] trawllight_3.2.0 ggplot2_3.4.2   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] rstudioapi_0.14   knitr_1.42        magrittr_2.0.3    munsell_0.5.0     tidyselect_1.2.0  colorspace_2.1-0 
-    FALSE  [7] R6_2.5.1          rlang_1.1.0       fastmap_1.1.1     fansi_1.0.4       stringr_1.5.0     httr_1.4.5       
-    FALSE [13] dplyr_1.1.1       tools_4.2.3       grid_4.2.3        gtable_0.3.3      data.table_1.14.8 xfun_0.38        
-    FALSE [19] utf8_1.2.3        cli_3.6.1         withr_2.5.0       htmltools_0.5.5   yaml_2.3.7        digest_0.6.31    
-    FALSE [25] tibble_3.2.1      lifecycle_1.0.3   vctrs_0.6.1       glue_1.6.2        evaluate_0.20     rmarkdown_2.20   
-    FALSE [31] stringi_1.7.12    compiler_4.2.3    pillar_1.9.0      scales_1.2.1      generics_0.1.3    readtext_0.81    
-    FALSE [37] pkgconfig_2.0.3
+    FALSE  [1] gtable_0.3.3      compiler_4.3.0    tidyselect_1.2.0  xml2_1.3.4        stringr_1.5.0    
+    FALSE  [6] snakecase_0.11.0  scales_1.2.1      yaml_2.3.7        fastmap_1.1.1     R6_2.5.1         
+    FALSE [11] generics_0.1.3    curl_5.0.0        knitr_1.42        readtext_0.82     tibble_3.2.1     
+    FALSE [16] munsell_0.5.0     lubridate_1.9.2   tzdb_0.3.0        pillar_1.9.0      rlang_1.1.1      
+    FALSE [21] utf8_1.2.3        stringi_1.7.12    xfun_0.39         timechange_0.2.0  cli_3.6.1        
+    FALSE [26] withr_2.5.0       digest_0.6.31     grid_4.3.0        rstudioapi_0.14   hms_1.1.3        
+    FALSE [31] lifecycle_1.0.3   vctrs_0.6.2       evaluate_0.20     glue_1.6.2        data.table_1.14.8
+    FALSE [36] fansi_1.0.4       colorspace_2.1-0  rmarkdown_2.21    purrr_1.0.1       httr_1.4.5       
+    FALSE [41] tools_4.3.0       pkgconfig_2.0.3   htmltools_0.5.5
 
 ## NOAA README
 
