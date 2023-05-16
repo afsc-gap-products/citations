@@ -264,7 +264,7 @@ Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
 Rohan, S. K., Haehn, R. A., Stevenson, D. E., and Britt, L. L. (2022).
 *Results of the 2018 eastern Bering Sea continental shelf bottom trawl
 survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
-NMFS-F/SPO-450; p. 183). U.S. Dep. Commer.
+NMFS-AFSC-450; p. 183). U.S. Dep. Commer.
 <https://doi.org/10.25923/m4pw-t510>
 
 </div>
@@ -275,7 +275,7 @@ Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
 Rohan, S. K., Stevenson, D. E., and Britt, L. L. (2022a). *Results of
 the 2019 eastern and northern Bering Sea continental shelf bottom trawl
 survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
-NMFS-F/SPO-451; p. 225). U.S. Dep. Commer.
+NMFS-AFSC-451; p. 225). U.S. Dep. Commer.
 <https://doi.org/10.25923/d641-xb21>
 
 </div>
@@ -286,7 +286,7 @@ Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
 Rohan, S. K., Stevenson, D. E., and Britt, L. L. (2022b). *Results of
 the 2021 eastern and northern Bering Sea continental shelf bottom trawl
 survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
-NMFS-F/SPO-452; p. 227). U.S. Dep. Commer.
+NMFS-AFSC-452; p. 227). U.S. Dep. Commer.
 <https://doi.org/10.25923/g1ny-y360>
 
 </div>
@@ -508,8 +508,8 @@ utils::citation("trawllight")
 
     FALSE To cite package 'trawllight' in publications use:
     FALSE 
-    FALSE   Rohan S, Laman N (2023). _trawllight: Derive apparent optical properties from
-    FALSE   trawl-mounted light sensors_. R package version 3.2.0.
+    FALSE   Rohan S, Laman N (2023). _trawllight: Derive apparent optical properties from trawl-mounted light
+    FALSE   sensors_. R package version 3.2.0.
     FALSE 
     FALSE A BibTeX entry for LaTeX users is
     FALSE 
@@ -577,14 +577,14 @@ head(PKG)
 ```
 
     FALSE # A tibble: 6 × 2
-    FALSE   Package   Version
-    FALSE   <chr>     <chr>  
-    FALSE 1 abind     1.4-5  
-    FALSE 2 akgfmaps  2.3.1  
-    FALSE 3 antiword  1.3.1  
-    FALSE 4 askpass   1.1    
-    FALSE 5 backports 1.4.1  
-    FALSE 6 base64enc 0.1-3
+    FALSE   Package     Version 
+    FALSE   <chr>       <chr>   
+    FALSE 1 abind       1.4-5   
+    FALSE 2 akgfmaps    2.3.1   
+    FALSE 3 antiword    1.3.1   
+    FALSE 4 AsioHeaders 1.22.1-2
+    FALSE 5 askpass     1.1     
+    FALSE 6 backports   1.4.1
 
 Here is how the user can find all of the packages ever installed on the
 local computer
@@ -673,19 +673,16 @@ sessionInfo()
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
     FALSE other attached packages:
-    FALSE [1] janitor_2.2.0    readr_2.1.4      magrittr_2.0.3   dplyr_1.1.2      tidyr_1.3.0     
-    FALSE [6] trawllight_3.2.0 ggplot2_3.4.2   
+    FALSE [1] trawllight_3.2.0 ggplot2_3.4.2   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] gtable_0.3.3      compiler_4.3.0    tidyselect_1.2.0  xml2_1.3.4        stringr_1.5.0    
-    FALSE  [6] snakecase_0.11.0  scales_1.2.1      yaml_2.3.7        fastmap_1.1.1     R6_2.5.1         
-    FALSE [11] generics_0.1.3    curl_5.0.0        knitr_1.42        readtext_0.82     tibble_3.2.1     
-    FALSE [16] munsell_0.5.0     lubridate_1.9.2   tzdb_0.3.0        pillar_1.9.0      rlang_1.1.1      
-    FALSE [21] utf8_1.2.3        stringi_1.7.12    xfun_0.39         timechange_0.2.0  cli_3.6.1        
-    FALSE [26] withr_2.5.0       digest_0.6.31     grid_4.3.0        rstudioapi_0.14   hms_1.1.3        
-    FALSE [31] lifecycle_1.0.3   vctrs_0.6.2       evaluate_0.20     glue_1.6.2        data.table_1.14.8
-    FALSE [36] fansi_1.0.4       colorspace_2.1-0  rmarkdown_2.21    purrr_1.0.1       httr_1.4.5       
-    FALSE [41] tools_4.3.0       pkgconfig_2.0.3   htmltools_0.5.5
+    FALSE  [1] vctrs_0.6.2       httr_1.4.5        cli_3.6.1         knitr_1.42        rlang_1.1.1       xfun_0.39        
+    FALSE  [7] stringi_1.7.12    readtext_0.82     generics_0.1.3    data.table_1.14.8 glue_1.6.2        colorspace_2.1-0 
+    FALSE [13] htmltools_0.5.5   scales_1.2.1      fansi_1.0.4       rmarkdown_2.21    grid_4.3.0        munsell_0.5.0    
+    FALSE [19] evaluate_0.20     tibble_3.2.1      fastmap_1.1.1     yaml_2.3.7        lifecycle_1.0.3   stringr_1.5.0    
+    FALSE [25] compiler_4.3.0    dplyr_1.1.2       pkgconfig_2.0.3   rstudioapi_0.14   digest_0.6.31     R6_2.5.1         
+    FALSE [31] tidyselect_1.2.0  utf8_1.2.3        pillar_1.9.0      magrittr_2.0.3    withr_2.5.0       gtable_0.3.3     
+    FALSE [37] tools_4.3.0
 
 ## NOAA README
 
