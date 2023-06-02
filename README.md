@@ -508,8 +508,8 @@ utils::citation("trawllight")
 
     FALSE To cite package 'trawllight' in publications use:
     FALSE 
-    FALSE   Rohan S, Laman N (2023). _trawllight: Derive apparent optical properties from trawl-mounted light
-    FALSE   sensors_. R package version 3.2.0.
+    FALSE   Rohan S, Laman N (2023). _trawllight: Derive apparent optical properties from trawl-mounted light sensors_.
+    FALSE   R package version 3.2.0.
     FALSE 
     FALSE A BibTeX entry for LaTeX users is
     FALSE 
@@ -580,11 +580,11 @@ head(PKG)
     FALSE   Package     Version 
     FALSE   <chr>       <chr>   
     FALSE 1 abind       1.4-5   
-    FALSE 2 akgfmaps    2.3.1   
+    FALSE 2 akgfmaps    3.0.0   
     FALSE 3 antiword    1.3.1   
-    FALSE 4 AsioHeaders 1.22.1-2
-    FALSE 5 askpass     1.1     
-    FALSE 6 backports   1.4.1
+    FALSE 4 anytime     0.3.9   
+    FALSE 5 ape         5.7-1   
+    FALSE 6 AsioHeaders 1.22.1-2
 
 Here is how the user can find all of the packages ever installed on the
 local computer
@@ -662,9 +662,8 @@ sessionInfo()
     FALSE 
     FALSE 
     FALSE locale:
-    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8   
-    FALSE [3] LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
-    FALSE [5] LC_TIME=English_United States.utf8    
+    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8
+    FALSE [4] LC_NUMERIC=C                           LC_TIME=English_United States.utf8    
     FALSE 
     FALSE time zone: America/Los_Angeles
     FALSE tzcode source: internal
