@@ -336,7 +336,7 @@ bibfiletext_flag %>%
   dplyr::filter(auth == ">1" | year == ">1" | title == ">1")
 ```
 
-Test citing a report (@2022NEBS2022).
+Test citing a report (@2022NEBS2023).
 
 ```{r publishers-wrangle, eval = FALSE}
 # Here are all of the publishers represented in our .bib data file (\@fig-publishers; \@tbl-publishers): 

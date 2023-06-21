@@ -101,6 +101,27 @@ BibTex is a bibliographic tool that is used with LaTeX to help organize the user
 
 # How to use this citation resouce
 
+## Latest citations
+
+```{r source-current-tm, echo=FALSE}
+source("https://raw.githubusercontent.com/afsc-gap-products/citations/main/cite/current_data_tm.r")
+```
+
+- **Aleutian Islands (AI)** [@`r srvy_cite$CITE[srvy_cite$SRVY == "AI"]`]
+  - Triennial (1990s)/Biennial since 2000 in even years
+  - Modified Index-Stratified Random of Successful Stations Survey Design
+- **Eastern Bering Sea Slope (BSS)** [@`r srvy_cite$CITE[srvy_cite$SRVY == "BSS"]`]
+  - Intermittent (funding dependent)
+  - Modified Index-Stratified Random of Successful Stations Survey Design
+- **Eastern Bering Sea Shelf (EBS)** [@`r srvy_cite$CITE[srvy_cite$SRVY == "EBS"]`]
+  - Annual
+  - Fixed stations at center of 20 x 20 nm grid
+- **Gulf of Alaska (GOA)** [@`r srvy_cite$CITE[srvy_cite$SRVY == "GOA"]`]
+  - Triennial (1990s)/Biennial since 2001 in odd years
+  - Stratified Random Survey Design
+- **Northern Bering Sea (NBS)** [@`r srvy_cite$CITE[srvy_cite$SRVY == "NBS"]`]
+  - Biennial/Annual
+  - Fixed stations at center of 20 x 20 nm grid
 
 ## Sourcing directly from github
 

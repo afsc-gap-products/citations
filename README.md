@@ -44,6 +44,7 @@ Seattle, WA 98115
 > - [*BibTeX citation format*](#bibtex-citation-format)
 > - [*How to use this citation
 >   resouce*](#how-to-use-this-citation-resouce)
+>   - [*Latest citations*](#latest-citations)
 >   - [*Sourcing directly from github*](#sourcing-directly-from-github)
 >   - [*As a local file in R*](#as-a-local-file-in-r)
 >   - [*As a local file Endnote, Zotero, or other citation
@@ -147,6 +148,26 @@ author can refer to it in the source file.
 
 # How to use this citation resouce
 
+## Latest citations
+
+- **Aleutian Islands (AI)** (Von Szalay and Raring, 2020)
+  - Triennial (1990s)/Biennial since 2000 in even years
+  - Modified Index-Stratified Random of Successful Stations Survey
+    Design
+- **Eastern Bering Sea Slope (BSS)** (Hoff, 2016)
+  - Intermittent (funding dependent)
+  - Modified Index-Stratified Random of Successful Stations Survey
+    Design
+- **Eastern Bering Sea Shelf (EBS)** (Markowitz et al., 2023)
+  - Annual
+  - Fixed stations at center of 20 x 20 nm grid
+- **Gulf of Alaska (GOA)** (Von Szalay and Raring, 2018)
+  - Triennial (1990s)/Biennial since 2001 in odd years
+  - Stratified Random Survey Design
+- **Northern Bering Sea (NBS)** (Markowitz et al., 2023)
+  - Biennial/Annual
+  - Fixed stations at center of 20 x 20 nm grid
+
 ## Sourcing directly from github
 
 Sourcing directly from github requires internet access, but ensures that
@@ -248,6 +269,15 @@ document, call this code `<div id="refs"></div>` which renders as:
 <div id="refs" class="references csl-bib-body hanging-indent"
 line-spacing="2">
 
+<div id="ref-RN979" class="csl-entry">
+
+Hoff, G. R. (2016). *Results of the 2016 eastern Bering Sea upper
+continental slope survey of groundfishes and invertebrate resources*
+(NOAA Tech. Memo. NOAA-AFSC-339). U.S. Dep. Commer.
+<https://doi.org/10.7289/V5/TM-AFSC-339>
+
+</div>
+
 <div id="ref-2022NEBS2023" class="csl-entry">
 
 Markowitz, E. H., Dawson, E. J., Anderson, A. B., Rohan, S. K.,
@@ -288,6 +318,23 @@ the 2021 eastern and northern Bering Sea continental shelf bottom trawl
 survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
 NMFS-AFSC-452; p. 227). U.S. Dep. Commer.
 <https://doi.org/10.25923/g1ny-y360>
+
+</div>
+
+<div id="ref-GOA2018" class="csl-entry">
+
+Von Szalay, P. G., and Raring, N. W. (2018). *Data report: 2017 <span
+class="nocase">Gulf of Alaska</span> bottom trawl survey* (NOAA Tech.
+Memo. NMFS-AFSC-374). U.S. Dep. Commer.
+<https://doi.org/10.7289/V5/TM-AFSC-374>
+
+</div>
+
+<div id="ref-AI2018" class="csl-entry">
+
+Von Szalay, P. G., and Raring, N. W. (2020). *Data report: 2018 Aleutian
+Islands bottom trawl survey* (NOAA Tech. Memo. NMFS-AFSC-409). U.S. Dep.
+Commer. <https://doi.org/10.25923/qe5v-fz70>
 
 </div>
 
@@ -508,8 +555,8 @@ utils::citation("trawllight")
 
     FALSE To cite package 'trawllight' in publications use:
     FALSE 
-    FALSE   Rohan S, Laman N (2023). _trawllight: Derive apparent optical properties from trawl-mounted light sensors_.
-    FALSE   R package version 3.2.0.
+    FALSE   Rohan S, Laman N (2023). _trawllight: Derive apparent optical properties from trawl-mounted light
+    FALSE   sensors_. R package version 3.2.0.
     FALSE 
     FALSE A BibTeX entry for LaTeX users is
     FALSE 
@@ -662,8 +709,9 @@ sessionInfo()
     FALSE 
     FALSE 
     FALSE locale:
-    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8
-    FALSE [4] LC_NUMERIC=C                           LC_TIME=English_United States.utf8    
+    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8   
+    FALSE [3] LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
+    FALSE [5] LC_TIME=English_United States.utf8    
     FALSE 
     FALSE time zone: America/Los_Angeles
     FALSE tzcode source: internal
@@ -672,16 +720,18 @@ sessionInfo()
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
     FALSE other attached packages:
-    FALSE [1] trawllight_3.2.0 ggplot2_3.4.2   
+    FALSE [1] janitor_2.2.0    readr_2.1.4      magrittr_2.0.3   dplyr_1.1.2      tidyr_1.3.0      trawllight_3.2.0
+    FALSE [7] ggplot2_3.4.2   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] vctrs_0.6.2       httr_1.4.5        cli_3.6.1         knitr_1.42        rlang_1.1.1       xfun_0.39        
-    FALSE  [7] stringi_1.7.12    readtext_0.82     generics_0.1.3    data.table_1.14.8 glue_1.6.2        colorspace_2.1-0 
-    FALSE [13] htmltools_0.5.5   scales_1.2.1      fansi_1.0.4       rmarkdown_2.21    grid_4.3.0        munsell_0.5.0    
-    FALSE [19] evaluate_0.20     tibble_3.2.1      fastmap_1.1.1     yaml_2.3.7        lifecycle_1.0.3   stringr_1.5.0    
-    FALSE [25] compiler_4.3.0    dplyr_1.1.2       pkgconfig_2.0.3   rstudioapi_0.14   digest_0.6.31     R6_2.5.1         
-    FALSE [31] tidyselect_1.2.0  utf8_1.2.3        pillar_1.9.0      magrittr_2.0.3    withr_2.5.0       gtable_0.3.3     
-    FALSE [37] tools_4.3.0
+    FALSE  [1] gtable_0.3.3      compiler_4.3.0    tinytex_0.45      tidyselect_1.2.0  xml2_1.3.4        stringr_1.5.0    
+    FALSE  [7] snakecase_0.11.0  scales_1.2.1      yaml_2.3.7        fastmap_1.1.1     R6_2.5.1          generics_0.1.3   
+    FALSE [13] curl_5.0.0        knitr_1.42        readtext_0.82     tibble_3.2.1      munsell_0.5.0     lubridate_1.9.2  
+    FALSE [19] tzdb_0.3.0        pillar_1.9.0      rlang_1.1.1       utf8_1.2.3        stringi_1.7.12    xfun_0.39        
+    FALSE [25] timechange_0.2.0  cli_3.6.1         withr_2.5.0       digest_0.6.31     grid_4.3.0        rstudioapi_0.14  
+    FALSE [31] hms_1.1.3         lifecycle_1.0.3   vctrs_0.6.2       evaluate_0.20     glue_1.6.2        data.table_1.14.8
+    FALSE [37] fansi_1.0.4       colorspace_2.1-0  rmarkdown_2.21    purrr_1.0.1       httr_1.4.5        tools_4.3.0      
+    FALSE [43] pkgconfig_2.0.3   htmltools_0.5.5
 
 ## NOAA README
 
