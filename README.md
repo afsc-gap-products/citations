@@ -720,18 +720,16 @@ sessionInfo()
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
     FALSE other attached packages:
-    FALSE [1] janitor_2.2.0    readr_2.1.4      magrittr_2.0.3   dplyr_1.1.2      tidyr_1.3.0      trawllight_3.2.0
-    FALSE [7] ggplot2_3.4.2   
+    FALSE [1] trawllight_3.2.0 ggplot2_3.4.2   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] gtable_0.3.3      compiler_4.3.0    tinytex_0.45      tidyselect_1.2.0  xml2_1.3.4        stringr_1.5.0    
-    FALSE  [7] snakecase_0.11.0  scales_1.2.1      yaml_2.3.7        fastmap_1.1.1     R6_2.5.1          generics_0.1.3   
-    FALSE [13] curl_5.0.0        knitr_1.42        readtext_0.82     tibble_3.2.1      munsell_0.5.0     lubridate_1.9.2  
-    FALSE [19] tzdb_0.3.0        pillar_1.9.0      rlang_1.1.1       utf8_1.2.3        stringi_1.7.12    xfun_0.39        
-    FALSE [25] timechange_0.2.0  cli_3.6.1         withr_2.5.0       digest_0.6.31     grid_4.3.0        rstudioapi_0.14  
-    FALSE [31] hms_1.1.3         lifecycle_1.0.3   vctrs_0.6.2       evaluate_0.20     glue_1.6.2        data.table_1.14.8
-    FALSE [37] fansi_1.0.4       colorspace_2.1-0  rmarkdown_2.21    purrr_1.0.1       httr_1.4.5        tools_4.3.0      
-    FALSE [43] pkgconfig_2.0.3   htmltools_0.5.5
+    FALSE  [1] vctrs_0.6.2       httr_1.4.5        cli_3.6.1         knitr_1.42        rlang_1.1.1       xfun_0.39        
+    FALSE  [7] stringi_1.7.12    readtext_0.82     generics_0.1.3    data.table_1.14.8 glue_1.6.2        colorspace_2.1-0 
+    FALSE [13] htmltools_0.5.5   scales_1.2.1      fansi_1.0.4       rmarkdown_2.21    grid_4.3.0        munsell_0.5.0    
+    FALSE [19] evaluate_0.20     tibble_3.2.1      fastmap_1.1.1     yaml_2.3.7        lifecycle_1.0.3   stringr_1.5.0    
+    FALSE [25] compiler_4.3.0    dplyr_1.1.2       pkgconfig_2.0.3   rstudioapi_0.14   digest_0.6.31     R6_2.5.1         
+    FALSE [31] tidyselect_1.2.0  utf8_1.2.3        pillar_1.9.0      magrittr_2.0.3    withr_2.5.0       gtable_0.3.3     
+    FALSE [37] tools_4.3.0
 
 ## NOAA README
 
