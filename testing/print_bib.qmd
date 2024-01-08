@@ -23,11 +23,10 @@ execute:
   error: false
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl"
 bibliography: "../cite/bibliography.bib"
-editor: visual
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, error = FALSE, message = FALSE, warning = FALSE, comment = FALSE)
+knitr::opts_chunk$set(echo = FALSE, error = FALSE, message = FALSE, warning = FALSE, comment = FALSE, eval = TRUE)
 ```
 
 ```{r load_libraries}
