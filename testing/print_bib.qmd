@@ -34,6 +34,7 @@ PKG <- c(
   "tidyr",
   "dplyr",
   "magrittr",
+  "here",
   # "ggplot2", 
   "readr",
   "janitor")
@@ -47,7 +48,7 @@ for (p in PKG) {
 ```
 
 ```{r output_citations_fn}
-bibfiletext <- readLines(con = paste0("../cite/bibliography.bib"))
+bibfiletext <- readLines(con = here::here("cite/bibliography.bib"))#[1:1669] #1669 #1719
 
 output_citations <- function(bibfiletext, 
                              year = NULL, 
