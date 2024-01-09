@@ -129,7 +129,10 @@ publications. Learn more about APA 7th from this [Purdue
 Owl](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/reference_list_author_authors.html)
 resoure.
 
-![APA 7th no Ampersand](./img/apa7.png)
+<figure>
+<img src="./img/apa7.png" alt="APA 7th no Ampersand" />
+<figcaption aria-hidden="true">APA 7th no Ampersand</figcaption>
+</figure>
 
 The citation style guide for APA 7th can be downloaded from
 [github](https://github.com/citation-style-language/styles). This
@@ -150,7 +153,7 @@ author can refer to it in the source file.
 
 ## Latest citations
 
-- **Aleutian Islands (AI)** (Von Szalay and Raring, 2020)
+- **Aleutian Islands (AI)** (Von Szalay et al., 2023)
   - Triennial (1990s)/Biennial since 2000 in even years
   - Modified Index-Stratified Random of Successful Stations Survey
     Design
@@ -229,22 +232,35 @@ something like this:*
 
 Step 1: Open EndNote and select `File` \> `Import` \> `File`
 
-![Step 1: `File` \> `Import` \> `File`](./img/endnote_import1.png)
+<figure>
+<img src="./img/endnote_import1.png"
+alt="Step 1: File &gt; Import &gt; File" />
+<figcaption aria-hidden="true">Step 1: <code>File</code> &gt;
+<code>Import</code> &gt; <code>File</code></figcaption>
+</figure>
 
 Step 2: Open EndNote and select the `.bib` file you wish to import.
 
-![Step 2: Select the `.bib` file you wish to
-import.](./img/endnote_import2.png)
+<figure>
+<img src="./img/endnote_import2.png"
+alt="Step 2: Select the .bib file you wish to import." />
+<figcaption aria-hidden="true">Step 2: Select the <code>.bib</code> file
+you wish to import.</figcaption>
+</figure>
 
 Step 3: Select the import filter file you wish to import. For Bibtex,
 you’ll have to select “Other filters” and then “BibTex”. However,
 something seems to be wrong with the filter file and… it only kind of
 works.
 
-![Step 3: Select the import fiilter file you wish to import. For Bibtex,
-you’ll have to select “Other filters” and then “BibTex”. However,
-something seems to be wrong with the filter file and… it only kind of
-works.](./img/endnote_import3.png)
+<figure>
+<img src="./img/endnote_import3.png"
+alt="Step 3: Select the import fiilter file you wish to import. For Bibtex, you’ll have to select “Other filters” and then “BibTex”. However, something seems to be wrong with the filter file and… it only kind of works." />
+<figcaption aria-hidden="true">Step 3: Select the import fiilter file
+you wish to import. For Bibtex, you’ll have to select “Other filters”
+and then “BibTex”. However, something seems to be wrong with the filter
+file and… it only kind of works.</figcaption>
+</figure>
 
 # Citation files in action
 
@@ -252,15 +268,12 @@ Use the `[@...]` notation in your `rmarkdown` or `quarto` call a
 reference number for a citation.
 
 ``` r
-For example, here are **Annual Bering Sea Data Report** [@2022NEBS2023; @2021NEBS2022; @2019NEBS2022; @2018EBS2022]
+For example, here are **Annual Bering Sea Data Report** [@2022NEBS2023; @GOA2018; @AI2022; @RN979]. 
 ```
 
-*Which renders as:*
-
-For example, here are **Annual Bering Sea Data Report** (Markowitz,
-Dawson, Charriere, Prohaska, Rohan, Stevenson, et al., 2022b, 2022a;
-Markowitz, Dawson, Charriere, Prohaska, Rohan, Haehn, et al., 2022;
-Markowitz et al., 2023)
+*Which renders as:* “For example, here are **Annual Bering Sea Data
+Report** (Hoff, 2016; Markowitz et al., 2023; Von Szalay et al., 2023;
+Von Szalay and Raring, 2018).”
 
 Naturally, without writing anything else, references will appear at the
 of the document. If you want them to render at a specific place in your
@@ -288,53 +301,21 @@ NMFS-AFSC-469; p. 213). U.S. Dep. Commer.
 
 </div>
 
-<div id="ref-2018EBS2022" class="csl-entry">
-
-Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
-Rohan, S. K., Haehn, R. A., Stevenson, D. E., and Britt, L. L. (2022).
-*Results of the 2018 eastern Bering Sea continental shelf bottom trawl
-survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
-NMFS-AFSC-450; p. 183). U.S. Dep. Commer.
-<https://doi.org/10.25923/m4pw-t510>
-
-</div>
-
-<div id="ref-2019NEBS2022" class="csl-entry">
-
-Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
-Rohan, S. K., Stevenson, D. E., and Britt, L. L. (2022a). *Results of
-the 2019 eastern and northern Bering Sea continental shelf bottom trawl
-survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
-NMFS-AFSC-451; p. 225). U.S. Dep. Commer.
-<https://doi.org/10.25923/d641-xb21>
-
-</div>
-
-<div id="ref-2021NEBS2022" class="csl-entry">
-
-Markowitz, E. H., Dawson, E. J., Charriere, N. E., Prohaska, B. K.,
-Rohan, S. K., Stevenson, D. E., and Britt, L. L. (2022b). *Results of
-the 2021 eastern and northern Bering Sea continental shelf bottom trawl
-survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
-NMFS-AFSC-452; p. 227). U.S. Dep. Commer.
-<https://doi.org/10.25923/g1ny-y360>
-
-</div>
-
 <div id="ref-GOA2018" class="csl-entry">
 
-Von Szalay, P. G., and Raring, N. W. (2018). *Data report: 2017 <span
-class="nocase">Gulf of Alaska</span> bottom trawl survey* (NOAA Tech.
-Memo. NMFS-AFSC-374). U.S. Dep. Commer.
+Von Szalay, P. G., and Raring, N. W. (2018). *Data report: 2017
+<span class="nocase">Gulf of Alaska</span> bottom trawl survey* (NOAA
+Tech. Memo. NMFS-AFSC-374). U.S. Dep. Commer.
 <https://doi.org/10.7289/V5/TM-AFSC-374>
 
 </div>
 
-<div id="ref-AI2018" class="csl-entry">
+<div id="ref-AI2022" class="csl-entry">
 
-Von Szalay, P. G., and Raring, N. W. (2020). *Data report: 2018 Aleutian
-Islands bottom trawl survey* (NOAA Tech. Memo. NMFS-AFSC-409). U.S. Dep.
-Commer. <https://doi.org/10.25923/qe5v-fz70>
+Von Szalay, P. G., Raring, N. W., Siple, M. C., Dowlin, A. N., Riggle,
+B. C., and Laman, E. A. and. (2023). *Data report: 2022 Aleutian Islands
+bottom trawl survey* (AFSC Processed Rep. No. 2023-07; p. 230). U.S.
+Dep. Commer. <https://doi.org/10.25923/85cy-g225>
 
 </div>
 
@@ -624,14 +605,14 @@ head(PKG)
 ```
 
     FALSE # A tibble: 6 × 2
-    FALSE   Package     Version 
-    FALSE   <chr>       <chr>   
-    FALSE 1 abind       1.4-5   
-    FALSE 2 akgfmaps    3.0.0   
-    FALSE 3 antiword    1.3.1   
-    FALSE 4 anytime     0.3.9   
-    FALSE 5 ape         5.7-1   
-    FALSE 6 AsioHeaders 1.22.1-2
+    FALSE   Package      Version
+    FALSE   <chr>        <chr>  
+    FALSE 1 abind        1.4-5  
+    FALSE 2 adehabitatMA 0.3.16 
+    FALSE 3 akgfmaps     3.4.1  
+    FALSE 4 antiword     1.3.1  
+    FALSE 5 anytime      0.3.9  
+    FALSE 6 ape          5.7-1
 
 Here is how the user can find all of the packages ever installed on the
 local computer
@@ -701,7 +682,7 @@ repository](https://github.com/afsc-gap-products/citations/issues).
 sessionInfo()
 ```
 
-    FALSE R version 4.3.0 (2023-04-21 ucrt)
+    FALSE R version 4.3.1 (2023-06-16 ucrt)
     FALSE Platform: x86_64-w64-mingw32/x64 (64-bit)
     FALSE Running under: Windows 10 x64 (build 19045)
     FALSE 
@@ -719,16 +700,18 @@ sessionInfo()
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
     FALSE other attached packages:
-    FALSE [1] trawllight_3.2.0 ggplot2_3.4.2   
+    FALSE [1] here_1.0.1       trawllight_3.2.0 ggplot2_3.4.4    janitor_2.2.0    readr_2.1.4      magrittr_2.0.3   dplyr_1.1.4     
+    FALSE [8] tidyr_1.3.0     
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] vctrs_0.6.2       httr_1.4.6        cli_3.6.1         knitr_1.43        rlang_1.1.1       xfun_0.39        
-    FALSE  [7] stringi_1.7.12    readtext_0.82     generics_0.1.3    data.table_1.14.8 glue_1.6.2        colorspace_2.1-0 
-    FALSE [13] htmltools_0.5.5   scales_1.2.1      fansi_1.0.4       rmarkdown_2.22    grid_4.3.0        munsell_0.5.0    
-    FALSE [19] evaluate_0.21     tibble_3.2.1      fastmap_1.1.1     yaml_2.3.7        lifecycle_1.0.3   stringr_1.5.0    
-    FALSE [25] compiler_4.3.0    dplyr_1.1.2       pkgconfig_2.0.3   rstudioapi_0.14   digest_0.6.31     R6_2.5.1         
-    FALSE [31] tidyselect_1.2.0  utf8_1.2.3        pillar_1.9.0      magrittr_2.0.3    withr_2.5.0       gtable_0.3.3     
-    FALSE [37] tools_4.3.0
+    FALSE  [1] utf8_1.2.4         generics_0.1.3     xml2_1.3.6         stringi_1.8.3      hms_1.1.3          digest_0.6.33     
+    FALSE  [7] readtext_0.90      evaluate_0.23      grid_4.3.1         timechange_0.2.0   fastmap_1.1.1      rprojroot_2.0.4   
+    FALSE [13] tinytex_0.49       httr_1.4.7         purrr_1.0.2        fansi_1.0.6        scales_1.3.0       cli_3.6.1         
+    FALSE [19] rlang_1.1.2        munsell_0.5.0      withr_2.5.2        yaml_2.3.8         tools_4.3.1        tzdb_0.4.0        
+    FALSE [25] colorspace_2.1-0   curl_5.2.0         vctrs_0.6.5        R6_2.5.1           lifecycle_1.0.4    lubridate_1.9.3   
+    FALSE [31] snakecase_0.11.1   stringr_1.5.1      pkgconfig_2.0.3    pillar_1.9.0       gtable_0.3.4       data.table_1.14.10
+    FALSE [37] glue_1.6.2         xfun_0.41          tibble_3.2.1       tidyselect_1.2.0   rstudioapi_0.15.0  knitr_1.45        
+    FALSE [43] htmltools_0.5.7    rmarkdown_2.25     compiler_4.3.1
 
 ## NOAA README
 

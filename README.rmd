@@ -192,12 +192,10 @@ Step 3: Select the import filter file you wish to import. For Bibtex, you'll hav
 Use the `[@...]` notation in your `rmarkdown` or `quarto` call a reference number for a citation. 
 
 ```{r, eval = FALSE, echo = TRUE}
-For example, here are **Annual Bering Sea Data Report** [@2022NEBS2023; @2021NEBS2022; @2019NEBS2022; @2018EBS2022]
+For example, here are **Annual Bering Sea Data Report** [@2022NEBS2023; @GOA2018; @AI2022; @RN979]. 
 ```
 
-*Which renders as:*
-
-For example, here are **Annual Bering Sea Data Report** [@2022NEBS2023; @2021NEBS2022; @2019NEBS2022; @2018EBS2022]
+*Which renders as:* "For example, here are **Annual Bering Sea Data Report** [@2022NEBS2023; @GOA2018; @AI2022; @RN979]. "
 
 Naturally, without writing anything else, references will appear at the of the document. If you want them to render at a specific place in your document, call this code `<div id="refs"></div>` which renders as:
 
