@@ -298,6 +298,7 @@ Charriere, N. E., Prohaska, B. K., and Stevenson, D. E. (2023). *Results
 of the 2022 eastern and northern Bering Sea continental shelf bottom
 trawl survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
 NMFS-AFSC-469; p. 213). U.S. Dep. Commer.
+<https://doi.org/10.25923/rt50-th19>
 
 </div>
 
@@ -614,10 +615,10 @@ head(PKG)
     FALSE   <chr>        <chr>  
     FALSE 1 abind        1.4-5  
     FALSE 2 adehabitatMA 0.3.16 
-    FALSE 3 akgfmaps     3.4.1  
-    FALSE 4 antiword     1.3.1  
-    FALSE 5 anytime      0.3.9  
-    FALSE 6 ape          5.7-1
+    FALSE 3 akfingapdata 0.1.0  
+    FALSE 4 akgfmaps     3.4.1  
+    FALSE 5 antiword     1.3.1  
+    FALSE 6 anytime      0.3.9
 
 Here is how the user can find all of the packages ever installed on the
 local computer
