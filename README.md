@@ -532,6 +532,11 @@ To use the citation:
 
 ``` r
 library(trawllight)
+```
+
+    FALSE Warning: package 'ggplot2' was built under R version 4.3.2
+
+``` r
 utils::citation("trawllight")
 ```
 
@@ -701,18 +706,15 @@ sessionInfo()
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
     FALSE other attached packages:
-    FALSE [1] janitor_2.2.0    readr_2.1.4      here_1.0.1       magrittr_2.0.3   dplyr_1.1.4      tidyr_1.3.0      trawllight_3.2.0
-    FALSE [8] ggplot2_3.4.4   
+    FALSE [1] trawllight_3.2.0 ggplot2_3.4.4   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] gtable_0.3.4       compiler_4.3.1     tinytex_0.49       tidyselect_1.2.0   xml2_1.3.6         stringr_1.5.1     
-    FALSE  [7] snakecase_0.11.1   scales_1.3.0       yaml_2.3.8         fastmap_1.1.1      R6_2.5.1           generics_0.1.3    
-    FALSE [13] curl_5.2.0         knitr_1.45         readtext_0.90      tibble_3.2.1       munsell_0.5.0      rprojroot_2.0.4   
-    FALSE [19] lubridate_1.9.3    tzdb_0.4.0         pillar_1.9.0       rlang_1.1.2        utf8_1.2.4         stringi_1.8.3     
-    FALSE [25] xfun_0.41          timechange_0.2.0   cli_3.6.1          withr_2.5.2        digest_0.6.33      grid_4.3.1        
-    FALSE [31] rstudioapi_0.15.0  hms_1.1.3          lifecycle_1.0.4    vctrs_0.6.5        evaluate_0.23      glue_1.6.2        
-    FALSE [37] data.table_1.14.10 fansi_1.0.6        colorspace_2.1-0   rmarkdown_2.25     purrr_1.0.2        httr_1.4.7        
-    FALSE [43] tools_4.3.1        pkgconfig_2.0.3    htmltools_0.5.7
+    FALSE  [1] vctrs_0.6.5        httr_1.4.7         cli_3.6.1          knitr_1.45         rlang_1.1.2        xfun_0.41         
+    FALSE  [7] stringi_1.8.3      generics_0.1.3     readtext_0.90      data.table_1.14.10 glue_1.6.2         colorspace_2.1-0  
+    FALSE [13] htmltools_0.5.7    scales_1.3.0       fansi_1.0.6        rmarkdown_2.25     grid_4.3.1         tibble_3.2.1      
+    FALSE [19] munsell_0.5.0      evaluate_0.23      fastmap_1.1.1      yaml_2.3.8         lifecycle_1.0.4    compiler_4.3.1    
+    FALSE [25] dplyr_1.1.4        pkgconfig_2.0.3    rstudioapi_0.15.0  digest_0.6.33      R6_2.5.1           tidyselect_1.2.0  
+    FALSE [31] utf8_1.2.4         pillar_1.9.0       magrittr_2.0.3     withr_2.5.2        tools_4.3.1        gtable_0.3.4
 
 ## NOAA README
 
