@@ -1,4 +1,5 @@
-
+# require(remotes)
+# remotes::install_github("afsc-gap-products/trawllight")
 
 # SAVE METADATA ----------------------------------------------------------------
 rmarkdown::render(paste0("./README.Rmd"),

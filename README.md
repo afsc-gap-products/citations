@@ -280,7 +280,7 @@ of the document. If you want them to render at a specific place in your
 document, call this code `<div id="refs"></div>` which renders as:
 
 <div id="refs" class="references csl-bib-body hanging-indent"
-line-spacing="2">
+entry-spacing="0" line-spacing="2">
 
 <div id="ref-RN979" class="csl-entry">
 
@@ -532,18 +532,15 @@ To use the citation:
 
 ``` r
 library(trawllight)
-```
-
-    FALSE Warning: package 'ggplot2' was built under R version 4.3.2
-
-``` r
 utils::citation("trawllight")
 ```
 
     FALSE To cite package 'trawllight' in publications use:
     FALSE 
-    FALSE   Rohan S, Laman N (2023). _trawllight: Derive apparent optical properties from trawl-mounted light sensors_. R package
-    FALSE   version 3.2.0.
+    FALSE   Rohan S, Laman N (2024). _trawllight: Derive apparent optical properties from
+    FALSE   trawl-mounted light sensors_. R package version 3.2.0, commit
+    FALSE   240ac9594c6817266159271cc63bf57dec219fa4,
+    FALSE   <https://github.com/afsc-gap-products/trawllight>.
     FALSE 
     FALSE A BibTeX entry for LaTeX users is
     FALSE 
@@ -551,8 +548,9 @@ utils::citation("trawllight")
     FALSE     title = {trawllight: Derive apparent optical properties from trawl-mounted light
     FALSE sensors},
     FALSE     author = {Sean Rohan and Ned Laman},
-    FALSE     year = {2023},
-    FALSE     note = {R package version 3.2.0},
+    FALSE     year = {2024},
+    FALSE     note = {R package version 3.2.0, commit 240ac9594c6817266159271cc63bf57dec219fa4},
+    FALSE     url = {https://github.com/afsc-gap-products/trawllight},
     FALSE   }
 
 **From Zenodo**
@@ -611,14 +609,14 @@ head(PKG)
 ```
 
     FALSE # A tibble: 6 × 2
-    FALSE   Package      Version
-    FALSE   <chr>        <chr>  
-    FALSE 1 abind        1.4-5  
-    FALSE 2 adehabitatMA 0.3.16 
-    FALSE 3 akfingapdata 0.1.0  
-    FALSE 4 akgfmaps     3.4.1  
-    FALSE 5 antiword     1.3.1  
-    FALSE 6 anytime      0.3.9
+    FALSE   Package      Version 
+    FALSE   <chr>        <chr>   
+    FALSE 1 abind        1.4-5   
+    FALSE 2 akfingapdata 0.1.0   
+    FALSE 3 akgfmaps     3.5.3   
+    FALSE 4 antiword     1.3.3   
+    FALSE 5 AsioHeaders  1.22.1-2
+    FALSE 6 askpass      1.2.0
 
 Here is how the user can find all of the packages ever installed on the
 local computer
@@ -688,16 +686,17 @@ repository](https://github.com/afsc-gap-products/citations/issues).
 sessionInfo()
 ```
 
-    FALSE R version 4.3.1 (2023-06-16 ucrt)
-    FALSE Platform: x86_64-w64-mingw32/x64 (64-bit)
+    FALSE R version 4.4.0 (2024-04-24 ucrt)
+    FALSE Platform: x86_64-w64-mingw32/x64
     FALSE Running under: Windows 10 x64 (build 19045)
     FALSE 
     FALSE Matrix products: default
     FALSE 
     FALSE 
     FALSE locale:
-    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8
-    FALSE [4] LC_NUMERIC=C                           LC_TIME=English_United States.utf8    
+    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8   
+    FALSE [3] LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
+    FALSE [5] LC_TIME=English_United States.utf8    
     FALSE 
     FALSE time zone: America/Los_Angeles
     FALSE tzcode source: internal
@@ -706,15 +705,17 @@ sessionInfo()
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
     FALSE other attached packages:
-    FALSE [1] trawllight_3.2.0 ggplot2_3.4.4   
+    FALSE [1] trawllight_3.2.0 ggplot2_3.5.1   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] vctrs_0.6.5        httr_1.4.7         cli_3.6.1          knitr_1.45         rlang_1.1.2        xfun_0.41         
-    FALSE  [7] stringi_1.8.3      generics_0.1.3     readtext_0.90      data.table_1.14.10 glue_1.6.2         colorspace_2.1-0  
-    FALSE [13] htmltools_0.5.7    scales_1.3.0       fansi_1.0.6        rmarkdown_2.25     grid_4.3.1         tibble_3.2.1      
-    FALSE [19] munsell_0.5.0      evaluate_0.23      fastmap_1.1.1      yaml_2.3.8         lifecycle_1.0.4    compiler_4.3.1    
-    FALSE [25] dplyr_1.1.4        pkgconfig_2.0.3    rstudioapi_0.15.0  digest_0.6.33      R6_2.5.1           tidyselect_1.2.0  
-    FALSE [31] utf8_1.2.4         pillar_1.9.0       magrittr_2.0.3     withr_2.5.2        tools_4.3.1        gtable_0.3.4
+    FALSE  [1] vctrs_0.6.5       httr_1.4.7        cli_3.6.2         knitr_1.47        rlang_1.1.4      
+    FALSE  [6] xfun_0.44         stringi_1.8.4     generics_0.1.3    readtext_0.91     data.table_1.15.4
+    FALSE [11] glue_1.7.0        colorspace_2.1-0  htmltools_0.5.8.1 scales_1.3.0      fansi_1.0.6      
+    FALSE [16] rmarkdown_2.27    grid_4.4.0        tibble_3.2.1      munsell_0.5.1     evaluate_0.24.0  
+    FALSE [21] fastmap_1.2.0     yaml_2.3.8        lifecycle_1.0.4   compiler_4.4.0    dplyr_1.1.4      
+    FALSE [26] pkgconfig_2.0.3   rstudioapi_0.16.0 digest_0.6.35     R6_2.5.1          tidyselect_1.2.1 
+    FALSE [31] utf8_1.2.4        pillar_1.9.0      magrittr_2.0.3    withr_3.0.0       tools_4.4.0      
+    FALSE [36] gtable_0.3.5
 
 ## NOAA README
 
