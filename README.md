@@ -537,10 +537,8 @@ utils::citation("trawllight")
 
     FALSE To cite package 'trawllight' in publications use:
     FALSE 
-    FALSE   Rohan S, Laman N (2024). _trawllight: Derive apparent optical properties from
-    FALSE   trawl-mounted light sensors_. R package version 3.2.0, commit
-    FALSE   240ac9594c6817266159271cc63bf57dec219fa4,
-    FALSE   <https://github.com/afsc-gap-products/trawllight>.
+    FALSE   Rohan S, Laman N (2024). _trawllight: Derive apparent optical properties from trawl-mounted light sensors_. R package version 3.2.0,
+    FALSE   commit 240ac9594c6817266159271cc63bf57dec219fa4, <https://github.com/afsc-gap-products/trawllight>.
     FALSE 
     FALSE A BibTeX entry for LaTeX users is
     FALSE 
@@ -694,9 +692,8 @@ sessionInfo()
     FALSE 
     FALSE 
     FALSE locale:
-    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8   
-    FALSE [3] LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
-    FALSE [5] LC_TIME=English_United States.utf8    
+    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8
+    FALSE [4] LC_NUMERIC=C                           LC_TIME=English_United States.utf8    
     FALSE 
     FALSE time zone: America/Los_Angeles
     FALSE tzcode source: internal
@@ -708,14 +705,11 @@ sessionInfo()
     FALSE [1] trawllight_3.2.0 ggplot2_3.5.1   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] vctrs_0.6.5       httr_1.4.7        cli_3.6.2         knitr_1.47        rlang_1.1.4      
-    FALSE  [6] xfun_0.44         stringi_1.8.4     generics_0.1.3    readtext_0.91     data.table_1.15.4
-    FALSE [11] glue_1.7.0        colorspace_2.1-0  htmltools_0.5.8.1 scales_1.3.0      fansi_1.0.6      
-    FALSE [16] rmarkdown_2.27    grid_4.4.0        tibble_3.2.1      munsell_0.5.1     evaluate_0.24.0  
-    FALSE [21] fastmap_1.2.0     yaml_2.3.8        lifecycle_1.0.4   compiler_4.4.0    dplyr_1.1.4      
-    FALSE [26] pkgconfig_2.0.3   rstudioapi_0.16.0 digest_0.6.35     R6_2.5.1          tidyselect_1.2.1 
-    FALSE [31] utf8_1.2.4        pillar_1.9.0      magrittr_2.0.3    withr_3.0.0       tools_4.4.0      
-    FALSE [36] gtable_0.3.5
+    FALSE  [1] vctrs_0.6.5       httr_1.4.7        cli_3.6.2         knitr_1.47        rlang_1.1.4       xfun_0.44         stringi_1.8.4     generics_0.1.3   
+    FALSE  [9] readtext_0.91     data.table_1.15.4 glue_1.7.0        colorspace_2.1-0  htmltools_0.5.8.1 scales_1.3.0      fansi_1.0.6       rmarkdown_2.27   
+    FALSE [17] grid_4.4.0        tibble_3.2.1      munsell_0.5.1     evaluate_0.24.0   fastmap_1.2.0     yaml_2.3.8        lifecycle_1.0.4   compiler_4.4.0   
+    FALSE [25] dplyr_1.1.4       pkgconfig_2.0.3   rstudioapi_0.16.0 digest_0.6.35     R6_2.5.1          tidyselect_1.2.1  utf8_1.2.4        pillar_1.9.0     
+    FALSE [33] magrittr_2.0.3    withr_3.0.0       tools_4.4.0       gtable_0.3.5
 
 ## NOAA README
 
