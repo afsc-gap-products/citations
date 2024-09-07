@@ -161,13 +161,13 @@ author can refer to it in the source file.
   - Intermittent (funding dependent)
   - Modified Index-Stratified Random of Successful Stations Survey
     Design
-- **Eastern Bering Sea Shelf (EBS)** (Markowitz et al., 2023)
+- **Eastern Bering Sea Shelf (EBS)** (Markowitz et al., 2024)
   - Annual
   - Fixed stations at center of 20 x 20 nm grid
-- **Gulf of Alaska (GOA)** (Von Szalay and Raring, 2018)
+- **Gulf of Alaska (GOA)** (Siple et al., 2024)
   - Triennial (1990s)/Biennial since 2001 in odd years
   - Stratified Random Survey Design
-- **Northern Bering Sea (NBS)** (Markowitz et al., 2023)
+- **Northern Bering Sea (NBS)** (Markowitz et al., 2024)
   - Biennial/Annual
   - Fixed stations at center of 20 x 20 nm grid
 
@@ -299,6 +299,26 @@ of the 2022 eastern and northern Bering Sea continental shelf bottom
 trawl survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
 NMFS-AFSC-469; p. 213). U.S. Dep. Commer.
 <https://doi.org/10.25923/rt50-th19>
+
+</div>
+
+<div id="ref-2023NEBS" class="csl-entry">
+
+Markowitz, E. H., Dawson, E. J., Wassermann, S., Anderson, A. B., Rohan,
+S. K., Charriere, B. K., and Stevenson, D. E. (2024). *Results of the
+2023 eastern and northern Bering Sea continental shelf bottom trawl
+survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
+NMFS-AFSC-487; p. 242). U.S. Dep. Commer.
+<https://doi.org/10.25923/2mry-yx09>
+
+</div>
+
+<div id="ref-GOA2023" class="csl-entry">
+
+Siple, M. C., Szalay, P. G. von, Raring, N. W., Dowlin, A. N., and
+Riggle, B. C. (2024). *Data report: 2023 gulf of alaska bottom trawl
+survey* (NOAA Tech. Memo. AFSC processed report; 2024-09). U.S. Dep.
+Commer. <https://doi.org/10.25923/gbb1-x748>
 
 </div>
 
@@ -537,8 +557,9 @@ utils::citation("trawllight")
 
     FALSE To cite package 'trawllight' in publications use:
     FALSE 
-    FALSE   Rohan S, Laman N (2024). _trawllight: Derive apparent optical properties from trawl-mounted light sensors_. R package version 3.2.0,
-    FALSE   commit 240ac9594c6817266159271cc63bf57dec219fa4, <https://github.com/afsc-gap-products/trawllight>.
+    FALSE   Rohan S, Laman N (2024). _trawllight: Derive apparent optical properties from trawl-mounted light
+    FALSE   sensors_. R package version 3.2.0, commit 240ac9594c6817266159271cc63bf57dec219fa4,
+    FALSE   <https://github.com/afsc-gap-products/trawllight>.
     FALSE 
     FALSE A BibTeX entry for LaTeX users is
     FALSE 
@@ -705,11 +726,12 @@ sessionInfo()
     FALSE [1] trawllight_3.2.0 ggplot2_3.5.1   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] vctrs_0.6.5       httr_1.4.7        cli_3.6.2         knitr_1.47        rlang_1.1.4       xfun_0.44         stringi_1.8.4     generics_0.1.3   
-    FALSE  [9] readtext_0.91     data.table_1.15.4 glue_1.7.0        colorspace_2.1-0  htmltools_0.5.8.1 scales_1.3.0      fansi_1.0.6       rmarkdown_2.27   
-    FALSE [17] grid_4.4.0        tibble_3.2.1      munsell_0.5.1     evaluate_0.24.0   fastmap_1.2.0     yaml_2.3.8        lifecycle_1.0.4   compiler_4.4.0   
-    FALSE [25] dplyr_1.1.4       pkgconfig_2.0.3   rstudioapi_0.16.0 digest_0.6.35     R6_2.5.1          tidyselect_1.2.1  utf8_1.2.4        pillar_1.9.0     
-    FALSE [33] magrittr_2.0.3    withr_3.0.0       tools_4.4.0       gtable_0.3.5
+    FALSE  [1] vctrs_0.6.5       httr_1.4.7        cli_3.6.2         knitr_1.47        rlang_1.1.4       xfun_0.44        
+    FALSE  [7] stringi_1.8.4     generics_0.1.3    readtext_0.91     data.table_1.15.4 glue_1.7.0        colorspace_2.1-0 
+    FALSE [13] htmltools_0.5.8.1 scales_1.3.0      fansi_1.0.6       rmarkdown_2.27    grid_4.4.0        tibble_3.2.1     
+    FALSE [19] munsell_0.5.1     evaluate_0.24.0   fastmap_1.2.0     yaml_2.3.8        lifecycle_1.0.4   compiler_4.4.0   
+    FALSE [25] dplyr_1.1.4       pkgconfig_2.0.3   rstudioapi_0.16.0 digest_0.6.35     R6_2.5.1          tidyselect_1.2.1 
+    FALSE [31] utf8_1.2.4        pillar_1.9.0      magrittr_2.0.3    withr_3.0.0       tools_4.4.0       gtable_0.3.5
 
 ## NOAA README
 
