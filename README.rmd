@@ -23,15 +23,7 @@ The scripts therein reproducibly produce our citations for our data, annual data
 
 **Emily Markowitz** (Emily.Markowitz AT noaa.gov; [\@EmilyMarkowitz-NOAA](https://github.com/EmilyMarkowitz-NOAA))
 
-**Megsie Siple** (Margaret.Siple AT noaa.gov; [\@MargaretSiple-NOAA](https://github.com/MargaretSiple-NOAA))
-
-**Liz Dawson** (Liz.Dawson AT noaa.gov; [\@liz-dawson-NOAA](https://github.com/liz-dawson-NOAA))
-
-**Alex Dowlin** (Alexandra.Dowlin AT noaa.gov; [\@AlexandraDowlin-NOAA](https://github.com/AlexandraDowlin-NOAA))
-
-**Chris Anderson** (Christopher.Anderson AT noaa.gov; [\@ChrisAnderson-NOAA](https://github.com/ChrisAnderson-NOAA))
-
-**Bethany Riggle** (Bethany.Riggle AT noaa.gov; [\@bethanyriggle](https://github.com/bethanyriggle))
+[Previously] **Liz Dawson** (Liz.Dawson AT noaa.gov; [\@liz-dawson-NOAA](https://github.com/liz-dawson-NOAA))
 
 Alaska Fisheries Science Center,
 
@@ -382,7 +374,7 @@ To find the citation:
 ```{r, echo = TRUE, eval = FALSE}
 require(remotes)
 remotes::install_github("afsc-gap-products/trawllight")
-<!-- ``` -->
+```
 
 To use the citation: 
 
