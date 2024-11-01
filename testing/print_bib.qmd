@@ -107,7 +107,6 @@ output_citations <- function(bibfiletext,
   cite_yr <- bibfiletext00[grep(pattern = "year = {", x = bibfiletext00, fixed = TRUE)]
   cite_yr <- unlist(lapply(X = strsplit(split = "{", x = cite_yr, fixed = TRUE), "[[", 2))
   
-  
   bibfiletext1 <- data.frame(
     rn = bibfiletext0, 
     auth = cite_auth, 

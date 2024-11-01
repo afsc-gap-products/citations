@@ -14,20 +14,8 @@ annual data reports, presentations, and other outreach documents.
 **Emily Markowitz** (Emily.Markowitz AT noaa.gov;
 [@EmilyMarkowitz-NOAA](https://github.com/EmilyMarkowitz-NOAA))
 
-**Megsie Siple** (Margaret.Siple AT noaa.gov;
-[@MargaretSiple-NOAA](https://github.com/MargaretSiple-NOAA))
-
-**Liz Dawson** (Liz.Dawson AT noaa.gov;
+\[Previously\] **Liz Dawson** (Liz.Dawson AT noaa.gov;
 [@liz-dawson-NOAA](https://github.com/liz-dawson-NOAA))
-
-**Alex Dowlin** (Alexandra.Dowlin AT noaa.gov;
-[@AlexandraDowlin-NOAA](https://github.com/AlexandraDowlin-NOAA))
-
-**Chris Anderson** (Christopher.Anderson AT noaa.gov;
-[@ChrisAnderson-NOAA](https://github.com/ChrisAnderson-NOAA))
-
-**Bethany Riggle** (Bethany.Riggle AT noaa.gov;
-[@bethanyriggle](https://github.com/bethanyriggle))
 
 Alaska Fisheries Science Center,
 
@@ -545,10 +533,9 @@ To find the citation:
 ``` r
 require(remotes)
 remotes::install_github("afsc-gap-products/trawllight")
-<!-- ``` -->
-
-To use the citation: 
 ```
+
+To use the citation:
 
 ``` r
 library(trawllight)
@@ -557,9 +544,8 @@ utils::citation("trawllight")
 
     FALSE To cite package 'trawllight' in publications use:
     FALSE 
-    FALSE   Rohan S, Laman N (2024). _trawllight: Derive apparent optical properties from trawl-mounted light
-    FALSE   sensors_. R package version 3.2.0, commit 240ac9594c6817266159271cc63bf57dec219fa4,
-    FALSE   <https://github.com/afsc-gap-products/trawllight>.
+    FALSE   Rohan S, Laman N (2024). _trawllight: Derive apparent optical properties from trawl-mounted light sensors_. R package version 3.2.0, commit
+    FALSE   240ac9594c6817266159271cc63bf57dec219fa4, <https://github.com/afsc-gap-products/trawllight>.
     FALSE 
     FALSE A BibTeX entry for LaTeX users is
     FALSE 
@@ -628,14 +614,14 @@ head(PKG)
 ```
 
     FALSE # A tibble: 6 × 2
-    FALSE   Package      Version 
-    FALSE   <chr>        <chr>   
-    FALSE 1 abind        1.4-5   
-    FALSE 2 akfingapdata 0.1.0   
-    FALSE 3 akgfmaps     3.5.3   
-    FALSE 4 antiword     1.3.3   
-    FALSE 5 AsioHeaders  1.22.1-2
-    FALSE 6 askpass      1.2.0
+    FALSE   Package      Version
+    FALSE   <chr>        <chr>  
+    FALSE 1 abind        1.4-8  
+    FALSE 2 akfingapdata 0.1.0  
+    FALSE 3 akgfmaps     3.5.3  
+    FALSE 4 antiword     1.3.4  
+    FALSE 5 askpass      1.2.1  
+    FALSE 6 assertthat   0.2.1
 
 Here is how the user can find all of the packages ever installed on the
 local computer
@@ -705,7 +691,7 @@ repository](https://github.com/afsc-gap-products/citations/issues).
 sessionInfo()
 ```
 
-    FALSE R version 4.4.0 (2024-04-24 ucrt)
+    FALSE R version 4.4.1 (2024-06-14 ucrt)
     FALSE Platform: x86_64-w64-mingw32/x64
     FALSE Running under: Windows 10 x64 (build 19045)
     FALSE 
@@ -713,8 +699,8 @@ sessionInfo()
     FALSE 
     FALSE 
     FALSE locale:
-    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8
-    FALSE [4] LC_NUMERIC=C                           LC_TIME=English_United States.utf8    
+    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
+    FALSE [5] LC_TIME=English_United States.utf8    
     FALSE 
     FALSE time zone: America/Los_Angeles
     FALSE tzcode source: internal
@@ -723,15 +709,15 @@ sessionInfo()
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
     FALSE other attached packages:
-    FALSE [1] trawllight_3.2.0 ggplot2_3.5.1   
+    FALSE [1] trawllight_3.2.0 ggplot2_3.5.1    janitor_2.2.0    readr_2.1.5      here_1.0.1       magrittr_2.0.3   dplyr_1.1.4      tidyr_1.3.1     
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] vctrs_0.6.5       httr_1.4.7        cli_3.6.2         knitr_1.47        rlang_1.1.4       xfun_0.44        
-    FALSE  [7] stringi_1.8.4     generics_0.1.3    readtext_0.91     data.table_1.15.4 glue_1.7.0        colorspace_2.1-0 
-    FALSE [13] htmltools_0.5.8.1 scales_1.3.0      fansi_1.0.6       rmarkdown_2.27    grid_4.4.0        tibble_3.2.1     
-    FALSE [19] munsell_0.5.1     evaluate_0.24.0   fastmap_1.2.0     yaml_2.3.8        lifecycle_1.0.4   compiler_4.4.0   
-    FALSE [25] dplyr_1.1.4       pkgconfig_2.0.3   rstudioapi_0.16.0 digest_0.6.35     R6_2.5.1          tidyselect_1.2.1 
-    FALSE [31] utf8_1.2.4        pillar_1.9.0      magrittr_2.0.3    withr_3.0.0       tools_4.4.0       gtable_0.3.5
+    FALSE  [1] gtable_0.3.6      compiler_4.4.1    tidyselect_1.2.1  stringr_1.5.1     snakecase_0.11.1  scales_1.3.0      yaml_2.3.10       fastmap_1.2.0    
+    FALSE  [9] R6_2.5.1          generics_0.1.3    knitr_1.48        readtext_0.91     tibble_3.2.1      munsell_0.5.1     rprojroot_2.0.4   lubridate_1.9.3  
+    FALSE [17] pillar_1.9.0      tzdb_0.4.0        rlang_1.1.4       utf8_1.2.4        stringi_1.8.4     xfun_0.47         timechange_0.3.0  cli_3.6.3        
+    FALSE [25] withr_3.0.2       grid_4.4.1        digest_0.6.37     rstudioapi_0.17.1 hms_1.1.3         lifecycle_1.0.4   vctrs_0.6.5       evaluate_1.0.1   
+    FALSE [33] glue_1.7.0        data.table_1.16.2 colorspace_2.1-1  fansi_1.0.6       rmarkdown_2.28    purrr_1.0.2       httr_1.4.7        tools_4.4.1      
+    FALSE [41] pkgconfig_2.0.3   htmltools_0.5.8.1
 
 ## NOAA README
 
