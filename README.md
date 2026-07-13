@@ -149,7 +149,7 @@ author can refer to it in the source file.
   - Intermittent (funding dependent)
   - Modified Index-Stratified Random of Successful Stations Survey
     Design
-- **Eastern Bering Sea Shelf (EBS)** (Markowitz et al., 2024)
+- **Eastern Bering Sea Shelf (EBS)** (Markowitz et al., 2025)
   - Annual
   - Fixed stations at center of 20 x 20 nm grid
 - **Gulf of Alaska (GOA)** (Siple et al., 2024)
@@ -281,7 +281,7 @@ continental slope survey of groundfishes and invertebrate resources*
 
 <div id="ref-2022NEBS2023" class="csl-entry">
 
-Markowitz, E. H., Dawson, E. J., Anderson, A. B., Rohan, S. K.,
+Markowitz, E. H., Dawson, E. J., Anderson, C. B., Rohan, S. K.,
 Charriere, N. E., Prohaska, B. K., and Stevenson, D. E. (2023). *Results
 of the 2022 eastern and northern Bering Sea continental shelf bottom
 trawl survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
@@ -292,12 +292,22 @@ NMFS-AFSC-469; p. 213). U.S. Dep. Commer.
 
 <div id="ref-2023NEBS" class="csl-entry">
 
-Markowitz, E. H., Dawson, E. J., Wassermann, S., Anderson, A. B., Rohan,
-S. K., Charriere, B. K., and Stevenson, D. E. (2024). *Results of the
-2023 eastern and northern Bering Sea continental shelf bottom trawl
+Markowitz, E. H., Dawson, E. J., Wassermann, S. N., Anderson, C. B.,
+Rohan, S. K., Charriere, N. E., and Stevenson, D. E. (2024). *Results of
+the 2023 eastern and northern Bering Sea continental shelf bottom trawl
 survey of groundfish and invertebrate fauna* (NOAA Tech. Memo.
 NMFS-AFSC-487; p. 242). U.S. Dep. Commer.
 <https://doi.org/10.25923/2mry-yx09>
+
+</div>
+
+<div id="ref-2024EBS" class="csl-entry">
+
+Markowitz, E. H., Wassermann, S. N., Rohan, S. K., Charriere, N. E.,
+Anderson, C. B., and Stevenson, D. E. (2025). *Results of the 2024
+eastern and northern Bering Sea continental shelf bottom trawl survey of
+groundfish and invertebrate fauna* (NOAA Tech. Memo. NMFS-AFSC-499; p.
+203). U.S. Dep. Commer. <https://doi.org/10.25923/8qa3-x785>
 
 </div>
 
@@ -544,8 +554,9 @@ utils::citation("trawllight")
 
     FALSE To cite package 'trawllight' in publications use:
     FALSE 
-    FALSE   Rohan S, Laman N (2024). _trawllight: Derive apparent optical properties from trawl-mounted light sensors_. R package version 3.2.0, commit
-    FALSE   240ac9594c6817266159271cc63bf57dec219fa4, <https://github.com/afsc-gap-products/trawllight>.
+    FALSE   Rohan S, Laman N (2026). _trawllight: Derive apparent optical properties from trawl-mounted
+    FALSE   light sensors_. R package version 3.2.0, commit 240ac9594c6817266159271cc63bf57dec219fa4,
+    FALSE   <https://github.com/afsc-gap-products/trawllight>.
     FALSE 
     FALSE A BibTeX entry for LaTeX users is
     FALSE 
@@ -553,7 +564,7 @@ utils::citation("trawllight")
     FALSE     title = {trawllight: Derive apparent optical properties from trawl-mounted light
     FALSE sensors},
     FALSE     author = {Sean Rohan and Ned Laman},
-    FALSE     year = {2024},
+    FALSE     year = {2026},
     FALSE     note = {R package version 3.2.0, commit 240ac9594c6817266159271cc63bf57dec219fa4},
     FALSE     url = {https://github.com/afsc-gap-products/trawllight},
     FALSE   }
@@ -617,11 +628,11 @@ head(PKG)
     FALSE   Package      Version
     FALSE   <chr>        <chr>  
     FALSE 1 abind        1.4-8  
-    FALSE 2 akfingapdata 0.1.0  
-    FALSE 3 akgfmaps     3.5.3  
-    FALSE 4 antiword     1.3.4  
-    FALSE 5 askpass      1.2.1  
-    FALSE 6 assertthat   0.2.1
+    FALSE 2 ADGofTest    0.3    
+    FALSE 3 akfingapdata 0.1.0  
+    FALSE 4 akgfmaps     4.2.1  
+    FALSE 5 antiword     1.3.5  
+    FALSE 6 ape          5.8-1
 
 Here is how the user can find all of the packages ever installed on the
 local computer
@@ -691,15 +702,16 @@ repository](https://github.com/afsc-gap-products/citations/issues).
 sessionInfo()
 ```
 
-    FALSE R version 4.4.1 (2024-06-14 ucrt)
+    FALSE R version 4.5.3 (2026-03-11 ucrt)
     FALSE Platform: x86_64-w64-mingw32/x64
-    FALSE Running under: Windows 10 x64 (build 19045)
+    FALSE Running under: Windows 11 x64 (build 26100)
     FALSE 
     FALSE Matrix products: default
-    FALSE 
+    FALSE   LAPACK version 3.12.1
     FALSE 
     FALSE locale:
-    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8    LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
+    FALSE [1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8   
+    FALSE [3] LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
     FALSE [5] LC_TIME=English_United States.utf8    
     FALSE 
     FALSE time zone: America/Los_Angeles
@@ -709,15 +721,20 @@ sessionInfo()
     FALSE [1] stats     graphics  grDevices utils     datasets  methods   base     
     FALSE 
     FALSE other attached packages:
-    FALSE [1] trawllight_3.2.0 ggplot2_3.5.1    janitor_2.2.0    readr_2.1.5      here_1.0.1       magrittr_2.0.3   dplyr_1.1.4      tidyr_1.3.1     
+    FALSE [1] trawllight_3.2.0 ggplot2_4.0.3    janitor_2.2.1    readr_2.2.0      here_1.0.2       magrittr_2.0.5  
+    FALSE [7] dplyr_1.2.1      tidyr_1.3.2      remotes_2.5.0   
     FALSE 
     FALSE loaded via a namespace (and not attached):
-    FALSE  [1] gtable_0.3.6      compiler_4.4.1    tidyselect_1.2.1  stringr_1.5.1     snakecase_0.11.1  scales_1.3.0      yaml_2.3.10       fastmap_1.2.0    
-    FALSE  [9] R6_2.5.1          generics_0.1.3    knitr_1.48        readtext_0.91     tibble_3.2.1      munsell_0.5.1     rprojroot_2.0.4   lubridate_1.9.3  
-    FALSE [17] pillar_1.9.0      tzdb_0.4.0        rlang_1.1.4       utf8_1.2.4        stringi_1.8.4     xfun_0.47         timechange_0.3.0  cli_3.6.3        
-    FALSE [25] withr_3.0.2       grid_4.4.1        digest_0.6.37     rstudioapi_0.17.1 hms_1.1.3         lifecycle_1.0.4   vctrs_0.6.5       evaluate_1.0.1   
-    FALSE [33] glue_1.7.0        data.table_1.16.2 colorspace_2.1-1  fansi_1.0.6       rmarkdown_2.28    purrr_1.0.2       httr_1.4.7        tools_4.4.1      
-    FALSE [41] pkgconfig_2.0.3   htmltools_0.5.8.1
+    FALSE  [1] utf8_1.2.6         generics_0.1.4     xml2_1.6.0         stringi_1.8.7      hms_1.1.4         
+    FALSE  [6] digest_0.6.39      readtext_0.92.1    evaluate_1.0.5     grid_4.5.3         timechange_0.4.0  
+    FALSE [11] RColorBrewer_1.1-3 fastmap_1.2.0      rprojroot_2.1.1    processx_3.9.0     pkgbuild_1.4.8    
+    FALSE [16] tinytex_0.60       httr_1.4.8         purrr_1.2.2        scales_1.4.0       cli_3.6.6         
+    FALSE [21] rlang_1.3.0        withr_3.0.3        yaml_2.3.12        otel_0.2.0         tools_4.5.3       
+    FALSE [26] tzdb_0.5.0         curl_7.1.0         vctrs_0.7.3        R6_2.6.1           lifecycle_1.0.5   
+    FALSE [31] lubridate_1.9.5    snakecase_0.11.1   stringr_1.6.0      pkgconfig_2.0.3    desc_1.4.3        
+    FALSE [36] callr_3.8.0        pillar_1.11.1      gtable_0.3.6       data.table_1.18.4  glue_1.8.1        
+    FALSE [41] xfun_0.59          tibble_3.3.1       tidyselect_1.2.1   rstudioapi_0.19.0  knitr_1.51        
+    FALSE [46] farver_2.1.2       htmltools_0.5.9    rmarkdown_2.31     compiler_4.5.3     S7_0.2.2
 
 ## NOAA README
 
